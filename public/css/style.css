@@ -1,0 +1,290 @@
+/* ============================================================
+   SS Prime Infra — Global Styles
+   ============================================================ */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* ---------- Base ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ---------- Layout ---------- */
+.page-wrapper {
+    max-width: 1700px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* ---------- Scroll Reveal — Fade Up ---------- */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Hero Text Entrance ---------- */
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text-animate {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-text-animate-delay {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+    opacity: 0;
+}
+
+.hero-text-animate-delay-2 {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+    opacity: 0;
+}
+
+/* ---------- Floating Shape Pulse ---------- */
+@keyframes floatPulse {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.05);
+        opacity: 0.25;
+    }
+}
+
+.float-pulse {
+    animation: floatPulse 6s ease-in-out infinite;
+}
+
+.float-pulse-delay {
+    animation: floatPulse 8s ease-in-out 2s infinite;
+}
+
+/* ---------- Company Slider ---------- */
+.company-slider-track {
+    animation: companySlider 28s linear infinite;
+}
+
+.company-slider-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes companySlider {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ---------- Card Hover Accent ---------- */
+.card-hover-accent {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-hover-accent:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(245, 158, 11, 0.1);
+}
+
+.card-hover-accent::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-hover-accent:hover::after {
+    transform: scaleX(1);
+}
+
+/* ---------- Button Glow ---------- */
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, #f59e0b, #d97706, #f59e0b);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(8px);
+}
+
+.btn-glow:hover::before {
+    opacity: 0.6;
+}
+
+/* ---------- Navbar Scrolled Glow ---------- */
+.navbar-scrolled {
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2),
+                0 1px 0 rgba(245, 158, 11, 0.08);
+}
+
+/* ---------- Hamburger Icon Animation ---------- */
+.hamburger-line {
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: center;
+}
+
+.hamburger-active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger-active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ---------- Status Badge Pulse ---------- */
+@keyframes badgePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(245, 158, 11, 0);
+    }
+}
+
+.badge-pulse {
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+/* ---------- Footer Gradient Strip ---------- */
+.footer-gradient-strip {
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #f59e0b 20%, 
+        #d97706 50%, 
+        #f59e0b 80%, 
+        transparent 100%
+    );
+}
+
+/* ---------- Swiper Pagination Customization ---------- */
+.heroSwiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.heroSwiper .swiper-pagination-bullet-active {
+    background: #f59e0b;
+    width: 32px;
+    border-radius: 6px;
+}
+
+/* ---------- Swiper Nav Arrows ---------- */
+.hero-nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.hero-nav-btn:hover {
+    background: rgba(245, 158, 11, 0.8);
+    border-color: rgba(245, 158, 11, 0.8);
+    transform: scale(1.1);
+}
+
+/* ---------- Section Divider ---------- */
+.section-accent-bar {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+    border-radius: 2px;
+}
+
+/* ---------- Glassmorphism Utility ---------- */
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- Selection Color ---------- */
+::selection {
+    background: rgba(245, 158, 11, 0.3);
+    color: inherit;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f59e0b, #d97706);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #fbbf24, #f59e0b);
+}
