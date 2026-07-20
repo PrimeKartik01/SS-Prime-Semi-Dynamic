@@ -25,7 +25,7 @@ export function propertyCard(property) {
 
             <div class="swiper-pagination"></div>
             <button
-                class="enquireBtn absolute top-4 right-4 z-20 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-xl font-semibold duration-300"
+                class="enquireBtn absolute top-4 right-4 z-20 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-xl font-semibold duration-300 shadow-md shadow-black-500"
                 data-id="${property.id}"
             >
                 Enquire Now
@@ -54,7 +54,7 @@ export function propertyCard(property) {
 
                     <p class="text-gray-500 mt-2">
 
-                        📍 ${property.location}, ${property.city}
+                        📍${property.city}
 
                     </p>
 
@@ -100,7 +100,7 @@ export function propertyCard(property) {
 
             
 
-            <div class="flex justify-between items-end mt-8">
+            <div class="flex justify-between items-end mt-3">
 
                 <div>
 
@@ -110,7 +110,7 @@ export function propertyCard(property) {
 
                     </p>
 
-                    <h2 class="text-xl font-bold text-yellow-600">
+                    <h2 class="text-md md:text-xl font-bold text-yellow-600">
 
                         ${property.priceLabel}
 
@@ -118,11 +118,12 @@ export function propertyCard(property) {
 
                 </div>
 
-                <a
-                    href="./property-details.html?id=${property.id}"
-                    class="bg-yellow-500 hover:bg-yellow-600 p-3 rounded-xl text-white font-semibold inline-flex items-center"
-                >
-                    View Details
+               <a href="./property-details.html?id=${property.id}" class="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 md:px-5 md:py-3 rounded-lg text-white font-semibold inline-flex items-center justify-center gap-2  transition-colors shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                    <span class="text-xs md:text-md">View</span>
                 </a>
 
             </div>

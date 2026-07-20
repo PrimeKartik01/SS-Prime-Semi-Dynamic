@@ -11,6 +11,10 @@ export const navbarData = {
             href: "#about-section"
         },
         {
+            label: "Careers",
+            href: "careers.html"
+        },
+        {
             label: "Contact",
             href: "contact.html"
         }

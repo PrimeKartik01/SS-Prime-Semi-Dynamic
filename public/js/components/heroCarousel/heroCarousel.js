@@ -69,12 +69,12 @@ export function initHeroCarousel({
             </div>
 
             <!-- Custom Nav Arrows -->
-            <div class="absolute bottom-20 md:bottom-auto md:top-1/2 md:-translate-y-1/2 left-4 md:left-6 z-20">
+            <div class="absolute hidden md:block bottom-20 md:bottom-auto md:top-1/2 md:-translate-y-1/2 left-4 md:left-6 z-20">
                 <button class="hero-nav-btn hero-prev">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
                 </button>
             </div>
-            <div class="absolute bottom-20 md:bottom-auto md:top-1/2 md:-translate-y-1/2 right-4 md:right-6 z-20">
+            <div class="absolute hidden md:block  bottom-20 md:bottom-auto md:top-1/2 md:-translate-y-1/2 right-4 md:right-6 z-20">
                 <button class="hero-nav-btn hero-next">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
                 </button>
@@ -83,7 +83,7 @@ export function initHeroCarousel({
             <!-- Search Component -->
 
             <div
-                class="absolute bottom-6 md:bottom-4 left-0 right-0 z-20 pb-6 px-4"
+                class="absolute bottom-12 md:bottom-4 left-0 right-0 z-20 pb-6 px-2"
             >
 
                 <div class="max-w-7xl mx-auto">

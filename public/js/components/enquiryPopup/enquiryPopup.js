@@ -1,4 +1,5 @@
 import { properties } from "../../data/properties.js";
+import { submitLead } from "../../utils/api.js";
 
 let popup;
 let popupContent;
@@ -243,53 +244,180 @@ export function initEnquiryPopup() {
     });
 
     // Wire up form submission success handler
+    // Wire up form submission success handler
     const form = document.querySelector("#popupForm");
+
     if (form) {
-        form.addEventListener("submit", (e) => {
+
+        form.addEventListener("submit", async (e) => {
+
             e.preventDefault();
 
-            // Hide header and form
-            const header = popupContent.querySelector(".relative.bg-yellow-500");
-            form.classList.add("hidden");
-            if (header) header.classList.add("hidden");
+            const submitBtn = form.querySelector("button[type='submit']");
+            const originalBtnText = submitBtn.textContent;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Submitting...";
+            submitBtn.classList.add("opacity-50", "cursor-not-allowed");
 
             const isSpecificProperty = !!propertyIdInput.value;
-            const chosenProject = isSpecificProperty ? projectInput.value : (projectSelect.value || "General Enquiry");
-            const chosenPhone = document.querySelector("#popupPhone").value;
 
-            // Create success message container
-            const successContainer = document.createElement("div");
-            successContainer.className = "p-10 flex flex-col items-center text-center justify-center space-y-6 animate-fade-in";
-            successContainer.innerHTML = `
+            const chosenProject = isSpecificProperty
+                ? projectInput.value
+                : (projectSelect.value || "General Enquiry");
+
+            const chosenCity = isSpecificProperty
+                ? cityInput.value
+                : (citySelect.value || "All Cities");
+
+            const chosenBudget = isSpecificProperty
+                ? budgetInput.value
+                : (budgetSelect.value || "Flexible");
+
+            const leadData = {
+
+                name: form.querySelector("#popupName").value.trim(),
+
+                email: form.querySelector("#popupEmail").value.trim(),
+
+                phone: form.querySelector("#popupPhone").value.trim(),
+
+                propertyId: propertyIdInput?.value || "",
+
+                price: propertyPriceInput?.value || "",
+
+                project: chosenProject,
+
+                city: chosenCity,
+
+                budget: chosenBudget,
+
+                source: "Popup Form"
+
+            };
+
+            try {
+
+                const result = await submitLead(leadData);
+
+                if (!result.success) {
+
+                    alert(result.message);
+
+                    return;
+
+                }
+
+                // Hide header and form
+                const header = popupContent.querySelector(".relative.bg-yellow-500");
+
+                form.classList.add("hidden");
+
+                if (header) {
+                    header.classList.add("hidden");
+                }
+
+                const successContainer = document.createElement("div");
+
+                successContainer.className =
+                    "p-10 flex flex-col items-center text-center justify-center space-y-6 animate-fade-in";
+
+                successContainer.innerHTML = `
+
                 <div class="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center border-4 border-emerald-500 shadow-lg shadow-emerald-500/20">
+
                     <svg class="w-10 h-10 text-emerald-500 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+
                     </svg>
+
                 </div>
-                <h3 class="text-3xl font-bold text-slate-900">Request Submitted!</h3>
+
+                <h3 class="text-3xl font-bold text-slate-900">
+
+                    Request Submitted!
+
+                </h3>
+
                 <p class="text-slate-600 leading-relaxed max-w-sm">
-                    Thank you, <span class="font-semibold text-slate-800">${document.querySelector("#popupName").value}</span>. 
-                    Our property experts are reviewing your request for <span class="font-semibold text-slate-800">${chosenProject}</span> 
-                    and will call you shortly on <span class="font-semibold text-slate-800">${chosenPhone}</span>.
+
+                    Thank you,
+
+                    <span class="font-semibold text-slate-800">
+
+                        ${leadData.name}
+
+                    </span>.
+
+                    <br><br>
+
+                    Our property experts are reviewing your request for
+
+                    <span class="font-semibold text-slate-800">
+
+                        ${chosenProject}
+
+                    </span>
+
+                    and will contact you shortly on
+
+                    <span class="font-semibold text-slate-800">
+
+                        ${leadData.phone}
+
+                    </span>.
+
                 </p>
+
                 <div class="w-12 h-1 bg-yellow-500 rounded-full"></div>
+
             `;
 
-            popupContent.appendChild(successContainer);
+                popupContent.appendChild(successContainer);
 
-            // Auto close after 3.5 seconds
-            setTimeout(() => {
-                closeEnquiryPopup();
-
-                // Reset popup state after closing animation
                 setTimeout(() => {
-                    successContainer.remove();
-                    form.reset();
-                    form.classList.remove("hidden");
-                    if (header) header.classList.remove("hidden");
-                }, 400);
-            }, 3500);
+
+                    closeEnquiryPopup();
+
+                    setTimeout(() => {
+
+                        successContainer.remove();
+
+                        form.reset();
+
+                        form.classList.remove("hidden");
+
+                        if (header) {
+                            header.classList.remove("hidden");
+                        }
+
+                    }, 400);
+
+                }, 3500);
+
+            }
+
+            catch (error) {
+
+                console.error("Popup Form Error:", error);
+
+                alert("Something went wrong. Please try again.");
+
+            }
+
+            finally {
+
+                submitBtn.disabled = false;
+
+                submitBtn.textContent = originalBtnText;
+
+                submitBtn.classList.remove("opacity-50", "cursor-not-allowed");
+
+            }
+
         });
+
     }
 }
 

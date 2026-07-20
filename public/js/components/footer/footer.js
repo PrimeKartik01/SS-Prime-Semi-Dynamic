@@ -58,6 +58,8 @@ export function initFooter(containerId = "footer") {
 
                     <li><a href="about.html" class="hover:text-amber-500 transition">About Us</a></li>
 
+                    <li><a href="careers.html" class="hover:text-amber-500 transition">Careers</a></li>
+
                     <li><a href="contact.html" class="hover:text-amber-500 transition">Contact</a></li>
 
                 </ul>
