@@ -41,9 +41,7 @@ export const applicationValidation = [
     body("message")
         .trim()
         .notEmpty()
-        .withMessage("Message is required")
-        .isLength({ min: 20 })
-        .withMessage("Message should be at least 20 characters")
+        .withMessage("Cover message is required")
 
 ];
 
@@ -53,9 +51,13 @@ export const validationError = (req, res, next) => {
 
     if (!errors.isEmpty()) {
 
+        const firstError = errors.array()[0];
+
         return res.status(400).json({
 
             success: false,
+
+            message: firstError.msg,
 
             errors: errors.array()
 

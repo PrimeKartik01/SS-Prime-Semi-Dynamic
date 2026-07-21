@@ -262,17 +262,22 @@ export function initEnquiryPopup() {
 
             const isSpecificProperty = !!propertyIdInput.value;
 
+            // Query selects fresh inside handler (they live in a different scope)
+            const _projectSelect = document.querySelector("#popupProjectSelect");
+            const _citySelect = document.querySelector("#popupCitySelect");
+            const _budgetSelect = document.querySelector("#popupBudgetSelect");
+
             const chosenProject = isSpecificProperty
                 ? projectInput.value
-                : (projectSelect.value || "General Enquiry");
+                : (_projectSelect?.value || "General Enquiry");
 
             const chosenCity = isSpecificProperty
                 ? cityInput.value
-                : (citySelect.value || "All Cities");
+                : (_citySelect?.value || "All Cities");
 
             const chosenBudget = isSpecificProperty
                 ? budgetInput.value
-                : (budgetSelect.value || "Flexible");
+                : (_budgetSelect?.value || "Flexible");
 
             const leadData = {
 

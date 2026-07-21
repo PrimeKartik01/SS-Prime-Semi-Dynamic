@@ -1,14 +1,60 @@
-export async function submitJobApplication(applicationData) {
+// ─── Lead Enquiry API ─────────────────────────────────────────────────────────
+// Used by: enquiryPopup, contactForm
+// Sends to: /api/enquiries  →  primeleads@ssprimeinfra.in
+
+export const submitLead = async (leadData) => {
+
     try {
-        console.log("submitJobApplication: Sending request with data:", applicationData);
+
+        const response = await fetch("/api/enquiries", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(leadData)
+
+        });
+
+        const result = await response.json();
+
+        return {
+            success: response.ok,
+            status: response.status,
+            ...result
+        };
+
+    } catch (error) {
+
+        console.error("Lead API Error:", error);
+
+        return {
+            success: false,
+            status: 500,
+            message: "Unable to connect to the server."
+        };
+
+    }
+
+};
+
+// ─── Job Application API ──────────────────────────────────────────────────────
+// Used by: applyPopup (careers page only)
+// Sends to: /api/applications  →  hrinfo@ssprimeinfra.in
+
+export const submitJobApplication = async (applicationData) => {
+
+    try {
 
         const isFormData = applicationData instanceof FormData;
-        
+
         const options = {
             method: "POST",
             body: isFormData ? applicationData : JSON.stringify(applicationData)
         };
-        
+
         if (!isFormData) {
             options.headers = {
                 "Content-Type": "application/json"
@@ -19,40 +65,22 @@ export async function submitJobApplication(applicationData) {
 
         const result = await response.json();
 
-        if (!response.ok) {
-            return { success: false, message: result.message || `Server returned status code ${response.status}` };
-        }
+        return {
+            success: response.ok,
+            status: response.status,
+            ...result
+        };
 
-        console.log("submitJobApplication: API responded successfully:", result);
-        return { success: true, data: result };
     } catch (error) {
-        console.error("submitJobApplication: Submission failed:", error);
-        return { success: false, message: "Something went wrong. Please try again." };
-    }
-}
 
-export async function submitLead(leadData) {
-    try {
-        console.log("submitLead: Sending request to API with data:", leadData);
-        
-        const response = await fetch("/api/enquiries", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(leadData)
-        });
-        
-        const result = await response.json();
-        
-        if (!response.ok) {
-            return { success: false, message: result.message || `Server returned status code ${response.status}` };
-        }
-        
-        console.log("submitLead: API responded successfully:", result);
-        return { success: true, data: result };
-    } catch (error) {
-        console.error("submitLead: Submission failed:", error);
-        return { success: false, message: "Something went wrong. Please try again." };
+        console.error("HR Application API Error:", error);
+
+        return {
+            success: false,
+            status: 500,
+            message: "Unable to connect to the server."
+        };
+
     }
-}
+
+};
