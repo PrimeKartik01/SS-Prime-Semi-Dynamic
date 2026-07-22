@@ -123,10 +123,12 @@ export const createApplication = async (req, res) => {
                 });
             }
 
-            await getHrTransporter().sendMail(mailOptions);
+            const hrMailResult = await getHrTransporter().sendMail(mailOptions);
+            console.log(`✅ HR email sent successfully to: ${process.env.HR_EMAIL}`);
+            console.log(`   Message ID: ${hrMailResult.messageId}`);
 
         } catch (mailErr) {
-            console.error("HR Email Error:", mailErr.message);
+            console.error("❌ HR Email Error:", mailErr.message);
         }
 
         return res.status(201).json({

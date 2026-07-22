@@ -34,7 +34,7 @@ export const createEnquiry = async (req, res) => {
 
             const { name, project, city, budget, propertyId, price, source } = req.body;
 
-            await getLeadsTransporter().sendMail({
+            const leadsMailResult = await getLeadsTransporter().sendMail({
                 from: `"SS Prime Leads" <${process.env.LEADS_EMAIL}>`,
                 to: process.env.LEADS_EMAIL,
                 subject: `🏠 New Lead: ${name} – ${project}`,
@@ -90,8 +90,11 @@ export const createEnquiry = async (req, res) => {
                 `
             });
 
+            console.log(`✅ Lead email sent successfully to: ${process.env.LEADS_EMAIL}`);
+            console.log(`   Message ID: ${leadsMailResult.messageId}`);
+
         } catch (mailErr) {
-            console.error("Lead Email Error:", mailErr.message);
+            console.error("❌ Lead Email Error:", mailErr.message);
         }
 
         return res.status(201).json({
