@@ -8,7 +8,7 @@ export function initFooter(containerId = "footer") {
 
 <footer class="bg-slate-950 text-slate-300 ">
 
-    <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="mx-auto px-10 py-16">
 
         <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
 
@@ -142,14 +142,9 @@ export function initFooter(containerId = "footer") {
 
             <div class="flex gap-6 text-sm">
 
-                <a href="#" class="hover:text-amber-500 transition">
+                <a href="privacy-policy.html" class="hover:text-amber-500 transition">
                     Privacy Policy
                 </a>
-
-                <a href="#" class="hover:text-amber-500 transition">
-                    Terms & Conditions
-                </a>
-
             </div>
 
         </div>

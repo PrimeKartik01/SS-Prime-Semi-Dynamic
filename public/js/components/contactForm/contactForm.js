@@ -127,14 +127,14 @@ export function initContactForm(containerId = "contact-form") {
 
             </div>
 
-            <div class="bg-white rounded-[40px] shadow-2xl border border-slate-200 p-10 lg:p-14">
+            <div class="bg-white rounded-[20px] md:rounded-[40px] border border-slate-200 p-5 lg:p-14">
 
                 <h3 class="text-3xl font-bold text-slate-900">
 
                     Schedule a Free Consultation
 
                 </h3>
-                
+
                 <form class="mt-10 space-y-6">
 
                     <input
