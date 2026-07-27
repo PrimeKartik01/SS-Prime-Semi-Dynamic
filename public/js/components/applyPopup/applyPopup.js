@@ -24,7 +24,7 @@ export function initApplyPopup() {
                         <p class="mt-3 text-white/90">Submit your details and we'll get back to you within 2-3 business days.</p>
                     </div>
 
-                    <form id="applyForm" class="p-8 space-y-5">
+                    <form id="applyForm" class="p-4 md:p-8 space-y-5">
                         <input type="hidden" id="applyJobId" name="jobId">
                         <input type="hidden" id="applyJobTitle" name="jobTitle">
 

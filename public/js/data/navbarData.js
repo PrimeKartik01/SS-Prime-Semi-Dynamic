@@ -4,11 +4,11 @@ export const navbarData = {
     links: [
         {
             label: "Home",
-            href: "#hero-slider"
+            href: "index.html"
         },
         {
             label: "About",
-            href: "#about-section"
+            href: "about.html"
         },
         {
             label: "Careers",

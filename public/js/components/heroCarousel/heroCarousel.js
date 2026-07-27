@@ -49,7 +49,7 @@ export function initHeroCarousel({
                                     </div>
 
                                     <h1
-                                        class="text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mt-6 hero-text-animate-delay font-display"
+                                        class="text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mt-6 hero-text-animate-delay"
                                     >
                                         ${slide.title}
                                     </h1>

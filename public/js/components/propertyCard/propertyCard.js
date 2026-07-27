@@ -14,7 +14,7 @@ export function propertyCard(property) {
 
                         <img
                             src="${image}"
-                            class="w-full h-72 object-cover"
+                            class="w-full h-48 lg:h-72 object-cover"
                         >
 
                     </div>
@@ -25,7 +25,7 @@ export function propertyCard(property) {
 
             <div class="swiper-pagination"></div>
             <button
-                class="enquireBtn absolute top-4 right-4 z-20 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-xl font-semibold duration-300 shadow-md shadow-black-500"
+                class="enquireBtn absolute top-4 right-4 z-20 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold duration-300 shadow-md shadow-black-500"
                 data-id="${property.id}"
             >
                 Enquire Now
@@ -36,29 +36,28 @@ export function propertyCard(property) {
 
         <div class="p-4">
 
-            <div class="flex justify-between">
+            <div class="flex justify-between md:flex-col-reverse md:gap-3">
+                    <div>
+                        <h2 class=" md:text-2xl font-bold">
 
-                <div>
+                            ${property.title}
 
-                    <p class="text-xs text-yellow-600 font-semibold uppercase">
+                        </h2>
 
-                        ${property.category}
+                        <p class="text-gray-500 mt-2">
 
-                    </p>
+                            📍${property.city}
 
-                    <h2 class="text-2xl font-bold mt-2">
+                        </p>
+                    </div>
 
-                        ${property.title}
+                    <div>
+                        <p class="w-max border rounded-md py-0.5 border-orange-200 px-3 text-xs text-yellow-600 font-semibold uppercase">
 
-                    </h2>
+                            ${property.category}
 
-                    <p class="text-gray-500 mt-2">
-
-                        📍${property.city}
-
-                    </p>
-
-                </div>
+                        </p>
+                    </div>
 
             </div>
 

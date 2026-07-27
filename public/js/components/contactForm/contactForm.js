@@ -134,13 +134,7 @@ export function initContactForm(containerId = "contact-form") {
                     Schedule a Free Consultation
 
                 </h3>
-
-                <p class="mt-4 text-slate-500">
-
-                    Fill in your details and our property expert will contact you shortly.
-
-                </p>
-
+                
                 <form class="mt-10 space-y-6">
 
                     <input

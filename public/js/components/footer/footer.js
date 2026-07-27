@@ -108,8 +108,8 @@ export function initFooter(containerId = "footer") {
 
                         <i class="fa-solid fa-phone text-amber-500 mt-1"></i>
 
-                        <a href="tel:+919999999999" class="hover:text-amber-500">
-                            +91 99999 99999
+                        <a href="tel:+919898981498" class="hover:text-amber-500">
+                            +91-9898981498
                         </a>
 
                     </div>
