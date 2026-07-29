@@ -513,10 +513,9 @@ export const properties = [
     featured: true,
     rating: 4.9,
     images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+      "img/brochure_images/godrej_ivara_1.webp",
+      "img/brochure_images/godrej_ivara_2.webp",
+      "img/brochure_images/godrej_ivara_3.webp",
     ]
   },
   {
@@ -584,10 +583,9 @@ export const properties = [
     featured: true,
     rating: 4.8,
     images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+      "img/brochure_images/conscient_elaira_1.webp",
+      "img/brochure_images/conscient_elaira_2.webp",
+      "img/brochure_images/conscient_elaira_3.webp",
     ]
   },
   {
@@ -608,10 +606,9 @@ export const properties = [
     featured: true,
     rating: 4.8,
     images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+      "img/brochure_images/birla_1.webp",
+      "img/brochure_images/birla_2.webp",
+      "img/brochure_images/birla_3.webp",
     ]
   },
   {
@@ -680,10 +677,9 @@ export const properties = [
     featured: true,
     rating: 4.9,
     images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+      "img/brochure_images/bptp_1.webp",
+      "img/brochure_images/bptp_2.webp",
+      "img/brochure_images/bptp_3.webp",
     ]
   },
   {
@@ -732,6 +728,52 @@ export const properties = [
       "https://images.unsplash.com/photo-1613977257363-707ba9348227",
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+    ]
+  },
+  {
+    id: 32,
+    title: "Three Sixty North",
+    builder: "Oberoi Realty",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3, 4 & 5 BHK",
+    city: "Gurugram",
+    location: "Sector 58, Golf Course Extension Road",
+    price: 335,
+    priceLabel: "₹3.35 Cr Onwards*",
+    carpetArea: "Coming Soon",
+    status: "Pre-Launch",
+    possession: "Coming Soon",
+    rera: "Applied",
+    featured: true,
+    rating: 4.9,
+    images: [
+      "/img/brochure_images/three_sixty_north_1.webp",
+      "/img/brochure_images/three_sixty_north_2.webp",
+      "/img/brochure_images/three_sixty_north_3.webp",
+    ]
+  },
+  {
+    id: 33,
+    title: "Code Name APEX 63A",
+    builder: "Coming Soon",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3 & 4 BHK",
+    city: "Gurugram",
+    location: "Sector 63A, Golf Course Extension Road",
+    price: 0,
+    priceLabel: "Price On Request",
+    carpetArea: "2277 - 2966 Sq.ft",
+    status: "Pre-Launch",
+    possession: "Coming Soon",
+    rera: "Applied",
+    featured: true,
+    rating: 4.9,
+    images: [
+      "/img/brochure_images/apex_63a_1.webp",
+      "/img/brochure_images/apex_63a_2.webp",
+      "/img/brochure_images/apex_63a_3.webp",
     ]
   },
 ];
