@@ -629,10 +629,8 @@ export const properties = [
     featured: false,
     rating: 4.8,
     images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+      "img/brochure_images/emaar_1.webp",
+      "img/brochure_images/emaar_2.webp",
     ]
   },
   {
@@ -700,10 +698,8 @@ export const properties = [
     featured: false,
     rating: 4.7,
     images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+      "img/brochure_images/m3m_1.webp",
+      "img/brochure_images/m3m_2.webp",
     ]
   },
   {
@@ -724,10 +720,9 @@ export const properties = [
     featured: true,
     rating: 5.0,
     images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+      "img/brochure_images/sobha_sector_63_1.webp",
+      "img/brochure_images/sobha_sector_63_2.webp",
+      "img/brochure_images/sobha_sector_63_3.webp",
     ]
   },
   {
@@ -748,9 +743,9 @@ export const properties = [
     featured: true,
     rating: 4.9,
     images: [
-      "/img/brochure_images/three_sixty_north_1.webp",
-      "/img/brochure_images/three_sixty_north_2.webp",
-      "/img/brochure_images/three_sixty_north_3.webp",
+      "img/brochure_images/oberoi_1.webp",
+      "img/brochure_images/oberoi_2.webp",
+      "img/brochure_images/oberoi_3.webp",
     ]
   },
   {

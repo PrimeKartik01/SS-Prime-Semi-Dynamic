@@ -11,13 +11,9 @@ export function initHeroCarousel({
     container.innerHTML = `
 
         <section
-            class="relative overflow-hidden"
-            style="height: 65vh; min-height: 550px;"
+            class="relative overflow-hidden h-[550px] md:h-[100vh]"
+           
         >
-
-            <!-- Floating Decorative Shapes -->
-            <div class="absolute top-20 right-10 w-72 h-72 rounded-full bg-amber-500/10 blur-3xl float-pulse pointer-events-none z-10"></div>
-            <div class="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl float-pulse-delay pointer-events-none z-10"></div>
 
             <div class="swiper heroSwiper h-full">
 
@@ -32,31 +28,6 @@ export function initHeroCarousel({
                                 alt="${slide.title}"
                                 class="absolute inset-0 w-full h-full object-cover"
                             >
-
-                            <!-- Premium Gradient Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
-
-                            <div class="absolute inset-0 flex items-center">
-
-                                <div class="max-w-7xl mx-auto w-full px-6 text-center">
-
-                                    <!-- Subtitle Pill -->
-                                    <div class="hero-text-animate">
-                                        <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium tracking-wide">
-                                            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                                            ${slide.subtitle}
-                                        </span>
-                                    </div>
-
-                                    <h1
-                                        class="text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mt-6 hero-text-animate-delay"
-                                    >
-                                        ${slide.title}
-                                    </h1>
-
-                                </div>
-
-                            </div>
 
                         </div>
 
