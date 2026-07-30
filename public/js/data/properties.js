@@ -1,6 +1,233 @@
 export const properties = [
   {
     id: 1,
+    title: "Smart World Sky Arc",
+    builder: "Smart World Developers",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3, 3.5 & 4.5 BHK",
+    city: "Gurgaon",
+    location: "Sector 69, Golf Course Extension Road",
+    price: 499,
+    priceLabel: "₹4.99 Cr Onwards",
+    carpetArea: "2355 - 3270 Sq.ft",
+    status: "New Launch",
+    possession: "",
+    rera: "",
+    featured: true,
+    rating: 4.9,
+    images: [
+      "img/brochure_images/smartworld_skyarc_1.webp",
+      "img/brochure_images/smartworld_skyarc_2.webp",
+    ]
+  },
+  {
+    id: 2,
+    title: "Conscient Elaira",
+    builder: "Conscient",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3 & 3.5 BHK",
+    city: "Gurgaon",
+    location: "Sector 80",
+    price: 317,
+    priceLabel: "₹3.17 Cr Onwards",
+    carpetArea: "2045 - 2785 Sq.ft",
+    status: "New Launch",
+    possession: "",
+    rera: "",
+    featured: true,
+    rating: 4.8,
+    images: [
+      "img/brochure_images/conscient_elaira_1.webp",
+      "img/brochure_images/conscient_elaira_2.webp",
+      "img/brochure_images/conscient_elaira_3.webp",
+    ]
+  },
+  {
+    id: 3,
+    title: "Birla Pravaah",
+    builder: "Birla Estates",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3 & 3.5 BHK",
+    city: "Gurgaon",
+    location: "Sector 71, SPR Road",
+    price: 365,
+    priceLabel: "₹3.65 Cr Onwards",
+    carpetArea: "2000 - 2450 Sq.ft",
+    status: "Upcoming",
+    possession: "",
+    rera: "",
+    featured: true,
+    rating: 4.8,
+    images: [
+      "img/brochure_images/birla_1.webp",
+      "img/brochure_images/birla_2.webp",
+      "img/brochure_images/birla_3.webp",
+    ]
+  },
+  {
+    id: 4,
+    title: "EMAAR 86",
+    builder: "EMAAR India",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3 & 4 BHK",
+    city: "Gurgaon",
+    location: "Sector 86",
+    price: 280,
+    priceLabel: "₹2.80 Cr Onwards",
+    carpetArea: "1715 - 2800 Sq.ft",
+    status: "New Launch",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 4.8,
+    images: [
+      "img/brochure_images/emaar_1.webp",
+      "img/brochure_images/emaar_2.webp",
+    ]
+  },
+  {
+    id: 5,
+    title: "Suncity Sector 78",
+    builder: "Suncity",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3 & 4 BHK",
+    city: "Gurgaon",
+    location: "Sector 78",
+    price: 376,
+    priceLabel: "₹3.76 Cr Onwards",
+    carpetArea: "2350 - 3150 Sq.ft",
+    status: "New Launch",
+    possession: "5 Years",
+    rera: "",
+    featured: true,
+    rating: 4.8,
+    images: [
+      "img/brochure_images/suncity_monarch_1.webp",
+      "img/brochure_images/suncity_monarch_2.webp",
+      "img/brochure_images/suncity_monarch_3.webp",
+    ]
+  },
+  {
+    id: 6,
+    title: "BPTP Gaia Residences",
+    builder: "BPTP",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3 BHK",
+    city: "Gurgaon",
+    location: "Sector 102, Dwarka Expressway",
+    price: 385,
+    priceLabel: "₹3.85 Cr Onwards",
+    carpetArea: "2100 Sq.ft",
+    status: "New Launch",
+    possession: "",
+    rera: "",
+    featured: true,
+    rating: 4.9,
+    images: [
+      "img/brochure_images/bptp_1.webp",
+      "img/brochure_images/bptp_2.webp",
+      "img/brochure_images/bptp_3.webp",
+    ]
+  },
+  {
+    id: 7,
+    title: "M3M Manesar",
+    builder: "M3M India",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "2 & 3 BHK",
+    city: "Gurgaon",
+    location: "Manesar",
+    price: 150,
+    priceLabel: "₹1.50 Cr Onwards",
+    carpetArea: "1200 - 2200 Sq.ft",
+    status: "Pre Launch",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 4.7,
+    images: [
+      "img/brochure_images/m3m_1.webp",
+      "img/brochure_images/m3m_2.webp",
+    ]
+  },
+  {
+    id: 8,
+    title: "Sobha Sector 63A",
+    builder: "Sobha Limited",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3, 4 & 4.5 BHK",
+    city: "Gurgaon",
+    location: "Sector 63A, Golf Course Extension Road",
+    price: 625,
+    priceLabel: "₹6.25 Cr Onwards",
+    carpetArea: "2300 - 3000 Sq.ft",
+    status: "Upcoming",
+    possession: "",
+    rera: "",
+    featured: true,
+    rating: 5.0,
+    images: [
+      "img/brochure_images/sobha_sector_63_1.webp",
+      "img/brochure_images/sobha_sector_63_2.webp",
+      "img/brochure_images/sobha_sector_63_3.webp",
+    ]
+  },
+  {
+    id: 9,
+    title: "Three Sixty North",
+    builder: "Oberoi Realty",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3, 4 & 5 BHK",
+    city: "Gurugram",
+    location: "Sector 58, Golf Course Extension Road",
+    price: 335,
+    priceLabel: "₹3.35 Cr Onwards*",
+    carpetArea: "Coming Soon",
+    status: "Pre-Launch",
+    possession: "Coming Soon",
+    rera: "Applied",
+    featured: true,
+    rating: 4.9,
+    images: [
+      "img/brochure_images/oberoi_1.webp",
+      "img/brochure_images/oberoi_2.webp",
+      "img/brochure_images/oberoi_3.webp",
+    ]
+  },
+  {
+    id: 10,
+    title: "Code Name APEX 63A",
+    builder: "Coming Soon",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3 & 4 BHK",
+    city: "Gurugram",
+    location: "Sector 63A, Golf Course Extension Road",
+    price: 0,
+    priceLabel: "Price On Request",
+    carpetArea: "2277 - 2966 Sq.ft",
+    status: "Pre-Launch",
+    possession: "Coming Soon",
+    rera: "Applied",
+    featured: true,
+    rating: 4.9,
+    images: [
+      "/img/brochure_images/apex_63a_1.webp",
+      "/img/brochure_images/apex_63a_2.webp",
+      "/img/brochure_images/apex_63a_3.webp",
+    ]
+  },
+  {
+    id: 11,
     title: "Ganga Legend County",
     builder: "",
     category: "Residential",
@@ -24,7 +251,7 @@ export const properties = [
     ]
   },
   {
-    id: 2,
+    id: 12,
     title: "Sun Valley",
     builder: "Bramha Corp",
     category: "Residential",
@@ -48,7 +275,7 @@ export const properties = [
     ]
   },
   {
-    id: 3,
+    id: 13,
     title: "VTP Cielo",
     builder: "",
     category: "Residential",
@@ -72,7 +299,7 @@ export const properties = [
     ]
   },
   {
-    id: 4,
+    id: 14,
     title: "Kasturi Hillside",
     builder: "Kasturi",
     category: "Residential",
@@ -96,7 +323,7 @@ export const properties = [
     ]
   },
   {
-    id: 5,
+    id: 15,
     title: "VJ Laviento",
     builder: "",
     category: "Residential",
@@ -120,7 +347,7 @@ export const properties = [
     ]
   },
   {
-    id: 6,
+    id: 16,
     title: "Bela Casa",
     builder: "",
     category: "Residential",
@@ -144,7 +371,7 @@ export const properties = [
     ]
   },
   {
-    id: 7,
+    id: 17,
     title: "Twilight Majestique",
     builder: "",
     category: "Residential",
@@ -166,7 +393,7 @@ export const properties = [
     ]
   },
   {
-    id: 8,
+    id: 18,
     title: "VJ Palladio",
     builder: "",
     category: "Residential",
@@ -190,7 +417,7 @@ export const properties = [
     ]
   },
   {
-    id: 9,
+    id: 19,
     title: "Bespoke Balewadi",
     builder: "",
     category: "Residential",
@@ -214,7 +441,7 @@ export const properties = [
     ]
   },
   {
-    id: 10,
+    id: 20,
     title: "Mantra Meridian",
     builder: "",
     category: "Residential",
@@ -238,7 +465,7 @@ export const properties = [
     ]
   },
   {
-    id: 11,
+    id: 21,
     title: "Codename Velvet",
     builder: "Dream Works Realtors",
     category: "Residential",
@@ -261,7 +488,7 @@ export const properties = [
     ]
   },
   {
-    id: 12,
+    id: 22,
     title: "Kasturi Riverside",
     builder: "Kasturi",
     category: "Residential",
@@ -285,7 +512,7 @@ export const properties = [
     ]
   },
   {
-    id: 13,
+    id: 23,
     title: "The Balmoral Tower",
     builder: "Kasturi",
     category: "Residential",
@@ -308,7 +535,7 @@ export const properties = [
     ]
   },
   {
-    id: 14,
+    id: 24,
     title: "Malpani M-Soul",
     builder: "Malpani",
     category: "Residential",
@@ -331,7 +558,7 @@ export const properties = [
     ]
   },
   {
-    id: 15,
+    id: 25,
     title: "Saheel Luxton",
     builder: "Saheel",
     category: "Residential",
@@ -355,7 +582,7 @@ export const properties = [
     ]
   },
   {
-    id: 16,
+    id: 26,
     title: "Lodha Massimo",
     builder: "Lodha",
     category: "Residential",
@@ -378,7 +605,7 @@ export const properties = [
     ]
   },
   {
-    id: 17,
+    id: 27,
     title: "Pride World City - Miami",
     builder: "Pride World City",
     category: "Residential",
@@ -401,7 +628,7 @@ export const properties = [
     ]
   },
   {
-    id: 18,
+    id: 28,
     title: "Pride World City - Wellington",
     builder: "Pride World City",
     category: "Residential",
@@ -425,7 +652,7 @@ export const properties = [
     ]
   },
   {
-    id: 19,
+    id: 29,
     title: "Pride World City - Montreal",
     builder: "Pride World City",
     category: "Residential",
@@ -449,7 +676,7 @@ export const properties = [
     ]
   },
   {
-    id: 20,
+    id: 30,
     title: "Pride World City - Boston",
     builder: "Pride World City",
     category: "Residential",
@@ -472,7 +699,7 @@ export const properties = [
     ]
   },
   {
-    id: 21,
+    id: 31,
     title: "Mantra Melange",
     builder: "Mantra",
     category: "Residential",
@@ -496,7 +723,7 @@ export const properties = [
     ]
   },
   {
-    id: 22,
+    id: 32,
     title: "Godrej Ivara",
     builder: "Godrej Properties",
     category: "Residential",
@@ -519,7 +746,7 @@ export const properties = [
     ]
   },
   {
-    id: 23,
+    id: 33,
     title: "Park Pebbles",
     builder: "",
     category: "Residential",
@@ -540,235 +767,5 @@ export const properties = [
       "/img/brochure_images/park_pebbles_2.webp",
       "/img/brochure_images/park_pebbles_3.webp",
     ]
-  },
-  {
-    id: 24,
-    title: "Smart World Sky Arc",
-    builder: "Smart World Developers",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3, 3.5 & 4.5 BHK",
-    city: "Gurgaon",
-    location: "Sector 69, Golf Course Extension Road",
-    price: 499,
-    priceLabel: "₹4.99 Cr Onwards",
-    carpetArea: "2355 - 3270 Sq.ft",
-    status: "New Launch",
-    possession: "",
-    rera: "",
-    featured: true,
-    rating: 4.9,
-    images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
-    ]
-  },
-  {
-    id: 25,
-    title: "Conscient Elaira",
-    builder: "Conscient",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3 & 3.5 BHK",
-    city: "Gurgaon",
-    location: "Sector 80",
-    price: 317,
-    priceLabel: "₹3.17 Cr Onwards",
-    carpetArea: "2045 - 2785 Sq.ft",
-    status: "New Launch",
-    possession: "",
-    rera: "",
-    featured: true,
-    rating: 4.8,
-    images: [
-      "img/brochure_images/conscient_elaira_1.webp",
-      "img/brochure_images/conscient_elaira_2.webp",
-      "img/brochure_images/conscient_elaira_3.webp",
-    ]
-  },
-  {
-    id: 26,
-    title: "Birla Pravaah",
-    builder: "Birla Estates",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3 & 3.5 BHK",
-    city: "Gurgaon",
-    location: "Sector 71, SPR Road",
-    price: 365,
-    priceLabel: "₹3.65 Cr Onwards",
-    carpetArea: "2000 - 2450 Sq.ft",
-    status: "Upcoming",
-    possession: "",
-    rera: "",
-    featured: true,
-    rating: 4.8,
-    images: [
-      "img/brochure_images/birla_1.webp",
-      "img/brochure_images/birla_2.webp",
-      "img/brochure_images/birla_3.webp",
-    ]
-  },
-  {
-    id: 27,
-    title: "EMAAR 86",
-    builder: "EMAAR India",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3 & 4 BHK",
-    city: "Gurgaon",
-    location: "Sector 86",
-    price: 280,
-    priceLabel: "₹2.80 Cr Onwards",
-    carpetArea: "1715 - 2800 Sq.ft",
-    status: "New Launch",
-    possession: "",
-    rera: "",
-    featured: false,
-    rating: 4.8,
-    images: [
-      "img/brochure_images/emaar_1.webp",
-      "img/brochure_images/emaar_2.webp",
-    ]
-  },
-  {
-    id: 28,
-    title: "Suncity Sector 78",
-    builder: "Suncity",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3 & 4 BHK",
-    city: "Gurgaon",
-    location: "Sector 78",
-    price: 376,
-    priceLabel: "₹3.76 Cr Onwards",
-    carpetArea: "2350 - 3150 Sq.ft",
-    status: "New Launch",
-    possession: "5 Years",
-    rera: "",
-    featured: true,
-    rating: 4.8,
-    images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
-    ]
-  },
-  {
-    id: 29,
-    title: "BPTP Gaia Residences",
-    builder: "BPTP",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3 BHK",
-    city: "Gurgaon",
-    location: "Sector 102, Dwarka Expressway",
-    price: 385,
-    priceLabel: "₹3.85 Cr Onwards",
-    carpetArea: "2100 Sq.ft",
-    status: "New Launch",
-    possession: "",
-    rera: "",
-    featured: true,
-    rating: 4.9,
-    images: [
-      "img/brochure_images/bptp_1.webp",
-      "img/brochure_images/bptp_2.webp",
-      "img/brochure_images/bptp_3.webp",
-    ]
-  },
-  {
-    id: 30,
-    title: "M3M Manesar",
-    builder: "M3M India",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "2 & 3 BHK",
-    city: "Gurgaon",
-    location: "Manesar",
-    price: 150,
-    priceLabel: "₹1.50 Cr Onwards",
-    carpetArea: "1200 - 2200 Sq.ft",
-    status: "Pre Launch",
-    possession: "",
-    rera: "",
-    featured: false,
-    rating: 4.7,
-    images: [
-      "img/brochure_images/m3m_1.webp",
-      "img/brochure_images/m3m_2.webp",
-    ]
-  },
-  {
-    id: 31,
-    title: "Sobha Sector 63A",
-    builder: "Sobha Limited",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3, 4 & 4.5 BHK",
-    city: "Gurgaon",
-    location: "Sector 63A, Golf Course Extension Road",
-    price: 625,
-    priceLabel: "₹6.25 Cr Onwards",
-    carpetArea: "2300 - 3000 Sq.ft",
-    status: "Upcoming",
-    possession: "",
-    rera: "",
-    featured: true,
-    rating: 5.0,
-    images: [
-      "img/brochure_images/sobha_sector_63_1.webp",
-      "img/brochure_images/sobha_sector_63_2.webp",
-      "img/brochure_images/sobha_sector_63_3.webp",
-    ]
-  },
-  {
-    id: 32,
-    title: "Three Sixty North",
-    builder: "Oberoi Realty",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3, 4 & 5 BHK",
-    city: "Gurugram",
-    location: "Sector 58, Golf Course Extension Road",
-    price: 335,
-    priceLabel: "₹3.35 Cr Onwards*",
-    carpetArea: "Coming Soon",
-    status: "Pre-Launch",
-    possession: "Coming Soon",
-    rera: "Applied",
-    featured: true,
-    rating: 4.9,
-    images: [
-      "img/brochure_images/oberoi_1.webp",
-      "img/brochure_images/oberoi_2.webp",
-      "img/brochure_images/oberoi_3.webp",
-    ]
-  },
-  {
-    id: 33,
-    title: "Code Name APEX 63A",
-    builder: "Coming Soon",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3 & 4 BHK",
-    city: "Gurugram",
-    location: "Sector 63A, Golf Course Extension Road",
-    price: 0,
-    priceLabel: "Price On Request",
-    carpetArea: "2277 - 2966 Sq.ft",
-    status: "Pre-Launch",
-    possession: "Coming Soon",
-    rera: "Applied",
-    featured: true,
-    rating: 4.9,
-    images: [
-      "/img/brochure_images/apex_63a_1.webp",
-      "/img/brochure_images/apex_63a_2.webp",
-      "/img/brochure_images/apex_63a_3.webp",
-    ]
-  },
+  }
 ];

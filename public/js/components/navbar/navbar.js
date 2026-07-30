@@ -12,7 +12,7 @@ export function initNavbar({
     
     <nav
         id="main-navbar"
-        class="fixed top-0 pt-2 md:pt-4 max-w-[1700px] left-1/2 -translate-x-1/2 w-full z-50 transition-all duration-500"
+        class="fixed top-0 pt-2 md:pt-4 md:pb-2 max-w-[1700px] left-1/2 -translate-x-1/2 w-full z-50 transition-all duration-500"
     >
 
         <div

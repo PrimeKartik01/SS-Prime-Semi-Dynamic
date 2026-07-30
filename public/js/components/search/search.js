@@ -26,7 +26,7 @@ function renderSearch() {
         <!-- ====== MOBILE: Clean pill search bar (visible only on mobile) ====== -->
         <div class="flex md:hidden items-center bg-white rounded-2xl shadow-2xl overflow-hidden">
 
-            <div class="pl-4 flex-shrink-0 text-gray-400">
+            <div class="pl-2 flex-shrink-0 text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/>
                 </svg>
@@ -41,7 +41,7 @@ function renderSearch() {
 
             <button
                 id="searchBtnMobile"
-                class="flex-shrink-0 h-14 px-5 bg-yellow-500 text-white font-bold flex items-center gap-2 text-sm active:bg-yellow-600"
+                class="flex-shrink-0 h-14 px-2 bg-yellow-500 text-white font-bold flex items-center gap-2 text-sm active:bg-yellow-600"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/>

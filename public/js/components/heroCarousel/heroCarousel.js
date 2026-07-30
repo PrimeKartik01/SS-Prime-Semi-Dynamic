@@ -19,19 +19,25 @@ export function initHeroCarousel({
 
                 <div class="swiper-wrapper">
 
-                    ${slides.map(slide => `
-
+                    ${slides.map(slide => {
+                        const mobileImg = slide.mobile_image || slide.mobileImage || slide.image;
+                        return `
                         <div class="swiper-slide relative">
-
+                            <!-- Mobile Image -->
+                            <img
+                                src="${mobileImg}"
+                                alt="${slide.title || 'Banner'}"
+                                class="block md:hidden absolute inset-0 w-full h-full object-cover"
+                            >
+                            <!-- Desktop Image -->
                             <img
                                 src="${slide.image}"
-                                alt="${slide.title}"
-                                class="absolute inset-0 w-full h-full object-cover"
+                                alt="${slide.title || 'Banner'}"
+                                class="hidden md:block absolute inset-0 w-full h-full object-cover"
                             >
-
                         </div>
-
-                    `).join("")}
+                    `;
+                    }).join("")}
 
                 </div>
 
