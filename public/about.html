@@ -35,14 +35,18 @@
 
         <!-- ================= HERO SECTION ================= -->
         <section
-            class="relative min-h-[75vh] md:min-h-[82vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+            class="relative min-h-[75vh] md:min-h-[82vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-500 to-slate-200">
 
             <!-- Background Decorative Image & Overlay -->
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
-                class="absolute inset-0 w-full h-full object-cover opacity-25 scale-105 transition duration-1000"
+            <img src="img/about/about_us_1.webp"
+                class="absolute inset-0 w-full h-full object-cover scale-105 transition duration-1000 hidden md:block"
                 alt="Luxury Modern Architecture">
 
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+            <img src="img/about/about_us_mobile_1.webp"
+                class="absolute inset-0 w-full h-full object-cover scale-105 transition duration-1000 md:block"
+                alt="Luxury Modern Architecture">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-400/20 to-transparent"></div>
 
             <!-- Ambient Glowing Orbs -->
             <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-amber-500/15 blur-3xl float-pulse"></div>
@@ -52,13 +56,6 @@
 
             <div class="relative max-w-[1700px] mx-auto px-6 lg:px-12 w-full pt-32 pb-20 text-center md:text-left">
                 <div class="max-w-4xl">
-                    <!-- Pill Tag -->
-                    <span
-                        class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 backdrop-blur-md text-amber-400 text-xs md:text-sm font-semibold tracking-widest uppercase hero-text-animate">
-                        <i class="fa-solid fa-building-circle-check text-amber-400"></i>
-                        Redefining Real Estate Excellence
-                    </span>
-
                     <h1
                         class="mt-6 text-white text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1]  hero-text-animate-delay">
                         Building Trust, Delivering
@@ -69,8 +66,8 @@
                     </h1>
 
                     <p
-                        class="mt-6 text-slate-300 text-base md:text-xl leading-relaxed max-w-3xl font-light hero-text-animate-delay-2">
-                        At <strong class="text-white font-semibold">SS Prime Infra</strong>, we empower clients with
+                        class="mt-6 text-slate-300 text-base md:text-xl leading-relaxed max-w-3xl font-light hero-text-animate-delay-2 text-white">
+                        At <strong class=" font-semibold">SS Prime Infra</strong>, we empower clients with
                         verified real estate opportunities, complete legal clarity, and developer-direct pricing across
                         Gurgaon and Pune.
                     </p>
@@ -96,32 +93,28 @@
             <div class="bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div class="p-2">
-                        <div class="text-xl md:text-5xl font-black text-amber-400 ">₹500Cr+</div>
+                        <div class="text-xl md:text-5xl font-semibold text-amber-400 ">₹500 Cr+</div>
                         <div class="mt-2 text-xs md:text-sm text-slate-400 uppercase tracking-widest font-medium">
                             Property Delivered</div>
                     </div>
                     <div class="p-2">
-                        <div class="text-xl md:text-5xl font-black text-amber-400 ">1,000+</div>
+                        <div class="text-xl md:text-5xl font-semibold text-amber-400 ">1000+</div>
                         <div class="mt-2 text-xs md:text-sm text-slate-400 uppercase tracking-widest font-medium">Happy
                             Families</div>
                     </div>
                     <div class="p-2">
-                        <div class="text-xl md:text-5xl font-black text-amber-400 ">50+</div>
+                        <div class="text-xl md:text-5xl font-semibold text-amber-400 ">50+</div>
                         <div class="mt-2 text-xs md:text-sm text-slate-400 uppercase tracking-widest font-medium">Tier-1
                             Developers</div>
                     </div>
                     <div class="p-2">
-                        <div class="text-xl md:text-5xl font-black text-amber-400 ">2 Hubs</div>
+                        <div class="text-xl md:text-5xl font-semibold text-amber-400 ">2 Hubs</div>
                         <div class="mt-2 text-xs md:text-sm text-slate-400 uppercase tracking-widest font-medium">
                             Gurgaon & Pune</div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- ================= DEVELOPER PARTNERS SLIDER ================= -->
-        <div id="company-slider"></div>
-
 
         <!-- ================= ABOUT COMPANY STORY ================= -->
         <section class="py-20 md:py-28 bg-slate-50">
@@ -226,6 +219,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- ================= DEVELOPER PARTNERS SLIDER ================= -->
+        <div id="company-slider"></div>
 
         <!-- ================= WHY CHOOSE US ================= -->
         <section class="py-20 bg-white">
