@@ -62,9 +62,9 @@ export function renderProperties(properties, page = 1) {
 
                 ${Array.from({ length: totalPages }, (_, index) => {
 
-                    const pageNumber = index + 1;
+        const pageNumber = index + 1;
 
-                    return `
+        return `
 
                         <button
                             data-page="${pageNumber}"
@@ -75,7 +75,7 @@ export function renderProperties(properties, page = 1) {
 
                     `;
 
-                }).join("")}
+    }).join("")}
 
                 <button
                     data-page="${currentPage + 1}"

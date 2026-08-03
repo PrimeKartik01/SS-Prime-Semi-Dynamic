@@ -24,8 +24,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve Frontend
-app.use(express.static(path.join(__dirname, "public")));
+// Serve Frontend with Browser Caching & ETag optimization for ultra-fast load times
+app.use(express.static(path.join(__dirname, "public"), {
+    maxAge: "7d",
+    etag: true
+}));
 
 // Routes
 app.use("/api/enquiries", enquiryRoutes);

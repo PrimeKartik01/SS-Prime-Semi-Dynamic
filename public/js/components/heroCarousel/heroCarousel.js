@@ -20,8 +20,8 @@ export function initHeroCarousel({
                 <div class="swiper-wrapper">
 
                     ${slides.map(slide => {
-                        const mobileImg = slide.mobile_image || slide.mobileImage || slide.image;
-                        return `
+        const mobileImg = slide.mobile_image || slide.mobileImage || slide.image;
+        return `
                         <div class="swiper-slide relative">
                             <!-- Mobile Image -->
                             <img
@@ -37,7 +37,7 @@ export function initHeroCarousel({
                             >
                         </div>
                     `;
-                    }).join("")}
+    }).join("")}
 
                 </div>
 
