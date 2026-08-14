@@ -1,6 +1,8 @@
 import { initNavbar } from "../navbar/navbar.js";
 import { navbarData } from "../../data/navbarData.js";
 import { properties } from "../../data/properties.js";
+import { initEMICalculator, formatCurrency } from "../emiCalculator/emiCalculator.js";
+import { initEnquiryPopup, openEnquiryPopup } from "../enquiryPopup/enquiryPopup.js";
 
 function getQueryParam(name) {
     const params = new URLSearchParams(window.location.search);
@@ -9,7 +11,7 @@ function getQueryParam(name) {
 
 function renderPropertyDetails(property) {
     return `
-        <div class="bg-white shadow-xl overflow-hidden">
+        <div class="bg-white shadow-xl overflow-hidden rounded-3xl">
             <div class="swiper propertyDetailsSwiper">
                 <div class="swiper-wrapper">
                     ${property.images.map(image => `
@@ -45,11 +47,11 @@ function renderPropertyDetails(property) {
                     </div>
                     <div class="rounded-3xl border border-gray-200 p-6">
                         <p class="text-sm text-gray-400">Possession</p>
-                        <p class="mt-3 text-xl font-semibold">${property.possession}</p>
+                        <p class="mt-3 text-xl font-semibold">${property.possession || "On Request"}</p>
                     </div>
                     <div class="rounded-3xl border border-gray-200 p-6">
                         <p class="text-sm text-gray-400">RERA No.</p>
-                        <p class="mt-3 text-xl font-semibold">${property.rera}</p>
+                        <p class="mt-3 text-xl font-semibold">${property.rera || "Applied / Available"}</p>
                     </div>
                 </div>
 
@@ -62,7 +64,7 @@ function renderPropertyDetails(property) {
                         <div class="grid gap-4 sm:grid-cols-2">
                             <div>
                                 <p class="text-sm text-gray-400">Status</p>
-                                <p class="mt-2 font-semibold">${property.status}</p>
+                                <p class="mt-2 font-semibold">${property.status || "Available"}</p>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-400">Type</p>
@@ -73,20 +75,31 @@ function renderPropertyDetails(property) {
                     <div class="rounded-3xl border border-gray-200 p-8 space-y-4">
                         <h2 class="text-2xl font-semibold">Key Highlights</h2>
                         <ul class="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Premium location in ${property.location}, ${property.city}</li>
-                            <li>Trusted builder: ${property.builder}</li>
+                            <li>Premium location in ${property.location || property.city}, ${property.city}</li>
+                            <li>Trusted builder: ${property.builder || "SS Prime Partner"}</li>
                             <li>Flexible BHK options: ${property.bhk}</li>
-                            <li>Ready by ${property.possession}</li>
+                            <li>Possession: ${property.possession || "On Schedule"}</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <!-- Integrated EMI Calculator Section -->
+                <div class="mt-12 border-t border-gray-200 pt-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900">Home Loan & Monthly EMI</h2>
+                            <p class="text-gray-500 text-sm mt-1">Estimate monthly instalments for ${property.title}</p>
+                        </div>
+                    </div>
+                    <div id="property-emi-calculator"></div>
+                </div>
+
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pt-6 border-t border-gray-200">
                     <a href="./index.html" class="inline-flex items-center justify-center rounded-3xl border border-gray-300 px-6 py-3 text-gray-700 hover:bg-gray-100">
                         Back to listings
                     </a>
-                    <button class="enquireBtn inline-flex items-center justify-center rounded-3xl bg-yellow-500 px-6 py-3 text-white hover:bg-yellow-600 cursor-pointer" data-id="${property.id}">
-                        Contact Sales
+                    <button class="enquireBtn inline-flex items-center justify-center rounded-3xl bg-yellow-500 px-6 py-3 text-white hover:bg-yellow-600 cursor-pointer font-semibold shadow-md" data-id="${property.id}">
+                        Contact Sales Team
                     </button>
                 </div>
             </div>
@@ -110,6 +123,8 @@ function init() {
         data: navbarData,
     });
 
+    initEnquiryPopup();
+
     const idParam = getQueryParam("id");
     const propertyId = idParam ? Number(idParam) : null;
     const property = properties.find(item => item.id === propertyId);
@@ -132,7 +147,30 @@ function init() {
                 clickable: true,
             },
         });
+
+        // Initialize embedded EMI Calculator for this specific property
+        const rawPriceInRupees = (property.price && property.price > 0) ? Math.round(property.price * 100000) : 5000000;
+
+        initEMICalculator({
+            container: "#property-emi-calculator",
+            propertyPrice: rawPriceInRupees,
+            defaultDownPayment: 20,
+            defaultInterestRate: 8.5,
+            defaultTenure: 20,
+            onLoanAssistance: (snapshot) => {
+                openEnquiryPopup(property);
+            }
+        });
     }
+
+    document.addEventListener("click", (e) => {
+        const button = e.target.closest(".enquireBtn");
+        if (!button) return;
+        const targetProperty = properties.find(item => item.id == button.dataset.id);
+        if (targetProperty) {
+            openEnquiryPopup(targetProperty);
+        }
+    });
 }
 
 window.addEventListener("DOMContentLoaded", init);

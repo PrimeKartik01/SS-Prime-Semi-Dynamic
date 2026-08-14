@@ -1,0 +1,486 @@
+/**
+ * emiCalculator.css
+ * ------------------------------------------------------------------
+ * Scoped entirely under .emi-calc so it can be dropped into any page
+ * without colliding with existing styles. No Tailwind required.
+ * ------------------------------------------------------------------ */
+
+.emi-calc {
+  --emi-ink: #1c2333;
+  --emi-ink-soft: #495066;
+  --emi-paper: #ffffff;
+  --emi-paper-raised: #f8fafc;
+  --emi-brass: #eab308;
+  --emi-brass-light: #facc15;
+  --emi-slate: #64748b;
+  --emi-sage: #059669;
+  --emi-border: rgba(28, 35, 51, 0.1);
+  --emi-danger: #ef4444;
+  --emi-radius: 16px;
+  --emi-shadow: 0 20px 45px -25px rgba(28, 35, 51, 0.15);
+
+  --emi-font-display: "Playfair Display", Georgia, serif;
+  --emi-font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --emi-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  font-family: var(--emi-font-body);
+  color: var(--emi-ink);
+  background: var(--emi-paper);
+  border-radius: calc(var(--emi-radius) + 6px);
+  padding: 2.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.emi-calc *,
+.emi-calc *::before,
+.emi-calc *::after {
+  box-sizing: border-box;
+}
+
+/* -------------------- header -------------------- */
+
+.emi-calc__header {
+  margin-bottom: 2rem;
+  max-width: 40rem;
+}
+
+.emi-calc__eyebrow {
+  font-family: var(--emi-font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ca8a04;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.emi-calc__title {
+  font-family: var(--emi-font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+  margin: 0 0 0.4rem;
+  color: var(--emi-ink);
+}
+
+.emi-calc__subtitle {
+  font-size: 0.92rem;
+  color: var(--emi-ink-soft);
+  margin: 0;
+}
+
+/* -------------------- layout -------------------- */
+
+.emi-calc__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .emi-calc__body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* -------------------- inputs -------------------- */
+
+.emi-calc__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.emi-field__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.emi-field label,
+.emi-field__label-static {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--emi-ink);
+  letter-spacing: 0.01em;
+}
+
+.emi-field__badge {
+  font-family: var(--emi-font-mono);
+  font-size: 0.8rem;
+  color: #a16207;
+  font-weight: 600;
+  background: rgba(234, 179, 8, 0.15);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+}
+
+.emi-field__input-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--emi-paper-raised);
+  border: 1px solid var(--emi-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.emi-field__input-wrap:focus-within {
+  border-color: var(--emi-brass);
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.2);
+}
+
+.emi-field__prefix {
+  padding: 0 0.9rem;
+  color: var(--emi-slate);
+  font-family: var(--emi-font-mono);
+  font-size: 0.95rem;
+  border-right: 1px solid var(--emi-border);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.emi-field__text {
+  flex: 1;
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 0.75rem 0.9rem;
+  font-family: var(--emi-font-mono);
+  font-size: 1rem;
+  color: var(--emi-ink);
+  min-width: 0;
+}
+
+.emi-field__hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.76rem;
+  color: var(--emi-slate);
+  min-height: 1em;
+}
+
+.emi-field__error {
+  margin: 0.3rem 0 0;
+  font-size: 0.76rem;
+  color: var(--emi-danger);
+  min-height: 1em;
+}
+
+.emi-field--readout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px dashed var(--emi-sage);
+  border-radius: 12px;
+}
+
+.emi-field__value {
+  font-family: var(--emi-font-mono);
+  font-weight: 700;
+  color: #047857;
+  font-size: 1.1rem;
+}
+
+/* down-payment unit toggle */
+
+.emi-toggle {
+  display: inline-flex;
+  border: 1px solid var(--emi-border);
+  border-radius: 999px;
+  padding: 2px;
+  background: var(--emi-paper-raised);
+}
+
+.emi-toggle__btn {
+  border: 0;
+  background: transparent;
+  font-family: var(--emi-font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  color: var(--emi-slate);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.emi-toggle__btn.is-active {
+  background: var(--emi-ink);
+  color: #fff;
+}
+
+.emi-toggle__btn:focus-visible,
+.emi-cta__btn:focus-visible,
+.emi-field__text:focus-visible,
+.emi-slider:focus-visible {
+  outline: 2px solid var(--emi-brass);
+  outline-offset: 2px;
+}
+
+/* range sliders */
+
+.emi-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  outline: none;
+  cursor: pointer;
+}
+
+.emi-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #eab308;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.emi-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.emi-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #eab308;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.emi-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+/* -------------------- results card -------------------- */
+
+.emi-calc__results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.emi-result-card {
+  position: relative;
+  background: var(--emi-paper-raised);
+  border-radius: var(--emi-radius);
+  box-shadow: var(--emi-shadow);
+  padding: 2rem 1.75rem;
+  text-align: center;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.emi-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--emi-brass);
+  opacity: 0.55;
+}
+.emi-corner--tl { top: 10px; left: 10px; border-right: 0; border-bottom: 0; }
+.emi-corner--tr { top: 10px; right: 10px; border-left: 0; border-bottom: 0; }
+.emi-corner--bl { bottom: 10px; left: 10px; border-right: 0; border-top: 0; }
+.emi-corner--br { bottom: 10px; right: 10px; border-left: 0; border-top: 0; }
+
+.emi-result-card__label {
+  font-family: var(--emi-font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--emi-slate);
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.emi-result-card__value {
+  font-family: var(--emi-font-display);
+  font-size: clamp(2.1rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: #ca8a04;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.emi-result-card__per-month {
+  font-size: 0.85rem;
+  color: var(--emi-slate);
+  margin: 0.2rem 0 1.75rem;
+}
+
+/* blueprint ledger — signature element */
+
+.emi-ledger {
+  text-align: left;
+  border-top: 1px solid var(--emi-border);
+  padding-top: 1.1rem;
+  margin-bottom: 1.75rem;
+}
+
+.emi-ledger__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.45rem 0;
+  font-family: var(--emi-font-mono);
+  font-size: 0.86rem;
+}
+
+.emi-ledger__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--emi-slate);
+  flex: none;
+  transform: translateY(-1px);
+}
+.emi-ledger__dot--principal { background: var(--emi-sage); }
+.emi-ledger__dot--interest { background: var(--emi-brass); }
+
+.emi-ledger__label {
+  color: var(--emi-ink-soft);
+  white-space: nowrap;
+}
+
+.emi-ledger__leader {
+  flex: 1;
+  border-bottom: 1px dotted var(--emi-border);
+  margin-bottom: 4px;
+}
+
+.emi-ledger__value {
+  color: var(--emi-ink);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.emi-ledger__row--total {
+  border-top: 1px solid var(--emi-border);
+  margin-top: 0.3rem;
+  padding-top: 0.6rem;
+}
+.emi-ledger__row--total .emi-ledger__dot { background: var(--emi-ink); }
+.emi-ledger__row--total .emi-ledger__value { color: #ca8a04; font-weight: 700; }
+
+/* donut chart */
+
+.emi-chart {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  margin: 0 auto;
+}
+
+.emi-chart__svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.emi-chart__track {
+  fill: none;
+  stroke: var(--emi-border);
+  stroke-width: 10;
+}
+
+.emi-chart__seg {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: butt;
+  transform-origin: 60px 60px;
+  transition: stroke-dashoffset 0.3s ease, transform 0.3s ease;
+}
+
+.emi-chart__seg--principal { stroke: var(--emi-sage); }
+.emi-chart__seg--interest { stroke: var(--emi-brass); }
+
+.emi-chart__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.emi-chart__center-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--emi-slate);
+}
+
+.emi-chart__center-value {
+  font-family: var(--emi-font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--emi-ink);
+}
+
+/* -------------------- CTA -------------------- */
+
+.emi-cta {
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: var(--emi-radius);
+  padding: 1.5rem 1.75rem;
+  text-align: center;
+}
+
+.emi-cta__title {
+  font-family: var(--emi-font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: #ffffff;
+}
+
+.emi-cta__body {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0 0 1.1rem;
+  line-height: 1.5;
+}
+
+.emi-cta__btn {
+  background: linear-gradient(135deg, #eab308, #ca8a04);
+  color: #0f172a;
+  border: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 20px -5px rgba(234, 179, 8, 0.4);
+}
+
+.emi-cta__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -5px rgba(234, 179, 8, 0.6);
+}
+
+/* -------------------- reduced motion -------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .emi-chart__seg,
+  .emi-cta__btn {
+    transition: none;
+  }
+}

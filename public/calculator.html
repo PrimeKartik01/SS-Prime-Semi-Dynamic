@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calculate your home loan EMI instantly with SS Prime Infra's interactive Home Loan EMI Calculator. Plan monthly instalments, principal breakdown, and interest rate options.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="./img/logo.webp">
+
+    <!-- Preconnect for External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/components/emiCalculator/emiCalculator.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <title>Home Loan EMI Calculator — SS Prime Infra</title>
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-500/30">
+
+    <div class="page-wrapper overflow-x-hidden">
+
+        <!-- Dynamic Header / Navbar -->
+        <header id="navbar"></header>
+
+        <!-- ================= HERO SECTION ================= -->
+        <section class="relative min-h-[50vh] md:min-h-[58vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 pt-28 pb-16">
+
+            <!-- Ambient Background Glow -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-amber-500/15 blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-yellow-500/10 blur-3xl pointer-events-none"></div>
+
+            <div class="relative max-w-[1400px] mx-auto px-6 lg:px-12 w-full text-center">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-widest border border-amber-500/30">
+                    <i class="fa-solid fa-calculator"></i> Financial Advisory Tool
+                </span>
+                <h1 class="mt-6 text-white text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1]">
+                    Home Loan
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
+                        EMI Calculator
+                    </span>
+                </h1>
+                <p class="mt-6 text-slate-300 text-base md:text-xl leading-relaxed max-w-3xl mx-auto font-light">
+                    Plan your property purchase with confidence. Adjust loan parameters, down payment, and tenure to estimate your monthly commitment.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= CALCULATOR CONTAINER SECTION ================= -->
+        <section class="py-16 md:py-24 bg-slate-100/70 relative z-10 -mt-10">
+            <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+
+                <!-- EMI Calculator Embed Target -->
+                <div id="emi-calculator"></div>
+
+            </div>
+        </section>
+
+        <!-- ================= FEATURES & BENEFITS SECTION ================= -->
+        <section class="py-20 bg-white">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-amber-500 font-bold uppercase tracking-[4px] text-sm">Smart Financing</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 mt-3">
+                        Why Use Our Home Loan Calculator?
+                    </h2>
+                    <p class="mt-4 text-slate-600">
+                        Understanding your monthly obligation helps you select the right property within your comfortable budget.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:bg-slate-900 hover:text-white transition duration-500 group">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-500 mb-6">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-white transition">Instant Loan Breakdown</h3>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed group-hover:text-slate-300 transition">
+                            Get immediate clarity on principal vs interest distributions across your selected loan tenure.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:bg-slate-900 hover:text-white transition duration-500 group">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-500 mb-6">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-white transition">Customizable Inputs</h3>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed group-hover:text-slate-300 transition">
+                            Flexibly toggle down payments in percentage or rupee amounts, and test various bank interest rates.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:bg-slate-900 hover:text-white transition duration-500 group">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-500 mb-6">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-white transition">Direct Advisory Support</h3>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed group-hover:text-slate-300 transition">
+                            Connect with our property & banking advisors to compare top bank home loan rates in Gurgaon & Pune.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Dynamic Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script type="module" src="./js/components/calculator/calculatorPage.js"></script>
+</body>
+
+</html>
