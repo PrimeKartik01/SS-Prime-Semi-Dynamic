@@ -99,6 +99,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .emi-field label,
@@ -117,6 +119,7 @@
   background: rgba(234, 179, 8, 0.15);
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
+  white-space: nowrap;
 }
 
 .emi-field__input-wrap {
@@ -143,6 +146,7 @@
   align-self: stretch;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .emi-field__text {
@@ -152,9 +156,10 @@
   background: transparent;
   padding: 0.75rem 0.9rem;
   font-family: var(--emi-font-mono);
-  font-size: 1rem;
+  font-size: 1rem; /* 16px minimum prevents browser auto-zoom on mobile focus */
   color: var(--emi-ink);
   min-width: 0;
+  -webkit-appearance: none;
 }
 
 .emi-field__hint {
@@ -179,6 +184,7 @@
   background: rgba(5, 150, 105, 0.08);
   border: 1px dashed var(--emi-sage);
   border-radius: 12px;
+  gap: 0.5rem;
 }
 
 .emi-field__value {
@@ -186,6 +192,8 @@
   font-weight: 700;
   color: #047857;
   font-size: 1.1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* down-payment unit toggle */
@@ -203,11 +211,16 @@
   background: transparent;
   font-family: var(--emi-font-mono);
   font-size: 0.75rem;
-  padding: 0.25rem 0.65rem;
+  padding: 0.3rem 0.75rem;
+  min-height: 32px;
   border-radius: 999px;
   color: var(--emi-slate);
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
 }
 
 .emi-toggle__btn.is-active {
@@ -234,13 +247,17 @@
   background: #e2e8f0;
   outline: none;
   cursor: pointer;
+  padding: 8px 0;
+  margin: 4px 0;
+  box-sizing: content-box;
+  touch-action: manipulation;
 }
 
 .emi-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: #ffffff;
   border: 3px solid #eab308;
@@ -249,13 +266,14 @@
   transition: transform 0.1s ease;
 }
 
-.emi-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
+.emi-slider::-webkit-slider-thumb:hover,
+.emi-slider::-webkit-slider-thumb:active {
+  transform: scale(1.2);
 }
 
 .emi-slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: #ffffff;
   border: 3px solid #eab308;
@@ -311,11 +329,13 @@
 
 .emi-result-card__value {
   font-family: var(--emi-font-display);
-  font-size: clamp(2.1rem, 5vw, 2.75rem);
+  font-size: clamp(1.8rem, 6.5vw, 2.75rem);
   font-weight: 700;
   color: #ca8a04;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .emi-result-card__per-month {
@@ -360,6 +380,7 @@
 
 .emi-ledger__leader {
   flex: 1;
+  min-width: 8px;
   border-bottom: 1px dotted var(--emi-border);
   margin-bottom: 4px;
 }
@@ -368,6 +389,7 @@
   color: var(--emi-ink);
   font-weight: 600;
   white-space: nowrap;
+  margin-left: auto;
 }
 
 .emi-ledger__row--total {
@@ -469,11 +491,144 @@
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 0 10px 20px -5px rgba(234, 179, 8, 0.4);
+  touch-action: manipulation;
 }
 
 .emi-cta__btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 24px -5px rgba(234, 179, 8, 0.6);
+}
+
+/* -------------------- Responsive & Mobile Viewports -------------------- */
+
+@media (max-width: 860px) {
+  .emi-calc {
+    padding: 2rem 1.5rem;
+  }
+
+  .emi-calc__body {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .emi-calc {
+    padding: 1.5rem 1.15rem;
+    border-radius: var(--emi-radius);
+  }
+
+  .emi-calc__header {
+    margin-bottom: 1.5rem;
+  }
+
+  .emi-calc__title {
+    font-size: clamp(1.4rem, 6.5vw, 1.85rem);
+  }
+
+  .emi-calc__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .emi-field__input-wrap {
+    border-radius: 10px;
+  }
+
+  .emi-field__prefix {
+    padding: 0 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .emi-field__text {
+    padding: 0.7rem 0.75rem;
+    font-size: 1rem; /* 16px prevents iOS zoom on focus */
+  }
+
+  .emi-result-card {
+    padding: 1.5rem 1.15rem;
+    border-radius: 14px;
+  }
+
+  .emi-corner {
+    width: 12px;
+    height: 12px;
+  }
+
+  .emi-corner--tl { top: 8px; left: 8px; }
+  .emi-corner--tr { top: 8px; right: 8px; }
+  .emi-corner--bl { bottom: 8px; left: 8px; }
+  .emi-corner--br { bottom: 8px; right: 8px; }
+
+  .emi-result-card__value {
+    font-size: clamp(1.75rem, 7.5vw, 2.35rem);
+  }
+
+  .emi-chart {
+    width: 116px;
+    height: 116px;
+  }
+
+  .emi-chart__center-value {
+    font-size: 1.1rem;
+  }
+
+  .emi-cta {
+    padding: 1.25rem 1rem;
+  }
+
+  .emi-cta__btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 420px) {
+  .emi-calc {
+    padding: 1.25rem 0.85rem;
+    border-radius: 14px;
+  }
+
+  .emi-calc__inputs {
+    gap: 1.25rem;
+  }
+
+  .emi-field label,
+  .emi-field__label-static {
+    font-size: 0.8rem;
+  }
+
+  .emi-field__badge {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .emi-toggle__btn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .emi-ledger__row {
+    font-size: 0.8rem;
+    gap: 0.3rem;
+  }
+
+  .emi-ledger__label,
+  .emi-ledger__value {
+    font-size: 0.78rem;
+  }
+
+  .emi-cta__title {
+    font-size: 1rem;
+  }
+
+  .emi-cta__body {
+    font-size: 0.78rem;
+    margin-bottom: 0.9rem;
+  }
 }
 
 /* -------------------- reduced motion -------------------- */

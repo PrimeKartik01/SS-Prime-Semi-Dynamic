@@ -1,11 +1,24 @@
-import { propertyCard } from "../propertyCard/propertyCard.js";
+import { propertyCard, propertySkeletonCard } from "../propertyCard/propertyCard.js";
 
 const ITEMS_PER_PAGE = 6;
 let currentPage = 1;
 let currentProperties = [];
 let isPaginationBound = false;
 
+export function renderPropertySkeletons(containerId = "propertyContainer", count = 4) {
+
+    const container = document.getElementById(containerId);
+
+    if (!container) return;
+
+    const skeletons = Array.from({ length: count }, () => propertySkeletonCard()).join("");
+
+    container.innerHTML = skeletons;
+
+}
+
 export function renderProperties(properties, page = 1) {
+
 
     const container = document.getElementById("propertyContainer");
     if (!container) return;

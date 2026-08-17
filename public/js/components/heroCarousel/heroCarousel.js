@@ -11,7 +11,7 @@ export function initHeroCarousel({
     container.innerHTML = `
 
         <section
-            class="relative overflow-hidden h-[550px] md:h-[100vh]"
+            class="relative overflow-hidden h-[550px] md:h-[100vh] bg-slate-800"
            
         >
 
@@ -22,24 +22,29 @@ export function initHeroCarousel({
                     ${slides.map(slide => {
         const mobileImg = slide.mobile_image || slide.mobileImage || slide.image;
         return `
-                        <div class="swiper-slide relative">
+                        <div class="swiper-slide relative bg-slate-800 animate-pulse">
                             <!-- Mobile Image -->
                             <img
                                 src="${mobileImg}"
                                 alt="${slide.title || 'Banner'}"
-                                class="block md:hidden absolute inset-0 w-full h-full object-cover"
+                                class="block md:hidden absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"
+                                onload="this.classList.remove('opacity-0'); this.closest('.swiper-slide')?.classList.remove('animate-pulse');"
+                                onerror="this.classList.remove('opacity-0');"
                             >
                             <!-- Desktop Image -->
                             <img
                                 src="${slide.image}"
                                 alt="${slide.title || 'Banner'}"
-                                class="hidden md:block absolute inset-0 w-full h-full object-cover"
+                                class="hidden md:block absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"
+                                onload="this.classList.remove('opacity-0'); this.closest('.swiper-slide')?.classList.remove('animate-pulse');"
+                                onerror="this.classList.remove('opacity-0');"
                             >
                         </div>
                     `;
     }).join("")}
 
                 </div>
+
 
                 <div class="swiper-pagination"></div>
 
@@ -75,7 +80,15 @@ export function initHeroCarousel({
 
     `;
 
+    container.querySelectorAll('img').forEach(img => {
+        if (img.complete && img.naturalWidth > 0) {
+            img.classList.remove('opacity-0');
+            img.closest('.swiper-slide')?.classList.remove('animate-pulse');
+        }
+    });
+
     new Swiper(".heroSwiper", {
+
 
         loop: true,
 

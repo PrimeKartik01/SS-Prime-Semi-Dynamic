@@ -140,3 +140,87 @@ export function propertyCard(property) {
     `;
 
 }
+
+export function propertySkeletonCard() {
+
+    return `
+
+    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 animate-pulse">
+
+        <!-- Image Skeleton -->
+        <div class="w-full h-48 lg:h-72 bg-gray-200 relative">
+            <div class="absolute top-4 right-4 w-28 h-9 bg-gray-300 rounded-lg"></div>
+        </div>
+        
+        <div class="p-4">
+
+            <div class="flex justify-between md:flex-col-reverse md:gap-3">
+
+                <div>
+
+                    <!-- Title Skeleton -->
+                    <div class="h-6 bg-gray-200 rounded-md w-3/4 mb-2"></div>
+
+                    <!-- City Skeleton -->
+                    <div class="h-4 bg-gray-200 rounded-md w-1/2"></div>
+
+                </div>
+
+                <div>
+
+                    <!-- Category Badge Skeleton -->
+                    <div class="h-5 bg-gray-200 rounded-md w-24"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Specs Skeleton -->
+            <div class="flex justify-between gap-4 mt-6">
+
+                <div class="space-y-2 w-1/3">
+
+                    <div class="h-3 bg-gray-200 rounded w-12"></div>
+
+                    <div class="h-4 bg-gray-200 rounded w-20"></div>
+
+                </div>
+
+                <div class="space-y-2 w-1/3">
+
+                    <div class="h-3 bg-gray-200 rounded w-12"></div>
+
+                    <div class="h-4 bg-gray-200 rounded w-20"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Price & Button Skeleton -->
+            <div class="flex justify-between items-end mt-4 pt-2 border-t border-gray-100">
+
+                <div class="space-y-2">
+
+                    <div class="h-3 bg-gray-200 rounded w-20"></div>
+
+                    <div class="h-6 bg-gray-200 rounded w-28"></div>
+
+                </div>
+
+                <div class="flex gap-2">
+
+                    <div class="w-10 h-10 bg-gray-200 rounded-lg"></div>
+
+                    <div class="w-24 h-10 bg-gray-200 rounded-lg"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    `;
+
+}
