@@ -11,7 +11,7 @@ function getQueryParam(name) {
 
 function renderPropertyDetails(property) {
     return `
-        <div class="bg-white shadow-xl overflow-hidden rounded-3xl">
+        <div class="bg-white shadow-xl overflow-hidden ">
             <div class="swiper propertyDetailsSwiper">
                 <div class="swiper-wrapper">
                     ${property.images.map(image => `
