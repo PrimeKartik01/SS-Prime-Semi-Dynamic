@@ -243,11 +243,12 @@ export function initEnquiryPopup() {
         openEnquiryPopup();
     });
 
-    // Wire up form submission success handler
-    // Wire up form submission success handler
+    // Wire up form submission success handler (guarded against duplicate listener attachment)
     const form = document.querySelector("#popupForm");
 
     if (form) {
+        if (form.dataset.listenerAttached === "true") return;
+        form.dataset.listenerAttached = "true";
 
         form.addEventListener("submit", async (e) => {
 
@@ -313,6 +314,9 @@ export function initEnquiryPopup() {
 
                 }
 
+                // Remove any previous success containers if present
+                popupContent.querySelectorAll(".enquiry-success").forEach(el => el.remove());
+
                 // Hide header and form
                 const header = popupContent.querySelector(".relative.bg-yellow-500");
 
@@ -325,7 +329,7 @@ export function initEnquiryPopup() {
                 const successContainer = document.createElement("div");
 
                 successContainer.className =
-                    "p-10 flex flex-col items-center text-center justify-center space-y-6 animate-fade-in";
+                    "enquiry-success p-10 flex flex-col items-center text-center justify-center space-y-6 animate-fade-in";
 
                 successContainer.innerHTML = `
 

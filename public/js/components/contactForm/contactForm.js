@@ -234,10 +234,11 @@ export function initContactForm(containerId = "contact-form") {
     }
 
     // Submit handler
-    // Submit handler
     const form = container.querySelector("form");
 
     if (form) {
+        if (form.dataset.listenerAttached === "true") return;
+        form.dataset.listenerAttached = "true";
 
         form.addEventListener("submit", async (e) => {
 

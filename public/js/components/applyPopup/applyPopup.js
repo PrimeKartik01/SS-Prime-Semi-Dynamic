@@ -128,6 +128,8 @@ export function initApplyPopup() {
     const form = document.querySelector("#applyForm");
 
     if (form) {
+        if (form.dataset.listenerAttached === "true") return;
+        form.dataset.listenerAttached = "true";
 
         form.addEventListener("submit", async (e) => {
 
