@@ -14,9 +14,9 @@ export function initFooter(containerId = "footer") {
 
             <div>
 
-                <h2 class="text-3xl font-bold text-white">
-                    SS Prime <span class="text-amber-500">Infra</span>
-                </h2>
+                <a href="index.html" class="flex justify-center items-center">
+                    <img src="img/logo.webp" alt="SS Prime Infra Logo" class="h-25 object-cover drop-shadow-lg">
+                </a>
 
                 <p class="mt-6 text-slate-400 leading-7">
                     Helping you find premium residential properties across Pune. Discover luxury apartments, investment opportunities and dream homes from India's leading developers.
@@ -99,11 +99,19 @@ export function initFooter(containerId = "footer") {
                 <div class="space-y-5">
 
                     <div class="flex gap-3">
+                        <i class="fa-solid fa-location-dot text-amber-500 mt-1 shrink-0"></i>
+                        <div>
+                            <span class="block text-xs text-amber-400 uppercase tracking-widest font-semibold mb-0.5">NCR Office</span>
+                            <span>Gurgaon, Haryana, Delhi NCR</span>
+                        </div>
+                    </div>
 
-                        <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
-
-                        <span>Pune, Maharashtra</span>
-
+                    <div class="flex gap-3">
+                        <i class="fa-solid fa-location-dot text-amber-500 mt-1 shrink-0"></i>
+                        <div>
+                            <span class="block text-xs text-amber-400 uppercase tracking-widest font-semibold mb-0.5">Maharashtra Office</span>
+                            <span>Pune, Maharashtra, India</span>
+                        </div>
                     </div>
 
                     <div class="flex gap-3">

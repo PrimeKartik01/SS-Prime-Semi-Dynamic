@@ -15,7 +15,8 @@ import { companiesLogoData } from "../../data/companiesLogoData.js";
 import { initContactForm } from "../contactForm/contactForm.js";
 
 import { initFooter } from "../footer/footer.js";
-
+import { initTestimonials } from "../testimonials/testimonials.js";
+import { testimonialsData } from "../../data/testimonialsData.js";
 
 import {
     initEnquiryPopup,
@@ -41,6 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     companySlider({
         containerId: "company-slider",
         companies: companiesLogoData
+    });
+
+    initTestimonials({
+        containerId: "testimonials",
+        testimonials: testimonialsData
     });
 
     initContactForm("contact-form");
