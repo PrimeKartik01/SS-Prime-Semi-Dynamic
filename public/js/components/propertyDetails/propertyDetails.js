@@ -23,58 +23,58 @@ function renderPropertyDetails(property) {
                 <div class="swiper-pagination"></div>
             </div>
 
-            <div class="p-8 space-y-8">
+            <div class="p-4 sm:p-8 space-y-6 sm:space-y-8">
                 <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div>
                         <p class="text-sm text-yellow-600 font-semibold uppercase">${property.category}</p>
-                        <h1 class="text-4xl font-bold text-gray-900 mt-3">${property.title}</h1>
-                        <p class="text-gray-500 mt-3">Builder ${property.builder}, ${property.location}, ${property.city}</p>
+                        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 sm:mt-3">${property.title}</h1>
+                        <p class="text-gray-500 text-sm sm:text-base mt-2 sm:mt-3">Builder ${property.builder}, ${property.location}, ${property.city}</p>
                     </div>
-                    <div class="rounded-3xl bg-yellow-500 text-white p-6 w-full sm:w-auto">
-                        <p class="text-sm uppercase tracking-[0.2em]">Starting From</p>
-                        <p class="text-3xl font-bold mt-2">${property.priceLabel}</p>
+                    <div class="rounded-2xl sm:rounded-3xl bg-yellow-500 text-white p-4 sm:p-6 w-full sm:w-auto">
+                        <p class="text-xs sm:text-sm uppercase tracking-[0.2em]">Starting From</p>
+                        <p class="text-2xl sm:text-3xl font-bold mt-1 sm:mt-2">${property.priceLabel}</p>
                     </div>
                 </div>
 
-                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                    <div class="rounded-3xl border border-gray-200 p-6">
-                        <p class="text-sm text-gray-400">BHK</p>
-                        <p class="mt-3 text-xl font-semibold">${property.bhk}</p>
+                <div class="grid gap-4 sm:gap-6 grid-cols-2 lg:grid-cols-4">
+                    <div class="rounded-2xl sm:rounded-3xl border border-gray-200 p-4 sm:p-6">
+                        <p class="text-xs sm:text-sm text-gray-400">BHK</p>
+                        <p class="mt-2 sm:mt-3 text-lg sm:text-xl font-semibold">${property.bhk}</p>
                     </div>
-                    <div class="rounded-3xl border border-gray-200 p-6">
-                        <p class="text-sm text-gray-400">Carpet Area</p>
-                        <p class="mt-3 text-xl font-semibold">${property.carpetArea}</p>
+                    <div class="rounded-2xl sm:rounded-3xl border border-gray-200 p-4 sm:p-6">
+                        <p class="text-xs sm:text-sm text-gray-400">Carpet Area</p>
+                        <p class="mt-2 sm:mt-3 text-lg sm:text-xl font-semibold">${property.carpetArea}</p>
                     </div>
-                    <div class="rounded-3xl border border-gray-200 p-6">
-                        <p class="text-sm text-gray-400">Possession</p>
-                        <p class="mt-3 text-xl font-semibold">${property.possession || "On Request"}</p>
+                    <div class="rounded-2xl sm:rounded-3xl border border-gray-200 p-4 sm:p-6">
+                        <p class="text-xs sm:text-sm text-gray-400">Possession</p>
+                        <p class="mt-2 sm:mt-3 text-lg sm:text-xl font-semibold">${property.possession || "On Request"}</p>
                     </div>
-                    <div class="rounded-3xl border border-gray-200 p-6">
-                        <p class="text-sm text-gray-400">RERA No.</p>
-                        <p class="mt-3 text-xl font-semibold">${property.rera || "Applied / Available"}</p>
+                    <div class="rounded-2xl sm:rounded-3xl border border-gray-200 p-4 sm:p-6">
+                        <p class="text-xs sm:text-sm text-gray-400">RERA No.</p>
+                        <p class="mt-2 sm:mt-3 text-lg sm:text-xl font-semibold">${property.rera || "Applied / Available"}</p>
                     </div>
                 </div>
 
                 <div class="grid gap-6 lg:grid-cols-2">
-                    <div class="rounded-3xl border border-gray-200 p-8 space-y-4">
-                        <h2 class="text-2xl font-semibold">Project Overview</h2>
-                        <p class="text-gray-600">
+                    <div class="rounded-2xl sm:rounded-3xl border border-gray-200 p-4 sm:p-8 space-y-4">
+                        <h2 class="text-xl sm:text-2xl font-semibold">Project Overview</h2>
+                        <p class="text-gray-600 text-sm sm:text-base">
                             ${property.summary || "Discover premium property features, specifications, and amenities designed for modern living."}
                         </p>
                         <div class="grid gap-4 sm:grid-cols-2">
                             <div>
-                                <p class="text-sm text-gray-400">Status</p>
-                                <p class="mt-2 font-semibold">${property.status || "Available"}</p>
+                                <p class="text-xs sm:text-sm text-gray-400">Status</p>
+                                <p class="mt-1 sm:mt-2 font-semibold text-sm sm:text-base">${property.status || "Available"}</p>
                             </div>
                             <div>
-                                <p class="text-sm text-gray-400">Type</p>
-                                <p class="mt-2 font-semibold">${property.type}</p>
+                                <p class="text-xs sm:text-sm text-gray-400">Type</p>
+                                <p class="mt-1 sm:mt-2 font-semibold text-sm sm:text-base">${property.type}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="rounded-3xl border border-gray-200 p-8 space-y-4">
-                        <h2 class="text-2xl font-semibold">Key Highlights</h2>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <div class="rounded-2xl sm:rounded-3xl border border-gray-200 p-4 sm:p-8 space-y-4">
+                        <h2 class="text-xl sm:text-2xl font-semibold">Key Highlights</h2>
+                        <ul class="list-disc list-inside text-gray-600 text-sm sm:text-base space-y-2">
                             <li>Premium location in ${property.location || property.city}, ${property.city}</li>
                             <li>Trusted builder: ${property.builder || "SS Prime Partner"}</li>
                             <li>Flexible BHK options: ${property.bhk}</li>
@@ -84,11 +84,11 @@ function renderPropertyDetails(property) {
                 </div>
 
                 <!-- Integrated EMI Calculator Section -->
-                <div class="mt-12 border-t border-gray-200 pt-8">
-                    <div class="flex items-center justify-between mb-6">
+                <div class="mt-8 sm:mt-12 border-t border-gray-200 pt-6 sm:pt-8">
+                    <div class="flex items-center justify-between mb-4 sm:mb-6">
                         <div>
-                            <h2 class="text-2xl font-bold text-gray-900">Home Loan & Monthly EMI</h2>
-                            <p class="text-gray-500 text-sm mt-1">Estimate monthly instalments for ${property.title}</p>
+                            <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Home Loan & Monthly EMI</h2>
+                            <p class="text-gray-500 text-xs sm:text-sm mt-1">Estimate monthly instalments for ${property.title}</p>
                         </div>
                     </div>
                     <div id="property-emi-calculator"></div>
