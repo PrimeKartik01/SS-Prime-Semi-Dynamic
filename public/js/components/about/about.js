@@ -130,36 +130,34 @@ function renderTeam(team) {
 
 // ─── Init ────────────────────────────────────────────────────
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Initialize Navbar
-    initNavbar({
-        containerId: "navbar",
-        data: navbarData,
-    });
-
-    // Initialize Company Logos Slider
-    companySlider({
-        containerId: "company-slider",
-        companies: companiesLogoData,
-    });
-
-    // Render data-driven sections
-    renderStats(aboutStats);
-    renderVisionValues(aboutVision, aboutValues);
-    renderTeam(aboutTeam);
-
-    // Initialize Gallery Carousel
-    initGalleryCarousel({
-        containerId: "about-gallery",
-        galleryItems: galleryItems,
-    });
-
-    // Initialize Contact Form
-    initContactForm("contact-form");
-
-    // Initialize Footer
-    initFooter("footer");
-
-    // Initialize Lead Modal Popup
-    initEnquiryPopup();
+// Initialize Navbar
+initNavbar({
+    containerId: "navbar",
+    data: navbarData,
 });
+
+// Initialize Company Logos Slider
+companySlider({
+    containerId: "company-slider",
+    companies: companiesLogoData,
+});
+
+// Render data-driven sections
+renderStats(aboutStats);
+renderVisionValues(aboutVision, aboutValues);
+renderTeam(aboutTeam);
+
+// Initialize Gallery Carousel
+initGalleryCarousel({
+    containerId: "about-gallery",
+    galleryItems: galleryItems,
+});
+
+// Initialize Contact Form
+initContactForm("contact-form");
+
+// Initialize Footer
+initFooter("footer");
+
+// Initialize Lead Modal Popup
+initEnquiryPopup();

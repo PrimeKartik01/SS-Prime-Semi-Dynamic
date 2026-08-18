@@ -124,8 +124,8 @@ export function initTestimonials({
                             `).join("")}
                         </div>
 
-                       
-                       
+                        <!-- Pagination Dots -->
+                        <div class="swiper-pagination testimonials-pagination mt-10"></div>
                     </div>
 
                     <!-- Add Navigation Arrows -->

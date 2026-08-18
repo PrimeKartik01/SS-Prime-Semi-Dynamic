@@ -32,8 +32,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <!-- Preload Javascript Modules -->
+    <link rel="modulepreload" href="./js/components/main/main.js">
+
     <title>Contact Us — SS Prime Infra | Premium Properties in Pune</title>
 </head>
 
@@ -356,10 +357,30 @@
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        // Observe after a small delay to let components render
-        setTimeout(() => {
-            document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
-        }, 300);
+        // Function to register elements
+        const registerFadeElements = (container) => {
+            if (!container) return;
+            const elements = container.querySelectorAll('.fade-up');
+            elements.forEach(el => fadeObserver.observe(el));
+            if (container.classList && container.classList.contains('fade-up')) {
+                fadeObserver.observe(container);
+            }
+        };
+
+        // Register initial elements
+        registerFadeElements(document);
+
+        // Register dynamically added elements
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+                mutation.addedNodes.forEach(node => {
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        registerFadeElements(node);
+                    }
+                });
+            });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
     </script>
 </body>
 

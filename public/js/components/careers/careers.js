@@ -6,13 +6,11 @@ import { renderJobs, initJobFilters, initJobInteractions } from "../jobList/jobL
 import { initApplyPopup, openApplyPopup } from "../applyPopup/applyPopup.js";
 import { initEnquiryPopup } from "../enquiryPopup/enquiryPopup.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-    initNavbar({ containerId: "navbar", data: navbarData });
-    initFooter("footer");
-    initApplyPopup();
-    initEnquiryPopup();
+initNavbar({ containerId: "navbar", data: navbarData });
+initFooter("footer");
+initApplyPopup();
+initEnquiryPopup();
 
-    renderJobs(jobs);
-    initJobFilters(jobs);
-    initJobInteractions(openApplyPopup);
-});
+renderJobs(jobs);
+initJobFilters(jobs);
+initJobInteractions(openApplyPopup);

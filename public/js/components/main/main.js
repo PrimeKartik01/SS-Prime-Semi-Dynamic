@@ -23,51 +23,47 @@ import {
     openEnquiryPopup
 } from "../enquiryPopup/enquiryPopup.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+initNavbar({
+    containerId: "navbar",
+    data: navbarData,
+});
 
-    initNavbar({
-        containerId: "navbar",
-        data: navbarData,
-    });
+initHeroCarousel({
+    containerId: "hero",
+    slides: heroSlides
+});
 
-    initHeroCarousel({
-        containerId: "hero",
-        slides: heroSlides
-    });
+initSearch(properties);
 
-    initSearch(properties);
+renderProperties(properties);
 
-    renderProperties(properties);
+companySlider({
+    containerId: "company-slider",
+    companies: companiesLogoData
+});
 
-    companySlider({
-        containerId: "company-slider",
-        companies: companiesLogoData
-    });
+initTestimonials({
+    containerId: "testimonials",
+    testimonials: testimonialsData
+});
 
-    initTestimonials({
-        containerId: "testimonials",
-        testimonials: testimonialsData
-    });
+initContactForm("contact-form");
 
-    initContactForm("contact-form");
-
-    initFooter("footer");
+initFooter("footer");
 
 
-    initEnquiryPopup();
+initEnquiryPopup();
 
-    document.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
 
-        const button = e.target.closest(".enquireBtn");
+    const button = e.target.closest(".enquireBtn");
 
-        if (!button) return;
+    if (!button) return;
 
-        const property = properties.find(item => item.id == button.dataset.id);
+    const property = properties.find(item => item.id == button.dataset.id);
 
-        if (!property) return;
+    if (!property) return;
 
-        openEnquiryPopup(property);
-
-    });
+    openEnquiryPopup(property);
 
 });
