@@ -5,7 +5,8 @@ import { companiesLogoData } from "../../data/companiesLogoData.js";
 import { initContactForm } from "../contactForm/contactForm.js";
 import { initFooter } from "../footer/footer.js";
 import { initEnquiryPopup } from "../enquiryPopup/enquiryPopup.js";
-import { aboutVision, aboutValues, aboutTeam, aboutStats } from "../../data/aboutData.js";
+import { initGalleryCarousel } from "../gallery/gallery.js";
+import { aboutVision, aboutValues, aboutTeam, aboutStats, galleryItems } from "../../data/aboutData.js";
 
 // ─── Helpers ────────────────────────────────────────────────
 
@@ -56,7 +57,7 @@ function renderVisionValues(vision, values) {
 
         <!-- Vision Statement -->
         <div class="mt-14 bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-500/20 rounded-3xl p-8 md:p-12 fade-up">
-            <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="flex flex-col md:flex-row  md:items-center gap-8">
                 <div class="w-20 h-20 rounded-2xl bg-amber-500 flex items-center justify-center text-slate-950 text-3xl shrink-0">
                     <i class="fa-solid fa-eye"></i>
                 </div>
@@ -113,7 +114,7 @@ function renderTeam(team) {
         <div class="text-center max-w-3xl mx-auto fade-up">
             <span class="text-amber-500 font-bold uppercase tracking-[4px] text-sm">The People Behind It</span>
             <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-3">
-                Meet Our <span class="text-amber-500">Managers</span>
+                Meet Our <span class="text-amber-500">Managers     </span>
             </h2>
             <p class="mt-4 text-slate-500">
                 A passionate group of real estate professionals dedicated to turning your property dreams into reality.
@@ -146,6 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
     renderStats(aboutStats);
     renderVisionValues(aboutVision, aboutValues);
     renderTeam(aboutTeam);
+
+    // Initialize Gallery Carousel
+    initGalleryCarousel({
+        containerId: "about-gallery",
+        galleryItems: galleryItems,
+    });
 
     // Initialize Contact Form
     initContactForm("contact-form");
