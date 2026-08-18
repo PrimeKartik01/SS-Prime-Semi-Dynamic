@@ -78,11 +78,17 @@ export const aboutTeam = [
 export const galleryItems = [
     {
         image: "img/gallery/1st.jpg",
+        title: "Premium Residential Complex",
+        description: "State-of-the-art luxury apartments in prime locations across Gurgaon and Pune.",
     },
     {
         image: "img/gallery/2nd.jpg",
+        title: "Modern Commercial Spaces",
+        description: "World-class office spaces designed for today's progressive businesses.",
     },
     {
         image: "img/gallery/3rd.jpg",
+        title: "Sophisticated Living",
+        description: "Curated properties offering the perfect blend of comfort and elegance.",
     },
 ];

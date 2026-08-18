@@ -96,14 +96,6 @@ function renderTeam(team) {
                 <h3 class="text-lg font-bold text-slate-900">${m.name}</h3>
                 <p class="text-amber-500 text-sm font-semibold mt-1">${m.role}</p>
                 <p class="text-slate-500 text-xs mt-3 leading-relaxed">${m.bio}</p>
-                <div class="flex justify-center gap-3 mt-5">
-                    <a href="${m.linkedin}" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-amber-500 hover:text-white text-slate-600 flex items-center justify-center transition duration-300">
-                        <i class="fa-brands fa-linkedin-in text-sm"></i>
-                    </a>
-                    <a href="${m.instagram}" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-amber-500 hover:text-white text-slate-600 flex items-center justify-center transition duration-300">
-                        <i class="fa-brands fa-instagram text-sm"></i>
-                    </a>
-                </div>
             </div>
         </div>`
         )
