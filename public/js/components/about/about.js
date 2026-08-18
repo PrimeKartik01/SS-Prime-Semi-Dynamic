@@ -109,6 +109,29 @@ function renderTeam(team) {
         )
         .join("");
 
+    const carouselCards = team
+        .map(
+            (m) => `
+        <div class="swiper-slide">
+            <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 h-full">
+                <div class="relative h-64 bg-slate-900 flex items-center justify-center overflow-hidden">
+                    <img
+                        src="${m.image}"
+                        alt="${m.name}"
+                        class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
+                        onerror="this.style.display='none'"
+                    >
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-bold text-slate-900">${m.name}</h3>
+                    <p class="text-amber-500 text-sm font-semibold mt-1">${m.role}</p>
+                    <p class="text-slate-500 text-xs mt-3 leading-relaxed">${m.bio}</p>
+                </div>
+            </div>
+        </div>`
+        )
+        .join("");
+
     container.innerHTML = `
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto fade-up">
@@ -121,11 +144,47 @@ function renderTeam(team) {
             </p>
         </div>
 
-        <!-- Team Grid -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 fade-up">
+        <!-- Mobile Carousel (visible only on small screens) -->
+        <div class="mt-16 fade-up md:hidden">
+            <div class="swiper team-carousel-mobile">
+                <div class="swiper-wrapper">
+                    ${carouselCards}
+                </div>
+                <div class="swiper-button-prev team-carousel-prev mt-4"></div>
+                <div class="swiper-button-next team-carousel-next mt-4"></div>
+            </div>
+        </div>
+
+        <!-- Desktop Grid (visible only on medium screens and up) -->
+        <div class="hidden md:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 fade-up">
             ${memberCards}
         </div>
     `;
+
+    // Initialize Swiper for mobile carousel after a short delay
+    setTimeout(() => {
+        if (typeof Swiper !== 'undefined') {
+            const carouselEl = document.querySelector('.team-carousel-mobile');
+            if (carouselEl) {
+                new Swiper(carouselEl, {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    pagination: {
+                        el: '.team-carousel-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.team-carousel-next',
+                        prevEl: '.team-carousel-prev',
+                    },
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                });
+            }
+        }
+    }, 100);
 }
 
 // ─── Init ────────────────────────────────────────────────────

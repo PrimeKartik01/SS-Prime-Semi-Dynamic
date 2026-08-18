@@ -13,7 +13,7 @@ export function initGalleryCarousel({
     const duplicatedItems = [...galleryItems, ...galleryItems];
 
     const swiperHTML = `
-        <section class="py-10 bg-white">
+        <section class="py-10 bg-slate-50">
             <div class="max-w-[1700px] px-6 lg:px-12">
                 <!-- Gallery Carousel -->
                 <div class="relative fade-up">
