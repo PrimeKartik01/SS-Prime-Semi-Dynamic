@@ -42,16 +42,16 @@ export const aboutValues = [
 export const aboutTeam = [
     {
         image: "img/managers/satish_sir.webp",
-        name: "Satish Ashok Rathod",
-        role: "Founder & CEO",
+        name: "Suman Bhakuni",
+        role: "Founder & Director",
         bio: "Leading real estate sales with 15+ years of industry expertise.",
         linkedin: "#",
         instagram: "#",
     },
     {
         image: "img/managers/suman_mam.webp",
-        name: "Suman Bhakuni",
-        role: "Founder & Director",
+        name: "Satish Ashok Rathod",
+        role: "Co-Founder & Director",
         bio: "Driving trusted real estate sales with a focus on transparency.",
         linkedin: "#",
         instagram: "#",
@@ -77,17 +77,17 @@ export const aboutTeam = [
 // ---------- Gallery Images ----------
 export const galleryItems = [
     {
-        image: "img/gallery/1st.jpg",
+        image: "img/gallery/1st.JPG",
         title: "Premium Residential Complex",
         description: "State-of-the-art luxury apartments in prime locations across Gurgaon and Pune.",
     },
     {
-        image: "img/gallery/2nd.jpg",
+        image: "img/gallery/2nd.JPG",
         title: "Modern Commercial Spaces",
         description: "World-class office spaces designed for today's progressive businesses.",
     },
     {
-        image: "img/gallery/3rd.jpg",
+        image: "img/gallery/3rd.JPG",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     },
