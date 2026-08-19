@@ -4,7 +4,7 @@
 
 // ---------- Stats Strip ----------
 export const aboutStats = [
-    { value: "₹500 Cr+", label: "Property Delivered" },
+    { value: "₹500+", label: "A+ Developers" },
     { value: "1000+", label: "Happy Families" },
     { value: "500+", label: "Associates" },
     { value: "2 Hubs", label: "Gurgaon & Pune" },
@@ -91,4 +91,10 @@ export const galleryItems = [
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     },
+    {
+        image: "img/gallery/4th.webp",
+        title: "Sophisticated Living",
+        description: "Curated properties offering the perfect blend of comfort and elegance.",
+    },
+
 ];
