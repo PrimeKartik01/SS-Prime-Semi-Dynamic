@@ -4,7 +4,7 @@
 
 // ---------- Stats Strip ----------
 export const aboutStats = [
-    { value: "₹500+", label: "A+ Developers" },
+    { value: "₹500+", label: "A+ Developers " },
     { value: "1000+", label: "Happy Families" },
     { value: "500+", label: "Associates" },
     { value: "2 Hubs", label: "Gurgaon & Pune" },
