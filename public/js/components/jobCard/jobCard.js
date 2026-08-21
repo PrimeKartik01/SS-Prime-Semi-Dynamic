@@ -28,9 +28,9 @@ export function jobCard(job) {
                     </h3>
 
                     <div class="flex flex-wrap items-center gap-4 mt-3 text-slate-500 text-sm">
-                        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> ${job.location}</span>
-                        <span><i class="fa-solid fa-briefcase text-amber-500 mr-1"></i> ${job.experience}</span>
-                        <span><i class="fa-solid fa-calendar text-amber-500 mr-1"></i> Posted ${posted}</span>
+                        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1 font-semibold"></i> ${job.location}</span>
+                        <span><i class="fa-solid fa-briefcase text-amber-500 mr-1 font-semibold"></i> ${job.experience}</span>
+                        <span><i class="fa-solid fa-calendar text-amber-500 mr-1 font-semibold"></i> Posted ${posted}</span>
                     </div>
 
                     <p class="mt-4 text-slate-600 leading-relaxed">
