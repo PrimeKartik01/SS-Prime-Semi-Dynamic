@@ -41,13 +41,13 @@ export function jobCard(job) {
 
                 <div class="flex flex-row md:flex-col gap-3 shrink-0">
                     <button
-                        class="applyBtn px-6 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-full transition duration-300 cursor-pointer"
+                        class="applyBtn px-6 py-3 bg-amber-500 text-xs md:text-sm hover:bg-amber-400 text-white font-semibold rounded-full transition duration-300 cursor-pointer"
                         data-id="${job.id}"
                     >
                         Apply Now
                     </button>
                     <button
-                        class="toggleDetailsBtn px-6 py-3 border border-slate-300 hover:border-amber-400 text-amber-500 font-semibold rounded-full transition duration-300 cursor-pointer"
+                        class="toggleDetailsBtn px-6 py-3 border text-xs md:text-sm border-slate-300 hover:border-amber-400 text-amber-500 font-semibold rounded-full transition duration-300 cursor-pointer"
                         data-id="${job.id}"
                     >
                         View Details
@@ -66,12 +66,14 @@ export function jobCard(job) {
                     ${job.requirements.map(req => `<li>${req}</li>`).join("")}
                 </ul>
 
-                <button
-                    class="applyBtn mt-6 px-8 py-3 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-full transition duration-300 cursor-pointer"
-                    data-id="${job.id}"
-                >
-                    Apply for this Position
-                </button>
+                <div class="flex max-md:justify-center ">
+                    <button
+                        class="applyBtn mt-6 px-8 py-3 text-xs md:text-sm bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-full transition duration-300 cursor-pointer"
+                        data-id="${job.id}"
+                    >
+                        Apply for this Position
+                    </button>
+                </div>
 
             </div>
 
