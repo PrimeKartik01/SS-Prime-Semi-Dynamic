@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="modulepreload" href="./js/components/galleryPage/galleryPage.js">
@@ -45,6 +46,8 @@
             </section>
         </main>
 
+        <div id="gallery-carousel"></div>
+
         <div id="gallery-lightbox" class="gallery-lightbox fixed inset-0 z-[100] hidden min-h-screen items-center justify-center bg-slate-950/95 p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Gallery image preview">
             <button id="lightbox-close" class="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-amber-400 hover:text-amber-400" type="button" aria-label="Close image preview">
                 <i class="fa-solid fa-xmark"></i>
@@ -62,6 +65,7 @@
         <div id="footer"></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/components/galleryPage/galleryPage.js"></script>
     <script>
         const fadeObserver = new IntersectionObserver((entries) => {

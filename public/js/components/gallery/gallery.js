@@ -6,12 +6,6 @@ export function initGalleryCarousel({
 
     if (!container) return;
 
-    const totalItems = galleryItems.length;
-    let currentIndex = 0;
-
-    // Duplicate items for infinite carousel effect
-    const duplicatedItems = [...galleryItems, ...galleryItems];
-
     const swiperHTML = `
         <section class="py-10 bg-slate-50">
             <div class="max-w-[1700px] px-6 lg:px-12">
@@ -21,7 +15,7 @@ export function initGalleryCarousel({
                     <div class="overflow-hidden rounded-3xl shadow-2xl border border-slate-200">
                         <div class="swiper gallery-swiper h-[300px] md:h-[500px]">
                             <div class="swiper-wrapper">
-                                ${duplicatedItems.map((item, idx) => `
+                                ${galleryItems.map((item) => `
                                     <div class="swiper-slide">
                                         <img
                                             src="${item.image}"

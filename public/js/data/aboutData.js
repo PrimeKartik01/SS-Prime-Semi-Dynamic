@@ -41,18 +41,18 @@ export const aboutValues = [
 // ---------- Team Members ----------
 export const aboutTeam = [
     {
-        image: "img/managers/satish_sir.webp",
+        image: "img/managers/suman_mam.webp",
         name: "Suman Bhakuni",
         role: "Founder & Director",
-        bio: "Leading real estate sales with 15+ years of industry expertise.",
+        bio: "Driving trusted real estate sales with a focus on transparency.",
         linkedin: "#",
         instagram: "#",
     },
     {
-        image: "img/managers/suman_mam.webp",
+        image: "img/managers/satish_sir.webp",
         name: "Satish Ashok Rathod",
         role: "Co-Founder & Director",
-        bio: "Driving trusted real estate sales with a focus on transparency.",
+        bio: "Leading real estate sales with 15+ years of industry expertise.",
         linkedin: "#",
         instagram: "#",
     },
@@ -101,15 +101,15 @@ export const galleryItems = [
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     },
-        {
+    {
         image: "./img/gallery/balmoral_hillside_1.webp",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
-    },    {
+    }, {
         image: "./img/gallery/balmoral_hillside_1.webp",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
-    },    {
+    }, {
         image: "./img/gallery/balmoral_hillside_1.webp",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
