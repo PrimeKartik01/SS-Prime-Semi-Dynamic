@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the SS Prime Infra gallery of premium homes, modern spaces, and refined living.">
+    <link rel="icon" type="image/webp" href="./img/logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="modulepreload" href="./js/components/galleryPage/galleryPage.js">
+    <title>Gallery — SS Prime Infra</title>
+</head>
+
+<body class="bg-[#f6f4ef] text-slate-900 antialiased">
+    <div class="page-wrapper overflow-x-hidden">
+        <header id="navbar"></header>
+
+        <main>
+            <section class="gallery-hero relative overflow-hidden bg-slate-950 text-white">
+                <div class="absolute inset-0 bg-[url('./img/gallery/1st.webp')] bg-cover bg-center opacity-35"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/75 to-slate-950/20"></div>
+                <div class="relative mx-auto flex min-h-[520px] max-w-[1700px] items-end px-6 pb-20 pt-36 lg:px-12">
+                    <div class="max-w-3xl fade-up">
+                        <p class="mb-5 text-xs font-bold uppercase tracking-[0.35em] text-amber-400">A glimpse into the extraordinary</p>
+                        <h1 class="font-display text-5xl leading-tight sm:text-7xl">Spaces made to be <span class="text-amber-400">remembered.</span></h1>
+                        <p class="mt-6 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">Explore a curated collection of the homes, spaces, and details that define the SS Prime Infra experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mx-auto max-w-[1700px] px-6 py-20 lg:px-12 lg:py-28">
+                <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end fade-up">
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-[0.3em] text-amber-600">The collection</p>
+                        <h2 class="font-display mt-3 text-4xl text-slate-950 sm:text-5xl">A closer look at living well</h2>
+                    </div>
+                    <p class="max-w-sm text-sm leading-7 text-slate-500">Every frame tells a story of considered design, enduring quality, and a place you will be proud to call home.</p>
+                </div>
+                <div id="gallery-grid" class="grid grid-cols-1 gap-4 md:auto-rows-[220px] md:grid-cols-4"></div>
+            </section>
+        </main>
+
+        <div id="gallery-lightbox" class="gallery-lightbox fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/95 p-5 sm:p-10" role="dialog" aria-modal="true" aria-label="Gallery image preview">
+            <button id="lightbox-close" class="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-amber-400 hover:text-amber-400" type="button" aria-label="Close image preview">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="grid max-h-full max-w-6xl gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-center">
+                <img id="lightbox-image" class="max-h-[72vh] w-full object-contain" src="" alt="">
+                <div class="text-white">
+                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-amber-400">SS Prime Infra</p>
+                    <h2 id="lightbox-title" class="font-display text-3xl"></h2>
+                    <p id="lightbox-description" class="mt-4 text-sm leading-7 text-slate-300"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </div>
+
+    <script type="module" src="./js/components/galleryPage/galleryPage.js"></script>
+    <script>
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        const registerFadeElements = (container) => {
+            if (container.matches && container.matches('.fade-up')) fadeObserver.observe(container);
+            if (container.querySelectorAll) container.querySelectorAll('.fade-up').forEach((element) => fadeObserver.observe(element));
+        };
+        registerFadeElements(document);
+        new MutationObserver((mutations) => mutations.forEach((mutation) => mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) registerFadeElements(node);
+        }))).observe(document.body, { childList: true, subtree: true });
+    </script>
+</body>
+
+</html>

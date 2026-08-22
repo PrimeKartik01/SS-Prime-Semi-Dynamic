@@ -11,6 +11,10 @@ export const navbarData = {
             href: "about.html"
         },
         {
+            label: "Gallery",
+            href: "gallery.html"
+        },
+        {
             label: "Careers",
             href: "careers.html"
         },
