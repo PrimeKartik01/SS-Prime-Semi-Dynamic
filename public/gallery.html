@@ -45,13 +45,13 @@
             </section>
         </main>
 
-        <div id="gallery-lightbox" class="gallery-lightbox fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/95 p-5 sm:p-10" role="dialog" aria-modal="true" aria-label="Gallery image preview">
+        <div id="gallery-lightbox" class="gallery-lightbox fixed inset-0 z-[100] hidden min-h-screen items-center justify-center bg-slate-950/95 p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Gallery image preview">
             <button id="lightbox-close" class="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-amber-400 hover:text-amber-400" type="button" aria-label="Close image preview">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <div class="grid max-h-full max-w-6xl gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-center">
-                <img id="lightbox-image" class="max-h-[72vh] w-full object-contain" src="" alt="">
-                <div class="text-white">
+            <div class="flex min-h-[calc(100vh-2rem)] w-full max-w-5xl flex-col items-center justify-center gap-4 text-center sm:min-h-[calc(100vh-4rem)] sm:gap-5">
+                <img id="lightbox-image" class="mx-auto max-h-[calc(100vh-12rem)] max-w-full object-contain sm:max-h-[calc(100vh-13rem)]" src="" alt="">
+                <div class="max-w-xl shrink-0 text-white">
                     <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-amber-400">SS Prime Infra</p>
                     <h2 id="lightbox-title" class="font-display text-3xl"></h2>
                     <p id="lightbox-description" class="mt-4 text-sm leading-7 text-slate-300"></p>
