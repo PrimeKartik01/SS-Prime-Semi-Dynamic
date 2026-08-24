@@ -67,7 +67,7 @@ export function renderProperties(properties, page = 1) {
 
                 <button
                     data-page="${currentPage - 1}"
-                    class="px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 ${currentPage === 1 ? "cursor-not-allowed opacity-50" : ""}"
+                    class="px-4 p-1 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 ${currentPage === 1 ? "cursor-not-allowed opacity-50" : ""}"
                     ${currentPage === 1 ? "disabled" : ""}
                 >
                     Prev
@@ -92,7 +92,7 @@ export function renderProperties(properties, page = 1) {
 
                 <button
                     data-page="${currentPage + 1}"
-                    class="px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 ${currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""}"
+                    class="px-4 py-1 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 ${currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""}"
                     ${currentPage === totalPages ? "disabled" : ""}
                 >
                     Next
