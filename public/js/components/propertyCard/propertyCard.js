@@ -10,11 +10,17 @@ export function propertyCard(property) {
 
                 ${property.images.map(image => `
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide relative">
+
+                        <div class="property-image-loader absolute inset-0 z-10 flex items-center justify-center bg-gray-100" aria-label="Loading property image">
+                            <div class="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-yellow-500"></div>
+                        </div>
 
                         <img
                             src="${image}"
-                            class="w-full h-48 lg:h-72 object-cover"
+                            class="w-full h-48 lg:h-72 object-cover opacity-0 transition-opacity duration-300"
+                            onload="this.classList.remove('opacity-0'); this.parentElement.querySelector('.property-image-loader')?.remove()"
+                            onerror="this.classList.remove('opacity-0'); this.parentElement.querySelector('.property-image-loader')?.remove()"
                         >
 
                     </div>
