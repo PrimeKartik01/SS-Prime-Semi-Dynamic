@@ -2,7 +2,7 @@ export function propertyCard(property) {
 
     return `
 
-    <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl duration-300">
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl duration-300">
 
         <div class="swiper propertySwiper">
 
@@ -223,4 +223,4 @@ export function propertySkeletonCard() {
 
     `;
 
-}
+}

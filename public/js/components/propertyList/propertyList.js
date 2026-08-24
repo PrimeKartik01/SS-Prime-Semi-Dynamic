@@ -81,7 +81,7 @@ export function renderProperties(properties, page = 1) {
 
                         <button
                             data-page="${pageNumber}"
-                            class="px-3 py-2 rounded-lg border ${pageNumber === currentPage ? "bg-yellow-500 text-white border-yellow-500" : "border-gray-300 bg-white text-gray-700 hover:bg-gray-100"}"
+                            class="py-1 px-2 rounded-lg border ${pageNumber === currentPage ? "bg-yellow-500 text-white border-yellow-500" : "border-gray-300 bg-white text-gray-700 hover:bg-gray-100"}"
                         >
                             ${pageNumber}
                         </button>

@@ -40,7 +40,7 @@ export function initNavbar({
                     <!-- Desktop CTA -->
                     <a
                         href="javascript:void(0)"
-                        class="enquire-now-cta hidden lg:inline-flex items-center gap-2 px-7 py-3 z-10 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-full hover:from-amber-400 hover:to-amber-500 hover:scale-105 transition-all duration-300 text-sm tracking-wide shadow-lg shadow-amber-500/25"
+                        class="enquire-now-cta hidden lg:inline-flex items-center gap-2 px-7 py-3 z-10 bg-yellow-500 text-white font-semibold hover:bg-yellow-400 transition-colors  font-semibold rounded-full hover:from-amber-400 hover:to-amber-500 hover:scale-105 transition-all duration-300 text-sm tracking-wide shadow-lg shadow-amber-500/25"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
                         ${data.ctaText}
