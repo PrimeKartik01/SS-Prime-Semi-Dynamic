@@ -61,7 +61,7 @@ export function renderProperties(properties, page = 1) {
 
     const paginationMarkup = totalPages > 1 ? `
 
-        <div class="col-span-full mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div class="col-span-full mt-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
             <div class="flex flex-wrap items-center justify-center gap-2">
 

@@ -113,7 +113,7 @@ export function initFooter(containerId = "footer") {
                         <div>
                             <span class="block text-xs text-amber-400 uppercase tracking-widest font-semibold mb-0.5">Maharashtra Office</span>
                             <a href="https://www.google.com/maps?sca_esv=cf5c3a640caff83a&sxsrf=APpeQnunwSMbo_g7QTwFe_fvSVwdW4LGgQ:1787137880010&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXNzcHJpbWVpbmZyYSBwdW5lMgYQABgWGB5I4BNQrwZYixJwAXgAkAEAmAGTAaABrQaqAQMwLja4AQPIAQD4AQGYAgagAtQFwgIHECMYsAMYJ8ICChAAGEcY1gQYsAPCAhcQLhjcBhi4BhjaBhjYAhjIAxiwA9gBAcICBBAjGCfCAgcQABiABBgNwgINEC4YgAQYDRjHARivAcICBhAAGB4YDcICBxAjGLACGCfCAgsQABiABBiKBRiGA5gDAOIDBRIBMSBAiAYBkAYGugYECAEYGZIHAzEuNaAH0iayBwMwLjW4B84FwgcFMS4yLjPIBxKACAE&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KV_Hcn0Xv8I7McnmUa5qS3Np&daddr=Office+No.+410,+ICON+Towers,+Survey+Number+83/1,+near+Kasturi+Chowk,+Wakad,+Maharashtra+411057" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition">
-                                Office No. 410, ICON Towers, Survey Number 83/1, Near Kasturi Chowk, Wakad, Pune, Maharashtra 411057
+                                Office No. 6, 6th Floor (B Wing) City Vista, Kharadi – Fountain Road Ashoka Nagar, Pune – 411014
                             </a>
                         </div>
                     </div>
