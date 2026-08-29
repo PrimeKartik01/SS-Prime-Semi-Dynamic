@@ -78,41 +78,42 @@ export const aboutTeam = [
 export const galleryItems = [
     {
         image: "./img/gallery/EGL08502.JPG",
-        title: "Premium Residential Complex",
-        description: "State-of-the-art luxury apartments in prime locations across Gurgaon and Pune.",
+        title: "Contemporary Residential Living",
+        description: "Modern homes, timeless comfort.",
     },
     {
-        image: "./img/gallery/EGL08515.JPG",
-        title: "Modern Commercial Spaces",
-        description: "World-class office spaces designed for today's progressive businesses.",
+        image: "./img/gallery/EGL08550.jpg",
+        title: "Premium Commercial Spaces",
+        description: "Designed for modern businesses.",
     },
     {
-        image: "./img/gallery/EGL08525.JPG",
-        title: "Sophisticated Living",
-        description: "Curated properties offering the perfect blend of comfort and elegance.",
+        image: "./img/gallery/EGL08525.jpg",
+        title: "Elegant Urban Residences",
+        description: "Luxury meets everyday living.",
     },
     {
-        image: "./img/gallery/EGL08530.JPG",
-        title: "Sophisticated Living",
-        description: "Curated properties offering the perfect blend of comfort and elegance.",
+        image: "./img/gallery/EGL08530.jpg",
+        title: "Architectural Excellence",
+        description: "Inspired design, exceptional spaces.",
     },
     {
-        image: "./img/gallery/EGL08601.JPG",
-        title: "Sophisticated Living",
-        description: "Curated properties offering the perfect blend of comfort and elegance.",
+        image: "./img/gallery/EGL08601.jpg",
+        title: "Luxury Living Experience",
+        description: "Comfort crafted with elegance.",
     },
     {
-        image: "./img/gallery/EGL08556.JPG",
-        title: "Sophisticated Living",
-        description: "Curated properties offering the perfect blend of comfort and elegance.",
-    }, {
-        image: "./img/gallery/EGL08586.JPG",
-        title: "Sophisticated Living",
-        description: "Curated properties offering the perfect blend of comfort and elegance.",
-    }, {
-        image: "./img/gallery/EGL08600.JPG",
-        title: "Sophisticated Living",
-        description: "Curated properties offering the perfect blend of comfort and elegance.",
+        image: "./img/gallery/EGL08556.jpg",
+        title: "Refined Lifestyle Spaces",
+        description: "Elevated spaces, effortless living.",
     },
-
+    {
+        image: "./img/gallery/EGL08586.jpg",
+        title: "Modern Living Spaces",
+        description: "Thoughtful spaces for families.",
+    },
+    {
+        image: "./img/gallery/EGL08600.jpg",
+        title: "Premium Lifestyle Residences",
+        description: "Where quality meets comfort.",
+    },
 ];
