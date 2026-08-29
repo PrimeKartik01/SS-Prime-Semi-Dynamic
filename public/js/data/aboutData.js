@@ -77,40 +77,40 @@ export const aboutTeam = [
 // ---------- Gallery Images ----------
 export const galleryItems = [
     {
-        image: "./img/gallery/1st.webp",
+        image: "./img/gallery/EGL08502.JPG",
         title: "Premium Residential Complex",
         description: "State-of-the-art luxury apartments in prime locations across Gurgaon and Pune.",
     },
     {
-        image: "./img/gallery/2nd.webp",
+        image: "./img/gallery/EGL08515.JPG",
         title: "Modern Commercial Spaces",
         description: "World-class office spaces designed for today's progressive businesses.",
     },
     {
-        image: "./img/gallery/3rd.webp",
+        image: "./img/gallery/EGL08525.JPG",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     },
     {
-        image: "./img/gallery/4th.webp",
+        image: "./img/gallery/EGL08530.JPG",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     },
     {
-        image: "./img/gallery/balmoral_hillside_1.webp",
+        image: "./img/gallery/EGL08601.JPG",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     },
     {
-        image: "./img/gallery/balmoral_hillside_1.webp",
+        image: "./img/gallery/EGL08556.JPG",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     }, {
-        image: "./img/gallery/balmoral_hillside_1.webp",
+        image: "./img/gallery/EGL08586.JPG",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     }, {
-        image: "./img/gallery/balmoral_hillside_1.webp",
+        image: "./img/gallery/EGL08600.JPG",
         title: "Sophisticated Living",
         description: "Curated properties offering the perfect blend of comfort and elegance.",
     },
