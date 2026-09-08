@@ -77,12 +77,12 @@ export const aboutTeam = [
 // ---------- Gallery Images ----------
 export const galleryItems = [
     {
-        image: "./img/gallery/EGL08502.jpg",
+        image: "./img/gallery/2.webp",
         title: "Contemporary Residential Living",
         description: "Modern homes, timeless comfort.",
     },
     {
-        image: "./img/gallery/2nd.webp",
+        image: "./img/gallery/EGL08550.jpg",
         title: "Premium Commercial Spaces",
         description: "Designed for modern businesses.",
     },
