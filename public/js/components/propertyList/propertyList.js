@@ -33,7 +33,7 @@ export function renderProperties(properties, page = 1) {
 
             <div class="col-span-full text-center py-20">
 
-                <h2 class="text-3xl font-bold">
+                <h2 class="text-xl font-semibold text-white">
 
                     No Property Found
 
