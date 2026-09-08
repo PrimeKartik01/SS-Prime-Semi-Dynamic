@@ -82,7 +82,7 @@ export const galleryItems = [
         description: "Modern homes, timeless comfort.",
     },
     {
-        image: "./img/gallery/EGL08550.jpg",
+        image: "./img/gallery/2nd.webp",
         title: "Premium Commercial Spaces",
         description: "Designed for modern businesses.",
     },
