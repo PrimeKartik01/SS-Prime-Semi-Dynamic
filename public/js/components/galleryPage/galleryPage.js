@@ -3,7 +3,6 @@ import { navbarData } from "../../data/navbarData.js";
 import { galleryItems } from "../../data/aboutData.js";
 import { initFooter } from "../footer/footer.js";
 import { initEnquiryPopup } from "../enquiryPopup/enquiryPopup.js";
-import { initGalleryCarousel } from "../gallery/gallery.js";
 
 function renderGallery(items) {
     const container = document.getElementById("gallery-grid");
@@ -65,9 +64,5 @@ function renderGallery(items) {
 
 initNavbar({ containerId: "navbar", data: navbarData });
 renderGallery(galleryItems);
-initGalleryCarousel({
-    containerId: "gallery-carousel",
-    galleryItems,
-});
 initFooter("footer");
 initEnquiryPopup();
