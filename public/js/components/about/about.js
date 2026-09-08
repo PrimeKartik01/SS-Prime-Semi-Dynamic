@@ -55,14 +55,14 @@ function renderVisionValues(vision, values) {
         </div>
 
         <!-- Vision Statement -->
-        <div class="mt-14 bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-500/20 rounded-3xl p-8 md:p-12 fade-up">
+        <div class="mt-14 bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-500/20 rounded-3xl p-5 md:p-12 fade-up">
             <div class="flex flex-col md:flex-row  md:items-center gap-8">
-                <div class="w-20 h-20 rounded-2xl bg-amber-500 flex items-center justify-center text-slate-950 text-3xl shrink-0">
+                <div class="w-14 md:w-20 h-14 md:h-20 rounded-2xl bg-amber-500 flex items-center justify-center text-slate-950 text-3xl shrink-0">
                     <i class="fa-solid fa-eye"></i>
                 </div>
                 <div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-white">${vision.heading}</h3>
-                    <p class="mt-3 text-slate-300 text-lg leading-relaxed font-light">${vision.text}</p>
+                    <h3 class="text-xl md:text-3xl font-bold text-white">${vision.heading}</h3>
+                    <p class="mt-3 text-slate-300 text-sm md:text-lg leading-relaxed font-light">${vision.text}</p>
                 </div>
             </div>
         </div>
@@ -158,6 +158,7 @@ function renderTeam(team) {
             const carouselEl = document.querySelector('.team-carousel-mobile');
             if (carouselEl) {
                 new Swiper(carouselEl, {
+                    loop: true,
                     slidesPerView: 1,
                     spaceBetween: 20,
                     pagination: {
