@@ -77,17 +77,17 @@ export const aboutTeam = [
 // ---------- Gallery Images ----------
 export const galleryItems = [
     {
-        image: "https://images.unsplash.com/photo-1788438868315-42d573e3b87f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "./img/gallery/EGL08502.jpg",
         title: "Contemporary Residential Living",
         description: "Modern homes, timeless comfort.",
     },
     {
-        image: "https://images.unsplash.com/photo-1788438868315-42d573e3b87f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "./img/gallery/EGL08550.jpg",
         title: "Premium Commercial Spaces",
         description: "Designed for modern businesses.",
     },
     {
-        image: "./img/gallery/EGL08525.jpg",
+        image: "./img/gallery/EGL08530.jpg",
         title: "Elegant Urban Residences",
         description: "Luxury meets everyday living.",
     },
