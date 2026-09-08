@@ -8,7 +8,7 @@ export function jobCard(job) {
     return `
     <div class="job-card bg-white rounded-3xl border border-slate-200 overflow-hidden hover:border-amber-400 hover:-translate-y-2 hover:shadow-2xl transition duration-500" data-job-id="${job.id}">
 
-        <div class="p-6 md:p-8">
+        <div class="p-4 md:p-8">
 
             <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
 
@@ -23,7 +23,7 @@ export function jobCard(job) {
                         </span>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-slate-900">
+                    <h3 class="text-xl md:text-2xl font-bold text-slate-900">
                         ${job.title}
                     </h3>
 
@@ -33,7 +33,7 @@ export function jobCard(job) {
                         <span class="font-semibold"><i class="fa-solid fa-calendar text-amber-500 mr-1"></i> Posted ${posted}</span>
                     </div>
 
-                    <p class="mt-4 text-slate-600 leading-relaxed">
+                    <p class="text-sm mt-4 text-slate-600 leading-relaxed">
                         ${job.summary}
                     </p>
 
@@ -59,10 +59,10 @@ export function jobCard(job) {
             <div class="job-details hidden mt-6 pt-6 border-t border-slate-200" id="job-details-${job.id}">
 
                 <h4 class="text-lg font-bold text-slate-900 mb-3">About the Role</h4>
-                <p class="text-slate-600 leading-relaxed mb-6">${job.description}</p>
+                <p class="text-slate-600 leading-relaxed mb-6 text-sm">${job.description}</p>
 
                 <h4 class="text-lg font-bold text-slate-900 mb-3">Requirements</h4>
-                <ul class="list-disc list-inside text-slate-600 space-y-2">
+                <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm">
                     ${job.requirements.map(req => `<li>${req}</li>`).join("")}
                 </ul>
 
