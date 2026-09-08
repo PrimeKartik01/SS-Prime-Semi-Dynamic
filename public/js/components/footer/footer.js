@@ -18,10 +18,13 @@ export function initFooter(containerId = "footer") {
                     <img src="img/logo.webp" alt="SS Prime Infra Logo" class="h-25 object-cover drop-shadow-lg">
                 </a>
 
-                <p class="mt-6 text-slate-400 leading-7">
+                <p class="text-slate-400 mt-3">Pune RERA: A52100044653</p>
+                <p class="text-slate-400 mt-1"> Delhi NCR RERA: RC/HARERA/GGM/3022/2617/2024/735</p>
+
+                <p class="mt-3 text-slate-400 leading-7">
                     Helping you find premium residential properties across Pune. Discover luxury apartments, investment opportunities and dream homes from India's leading developers.
                 </p>
-
+                
                 <div class="flex gap-4 mt-8">
 
                     <a href="#" class="w-11 h-11 rounded-full border border-slate-700 flex items-center justify-center hover:bg-amber-500 hover:border-amber-500 transition">
@@ -150,9 +153,9 @@ export function initFooter(containerId = "footer") {
 
         <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
 
-            <p class="text-sm text-slate-500">
-                © 2026 SS Prime Infra. All Rights Reserved.
-            </p>
+            <div class="text-sm text-slate-500 space-y-1 text-center md:text-left">
+                <p>© 2026 SS Prime Infra. All Rights Reserved.</p>
+            </div>
 
             <div class="flex gap-6 text-sm">
 

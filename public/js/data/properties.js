@@ -205,7 +205,7 @@ export const properties = [
   },
   {
     id: 10,
-    title: "Code Name APEX 63A",
+    title: "APEX 63A",
     builder: "Coming Soon",
     category: "Residential",
     type: "Apartment",
@@ -767,5 +767,153 @@ export const properties = [
       "/img/brochure_images/park_pebbles_2.webp",
       "/img/brochure_images/park_pebbles_3.webp",
     ]
+  },
+  {
+    id: 34,
+    title: "M3M 65 Avenue",
+    builder: "M3M",
+    category: "Commercial",
+    type: "Showroom",
+    bhk: "",
+    city: "Gurgaon",
+    location: "Sector 65",
+    price: 0.35,
+    priceLabel: "₹35,000 Per Month",
+    carpetArea: "100 Sq.ft",
+    status: "Ready to Move",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 5.0,
+    images: [
+      // Listing images
+    ]
+  },
+  {
+    id: 35,
+    title: "Emaar MGF Digital Greens",
+    builder: "Emaar",
+    category: "Commercial",
+    type: "Office Space",
+    bhk: "",
+    city: "Gurgaon",
+    location: "Sector 61, Golf Course Extension",
+    price: 3.13,
+    priceLabel: "₹3.13 Lakhs Per Month",
+    carpetArea: "2552 Sq.ft",
+    status: "Ready to Move",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 5.0,
+    images: [
+      // listing images
+    ]
+  },
+  {
+    id: 36,
+    title: "DLF Corporate Greens",
+    builder: "DLF",
+    category: "Commercial",
+    type: "Office Space",
+    bhk: "",
+    city: "Gurgaon",
+    location: "Sector 74A, Southern Peripheral Road",
+    price: 1.25,
+    priceLabel: "₹1.25 Lakhs Per Month",
+    carpetArea: "1650 Sq.ft",
+    status: "Ready to Move",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 5.0,
+    images: [
+      // listing images
+    ]
+  },
+  {
+    id: 37,
+    title: "AIPL Joy Central",
+    builder: "Advance India Projects Limited",
+    category: "Commercial",
+    type: "Shop",
+    bhk: "",
+    city: "Gurgaon",
+    location: "Sector 65, Golf Course Extension",
+    price: 1.45,
+    priceLabel: "₹1.45 Lakhs Per Month",
+    carpetArea: "1075 Sq.ft",
+    status: "Ready to Move",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 4.1,
+    images: [
+      // listing images
+    ]
+  },
+  {
+    id: 38,
+    title: "Emaar Capital Tower",
+    builder: "Emaar",
+    category: "Commercial",
+    type: "Office Space",
+    bhk: "",
+    city: "Gurgaon",
+    location: "Sector 26, MG Road",
+    price: 8.58,
+    priceLabel: "₹8.58 Lakhs Per Month",
+    carpetArea: "4903 Sq.ft",
+    status: "Ready to Move",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 4.6,
+    images: [
+      // listing images
+    ]
+  },
+  {
+    id: 37,
+    title: "Suncity Heights",
+    builder: "Suncity",
+    category: "Commercial",
+    type: "Office Space",
+    bhk: "",
+    city: "Gurgaon",
+    location: "Sector 54, Golf Course Road",
+    price: 0.75,
+    priceLabel: "₹75,000 Per Month",
+    carpetArea: "1500 Sq.ft",
+    status: "Ready to Move",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 4.5,
+    images: [
+      // listing images
+    ]
+  },
+  {
+    id: 38,
+    title: "Omaxe Gurgaon Mall",
+    builder: "Omaxe",
+    category: "Commercial",
+    type: "Shop / Retail Space",
+    bhk: "",
+    city: "Gurgaon",
+    location: "Sector 49",
+    price: 15.00,
+    priceLabel: "₹15 Lakhs - ₹2.16 Crore",
+    carpetArea: "250 - 2200 Sq.ft",
+    status: "Ready to Move",
+    possession: "",
+    rera: "",
+    featured: false,
+    rating: 5.0,
+    images: [
+      // listing images
+    ]
   }
 ];
+
