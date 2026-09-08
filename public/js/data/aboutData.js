@@ -91,29 +91,4 @@ export const galleryItems = [
         title: "Elegant Urban Residences",
         description: "Luxury meets everyday living.",
     },
-    {
-        image: "./img/gallery/EGL08530.jpg",
-        title: "Architectural Excellence",
-        description: "Inspired design, exceptional spaces.",
-    },
-    {
-        image: "./img/gallery/EGL08601.jpg",
-        title: "Luxury Living Experience",
-        description: "Comfort crafted with elegance.",
-    },
-    {
-        image: "./img/gallery/EGL08556.jpg",
-        title: "Refined Lifestyle Spaces",
-        description: "Elevated spaces, effortless living.",
-    },
-    {
-        image: "./img/gallery/EGL08586.jpg",
-        title: "Modern Living Spaces",
-        description: "Thoughtful spaces for families.",
-    },
-    {
-        image: "./img/gallery/EGL08600.jpg",
-        title: "Premium Lifestyle Residences",
-        description: "Where quality meets comfort.",
-    },
 ];
