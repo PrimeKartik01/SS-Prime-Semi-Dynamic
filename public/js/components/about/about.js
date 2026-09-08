@@ -5,8 +5,7 @@ import { companiesLogoData } from "../../data/companiesLogoData.js";
 import { initContactForm } from "../contactForm/contactForm.js";
 import { initFooter } from "../footer/footer.js";
 import { initEnquiryPopup } from "../enquiryPopup/enquiryPopup.js";
-import { initGalleryCarousel } from "../gallery/gallery.js";
-import { aboutVision, aboutValues, aboutTeam, aboutStats, galleryItems } from "../../data/aboutData.js";
+import { aboutVision, aboutValues, aboutTeam, aboutStats } from "../../data/aboutData.js";
 
 // ─── Helpers ────────────────────────────────────────────────
 
@@ -197,12 +196,6 @@ companySlider({
 renderStats(aboutStats);
 renderVisionValues(aboutVision, aboutValues);
 renderTeam(aboutTeam);
-
-// Initialize Gallery Carousel
-initGalleryCarousel({
-    containerId: "about-gallery",
-    galleryItems: galleryItems,
-});
 
 // Initialize Contact Form
 initContactForm("contact-form");
