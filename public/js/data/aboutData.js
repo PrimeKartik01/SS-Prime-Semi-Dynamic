@@ -77,7 +77,7 @@ export const aboutTeam = [
 // ---------- Gallery Images ----------
 export const galleryItems = [
     {
-        image: "./img/gallery/EGL08550.jpg",
+        image: "./img/gallery/EGL08502.jpg",
         title: "Contemporary Residential Living",
         description: "Modern homes, timeless comfort.",
     },
