@@ -807,7 +807,7 @@ export const properties = [
     featured: false,
     rating: 5.0,
     images: [
-      // listing images
+      "img/brochure_images/emaar_digi_greens.webp"
     ]
   },
   {
@@ -870,7 +870,8 @@ export const properties = [
     featured: false,
     rating: 4.6,
     images: [
-      // listing images
+      "img/brochure_images/emaar_capital_tower1.webp",
+      "img/brochure_images/emaar_capital_tower2.webp"
     ]
   },
   {
@@ -891,7 +892,7 @@ export const properties = [
     featured: false,
     rating: 4.5,
     images: [
-      // listing images
+      "img/brochure_images/suncity_heights_1.webp"
     ]
   },
   {
@@ -912,7 +913,7 @@ export const properties = [
     featured: false,
     rating: 5.0,
     images: [
-      // listing images
+      "img/brochure_images/omaxe_gurgaon_mall.webp",
     ]
   }
 ];

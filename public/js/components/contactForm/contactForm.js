@@ -9,13 +9,23 @@ export function initContactForm(containerId = "contact-form") {
 
     container.innerHTML = `
 
-<section class="py-15 bg-slate-50">
+<section>
 
-    <div class="max-w-[1700px] mx-auto px-6 lg:px-10">
+    <div class="max-w-[1700px]">
 
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="grid lg:grid-cols-2 items-stretch">
 
-            <div>
+            <div class="relative min-h-[650px] h-full overflow-hidden p-5 md:p-8">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515674744565-0d7112cd179a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Bridge connecting a modern city skyline"
+                    class="absolute inset-0 h-full w-full  object-center"
+                    loading="lazy">
+
+                <div class="absolute inset-0 bg-black/10"></div>
+
+                <div class="relative">
 
                 <span class="inline-block text-amber-500 uppercase tracking-[5px] font-semibold">
 
@@ -125,9 +135,11 @@ export function initContactForm(containerId = "contact-form") {
 
                 </div>
 
+                </div>
+
             </div>
 
-            <div class="bg-white rounded-[20px] md:rounded-[40px] border border-slate-200 p-5 lg:p-14">
+            <div class="bg-white p-5 lg:p-14">
 
                 <h3 class="text-3xl font-bold text-slate-900">
 
