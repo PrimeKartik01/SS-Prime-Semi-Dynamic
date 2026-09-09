@@ -23,7 +23,7 @@ export function initContactForm(containerId = "contact-form") {
 
                 </span>
 
-                <h2 class="mt-6 text-5xl font-bold text-slate-900 leading-tight">
+                <h2 class="mt-3 md:mt-6 text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
 
                     Looking For Your
 
@@ -35,7 +35,7 @@ export function initContactForm(containerId = "contact-form") {
 
                 </h2>
 
-                <p class="mt-8 text-lg leading-8 text-slate-600">
+                <p class="mt-4 md:mt-8 text-sm md:text-lg leading-8 text-slate-600">
 
                     Whether you're buying your first home, upgrading to a luxury residence,
                     or searching for the perfect investment, our dedicated property consultants
@@ -187,7 +187,7 @@ export function initContactForm(containerId = "contact-form") {
                     </select>
 
                     <button
-                        class="w-full h-14 rounded-xl bg-amber-500 hover:bg-amber-400 transition duration-300 font-semibold text-slate-950 cursor-pointer">
+                        class="w-full h-14 rounded-xl bg-yellow-500 hover:bg-amber-400 transition duration-300 font-semibold text-slate-950 cursor-pointer text-white">
 
                         Schedule Site Visit
 

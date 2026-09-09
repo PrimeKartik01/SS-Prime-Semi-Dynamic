@@ -74,14 +74,14 @@ export function initTestimonials({
 
             <div class="max-w-[1700px] mx-auto px-6 lg:px-12 relative z-10">
                 <!-- Section Header -->
-                <div class="text-center max-w-4xl mx-auto mb-16 fade-up">
+                <div class="text-center max-w-4xl mx-auto mb-4 md:mb-16 fade-up">
                     <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-widest border border-amber-500/20">
                         <i class="fa-solid fa-comments"></i> Client Testimonials
                     </span>
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mt-4 tracking-tight">
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-black mt-4 tracking-tight">
                         What Our <span class="text-amber-400">Happy Clients</span> Say
                     </h2>
-                    <p class="mt-4 text-slate-400 text-lg font-light">
+                    <p class="mt-4 text-slate-400 text-md md:text-lg font-light">
                         Real stories from home buyers and property investors who found their ideal properties with SS Prime Infra.
                     </p>
                 </div>
@@ -125,7 +125,7 @@ export function initTestimonials({
                         </div>
 
                         <!-- Pagination Dots -->
-                        <div class="swiper-pagination testimonials-pagination mt-10"></div>
+                        <div class="swiper-pagination testimonials-pagination mt-10 hidden md:block"></div>
                     </div>
 
                     <!-- Add Navigation Arrows -->

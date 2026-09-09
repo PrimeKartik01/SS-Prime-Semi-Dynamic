@@ -1,9 +1,19 @@
 import { propertyCard, propertySkeletonCard } from "../propertyCard/propertyCard.js";
 
-const ITEMS_PER_PAGE = 6;
+const DESKTOP_ITEMS_PER_PAGE = 6;
+const MOBILE_ITEMS_PER_PAGE = 3;
 let currentPage = 1;
 let currentProperties = [];
 let isPaginationBound = false;
+let isViewportListenerBound = false;
+
+function getItemsPerPage() {
+
+    return window.matchMedia("(max-width: 767px)").matches
+        ? MOBILE_ITEMS_PER_PAGE
+        : DESKTOP_ITEMS_PER_PAGE;
+
+}
 
 export function renderPropertySkeletons(containerId = "propertyContainer", count = 4) {
 
@@ -24,7 +34,17 @@ export function renderProperties(properties, page = 1) {
     if (!container) return;
     currentProperties = properties;
 
-    const totalPages = Math.max(1, Math.ceil(properties.length / ITEMS_PER_PAGE));
+    if (!isViewportListenerBound) {
+
+        window.matchMedia("(max-width: 767px)").addEventListener("change", () => {
+            renderProperties(currentProperties, currentPage);
+        });
+        isViewportListenerBound = true;
+
+    }
+
+    const itemsPerPage = getItemsPerPage();
+    const totalPages = Math.max(1, Math.ceil(properties.length / itemsPerPage));
     currentPage = Math.min(Math.max(page, 1), totalPages);
 
     if (!properties.length) {
@@ -54,8 +74,8 @@ export function renderProperties(properties, page = 1) {
 
     }
 
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const visibleProperties = properties.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const visibleProperties = properties.slice(startIndex, startIndex + itemsPerPage);
 
     const cards = visibleProperties.map(propertyCard).join("");
 
@@ -73,11 +93,9 @@ export function renderProperties(properties, page = 1) {
                     Prev
                 </button>
 
-                ${Array.from({ length: totalPages }, (_, index) => {
-
-        const pageNumber = index + 1;
-
-        return `
+                ${[currentPage, currentPage + 1]
+                    .filter(pageNumber => pageNumber <= totalPages)
+                    .map(pageNumber => `
 
                         <button
                             data-page="${pageNumber}"
@@ -86,9 +104,7 @@ export function renderProperties(properties, page = 1) {
                             ${pageNumber}
                         </button>
 
-                    `;
-
-    }).join("")}
+                    `).join("")}
 
                 <button
                     data-page="${currentPage + 1}"
@@ -139,7 +155,7 @@ function handlePaginationClick(event) {
     if (!button) return;
 
     const requestedPage = Number(button.dataset.page);
-    const totalPages = Math.max(1, Math.ceil(currentProperties.length / ITEMS_PER_PAGE));
+    const totalPages = Math.max(1, Math.ceil(currentProperties.length / getItemsPerPage()));
 
     if (!Number.isInteger(requestedPage) || requestedPage < 1 || requestedPage > totalPages) {
 
