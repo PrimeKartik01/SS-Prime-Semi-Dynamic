@@ -27,17 +27,17 @@ export function initContactForm(containerId = "contact-form") {
 
                 <div class="relative">
 
-                <span class="inline-block text-amber-500 uppercase tracking-[5px] font-semibold">
+                <span class="inline-block text-white uppercase tracking-[5px] font-semibold">
 
                     Contact Our Experts
 
                 </span>
 
-                <h2 class="mt-3 md:mt-6 text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
+                <h2 class="mt-3 md:mt-6 text-3xl md:text-5xl font-bold text-white leading-tight">
 
                     Looking For Your
 
-                    <span class="text-amber-500">
+                    <span class="text-slate-800">
 
                         Dream Property?
 
@@ -45,7 +45,7 @@ export function initContactForm(containerId = "contact-form") {
 
                 </h2>
 
-                <p class="mt-4 md:mt-8 text-sm md:text-lg leading-8 text-slate-600">
+                <p class="mt-4 md:mt-8 text-sm md:text-lg leading-8 text-white">
 
                     Whether you're buying your first home, upgrading to a luxury residence,
                     or searching for the perfect investment, our dedicated property consultants
@@ -65,13 +65,13 @@ export function initContactForm(containerId = "contact-form") {
 
                         <div>
 
-                            <h3 class="text-xl font-bold">
+                            <h3 class="text-xl font-bold text-white">
 
                                 500+ Premium Projects
 
                             </h3>
 
-                            <p class="mt-2 text-slate-500">
+                            <p class="mt-2 text-slate-500 text-white hidden md:block">
 
                                 Access verified residential and commercial projects across Gurgaon and Pune.
 
@@ -91,13 +91,13 @@ export function initContactForm(containerId = "contact-form") {
 
                         <div>
 
-                            <h3 class="text-xl font-bold">
+                            <h3 class="text-xl font-bold text-white">
 
                                 Best Price Guarantee
 
                             </h3>
 
-                            <p class="mt-2 text-slate-500">
+                            <p class="mt-2 text-slate-500 text-white hidden md:block">
 
                                 Get exclusive launch prices, offers and flexible payment plans.
 
@@ -117,13 +117,13 @@ export function initContactForm(containerId = "contact-form") {
 
                         <div>
 
-                            <h3 class="text-xl font-bold">
+                            <h3 class="text-xl font-bold text-white">
 
                                 Dedicated Relationship Manager
 
                             </h3>
 
-                            <p class="mt-2 text-slate-500">
+                            <p class="mt-2 text-slate-500 text-white hidden md:block">
 
                                 From site visit to possession, we'll be with you throughout the journey.
 
