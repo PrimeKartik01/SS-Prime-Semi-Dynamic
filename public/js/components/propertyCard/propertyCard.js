@@ -18,7 +18,7 @@ export function propertyCard(property) {
 
                         <img
                             src="${image}"
-                            class="w-full h-48 lg:h-72 object-cover opacity-0 transition-opacity duration-300"
+                            class="w-full h-38 lg:h-62 object-cover opacity-0 transition-opacity duration-300"
                             onload="this.classList.remove('opacity-0'); this.parentElement.querySelector('.property-image-loader')?.remove()"
                             onerror="this.classList.remove('opacity-0'); this.parentElement.querySelector('.property-image-loader')?.remove()"
                         >
@@ -31,7 +31,7 @@ export function propertyCard(property) {
 
             <div class="swiper-pagination"></div>
             <button
-                class="enquireBtn absolute top-4 right-4 z-20 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold duration-300 shadow-md shadow-black-500"
+                class="enquireBtn absolute text-xs top-4 right-4 z-20 bg-yellow-500 hover:bg-yellow-600 text-white p-1 md:px-4 py-2 rounded-lg font-semibold duration-300 shadow-md shadow-black-500"
                 data-id="${property.id}"
             >
                 Enquire Now
@@ -40,21 +40,33 @@ export function propertyCard(property) {
         </div>
         
 
-        <div class="p-4">
+        <div class="p-3 md:p-4">
 
-            <div class="flex justify-between md:flex-col-reverse md:gap-3">
+            <p class="text-gray-500 mt-2 flex items-center gap-1 text-xs md:text-sm w-max rounded-lg my-2">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                ${property.city}
+
+            </p>
+
+            <div class="flex justify-between  gap-1 md:gap-3">
                     <div>
-                        <h2 class=" md:text-2xl font-bold">
+                        <h2 class="text-[14px] md:text-2xl font-bold">
 
                             ${property.title}
 
                         </h2>
 
-                        <p class="text-gray-500 mt-2">
-
-                            📍${property.city}
-
-                        </p>
                     </div>
 
                     <div>
@@ -67,7 +79,7 @@ export function propertyCard(property) {
 
             </div>
 
-            <div class="flex justify-between gap-4 mt-6">
+            <div class="flex justify-between gap-4 mt-3 md:mt-6">
 
                 <div>
 
@@ -77,7 +89,7 @@ export function propertyCard(property) {
 
                     </p>
 
-                    <p class="font-semibold text-XS">
+                    <p class="font-semibold text-sm md:text-md">
 
                         ${property.builder}
 
@@ -93,7 +105,7 @@ export function propertyCard(property) {
 
                     </p>
 
-                    <h4 class="font-semibold">
+                    <h4 class="font-semibold text-sm md:text-md">
 
                         ${property.type}
 
