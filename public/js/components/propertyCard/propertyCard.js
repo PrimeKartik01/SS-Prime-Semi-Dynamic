@@ -42,7 +42,7 @@ export function propertyCard(property) {
 
         <div class="p-3 md:p-4">
 
-            <p class="text-gray-500 mt-2 flex items-center gap-1 text-xs md:text-sm w-max rounded-lg my-2">
+            <p class="text-teal-700 mt-2 flex items-center gap-1 text-xs md:text-sm w-max font-semibold rounded-lg my-2">
 
                     <svg xmlns="http://www.w3.org/2000/svg"
                         class="w-4 h-4"
@@ -61,7 +61,7 @@ export function propertyCard(property) {
 
             <div class="flex justify-between  gap-1 md:gap-3">
                     <div>
-                        <h2 class="text-[14px] md:text-2xl font-bold">
+                        <h2 class="text-[16px] md:text-2xl font-bold text-cyan-700">
 
                             ${property.title}
 
@@ -89,7 +89,7 @@ export function propertyCard(property) {
 
                     </p>
 
-                    <p class="font-semibold text-sm md:text-md">
+                    <p class="font-semibold text-sm md:text-md text-mauve-700">
 
                         ${property.builder}
 
@@ -105,7 +105,7 @@ export function propertyCard(property) {
 
                     </p>
 
-                    <h4 class="font-semibold text-sm md:text-md">
+                    <h4 class="font-semibold text-sm md:text-md text-mauve-700">
 
                         ${property.type}
 

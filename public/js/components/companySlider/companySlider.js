@@ -21,10 +21,6 @@ export function companySlider({
                     <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900">
                         Brands We Work With
                     </h2>
-
-                    <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-                        Partnering with industry-leading companies to deliver exceptional experiences.
-                    </p>
                 </div>
 
                 <div class="relative overflow-hidden">
