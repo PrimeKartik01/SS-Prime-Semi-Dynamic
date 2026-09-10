@@ -141,52 +141,52 @@ export function initContactForm(containerId = "contact-form") {
 
             <div class="bg-white p-5 lg:p-14">
 
-                <h3 class="text-[1.4rem] md:text-5xl text-center text-amber-400 font-bold">
+                <h3 class="text-[1.2rem] md:text-3xl text-center text-white rounded-xl p-2 bg-amber-400 font-bold">
 
                     Schedule a Free Consultation
 
                 </h3>
 
-                <form class="mt-10 space-y-6">
+                <form class="mt-5 md:mt-10 space-y-6">
 
                     <input
                         type="text"
                         id="contactName"
                         placeholder="Full Name"
-                        class="w-full h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
+                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
                         required>
 
                     <input
                         type="email"
                         id="contactEmail"
                         placeholder="Email Address"
-                        class="w-full h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
+                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
                         required>
 
                     <input
                         type="tel"
                         id="contactPhone"
                         placeholder="Mobile Number"
-                        class="w-full h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
+                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
                         required>
 
                     <select
                         id="contactProjectSelect"
-                        class="w-full h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
+                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
                         required>
                         <option value="">Select Project</option>
                     </select>
 
                     <select
                         id="contactCitySelect"
-                        class="w-full h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
+                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
                         required>
                         <option value="">Select City</option>
                     </select>
 
                     <select
                         id="contactBudgetSelect"
-                        class="w-full h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
+                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
                         required>
                         <option value="">Select Budget</option>
                         <option value="Flexible">Flexible</option>
@@ -199,9 +199,9 @@ export function initContactForm(containerId = "contact-form") {
                     </select>
 
                     <button
-                        class="w-full h-14 rounded-xl bg-yellow-500 hover:bg-amber-400 transition duration-300 font-semibold text-slate-950 cursor-pointer text-white">
+                        class="w-full h-10 md:h-14 rounded-xl bg-yellow-500 hover:bg-amber-400 transition duration-300 font-semibold text-slate-950 cursor-pointer text-white">
 
-                        Schedule Site Visit
+                        Book Visit
 
                     </button>
 

@@ -34,7 +34,7 @@ export function companySlider({
                     <div class="company-slider-track flex items-center gap-6 w-max">
 
                         ${logos.map(company => `
-                            <div class="group flex-shrink-0 w-48 h-48 flex items-center justify-center rounded-2xl bg-white hover:shadow-lg hover:border-amber-200 hover:-translate-y-1 transition-all duration-300">
+                            <div class="group flex-shrink-0 w-48 h-48 flex items-center justify-center rounded-2xl  hover:shadow-lg hover:border-amber-200 hover:-translate-y-1 transition-all duration-300">
 
                                 <div class="w-full h-full flex items-center justify-center p-6">
 

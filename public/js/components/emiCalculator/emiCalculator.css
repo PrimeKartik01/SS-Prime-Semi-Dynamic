@@ -151,7 +151,6 @@
 .emi-field__prefix {
   padding: 0 0.75rem;
   color: var(--emi-slate);
-  font-family: var(--emi-font-mono);
   font-size: 0.95rem;
   border-right: 1px solid var(--emi-border);
   align-self: stretch;
@@ -168,7 +167,6 @@
   outline: none;
   background: transparent;
   padding: 0.75rem 0.75rem;
-  font-family: var(--emi-font-mono);
   font-size: 1rem;
   color: var(--emi-ink);
   box-sizing: border-box;
@@ -204,7 +202,6 @@
 }
 
 .emi-field__value {
-  font-family: var(--emi-font-mono);
   font-weight: 700;
   color: #047857;
   font-size: 1.1rem;
@@ -226,7 +223,6 @@
 .emi-toggle__btn {
   border: 0;
   background: transparent;
-  font-family: var(--emi-font-mono);
   font-size: 0.75rem;
   padding: 0.3rem 0.75rem;
   min-height: 32px;
