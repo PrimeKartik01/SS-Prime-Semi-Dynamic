@@ -141,7 +141,7 @@ export function initContactForm(containerId = "contact-form") {
 
             <div class="bg-white p-5 lg:p-14">
 
-                <h3 class="text-[1.4rem] md:text-3xl text-center md:text-left font-bold text-slate-900">
+                <h3 class="text-[1.4rem] md:text-5xl text-center text-amber-400 font-bold">
 
                     Schedule a Free Consultation
 
