@@ -15,7 +15,7 @@ export function initContactForm(containerId = "contact-form") {
 
         <div class="grid lg:grid-cols-2 items-stretch">
 
-            <div class="relative min-h-[650px] h-full overflow-hidden p-5 md:p-8">
+            <div class="relative min-h-[410px] h-full overflow-hidden p-5 md:p-8">
 
                 <img
                     src="https://images.unsplash.com/photo-1515674744565-0d7112cd179a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -53,19 +53,19 @@ export function initContactForm(containerId = "contact-form") {
 
                 </p>
 
-                <div class="space-y-8 mt-12">
+                <div class="space-y-8 mt-6 md:mt-12">
 
                     <div class="flex gap-5">
 
-                        <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center flex-shrink-0">
+                        <div class="w-10 md:w-16 h-9 md:h-16 rounded-2xl bg-white/30 flex items-center justify-center flex-shrink-0">
 
-                            <i class="fa-solid fa-building text-amber-500 text-2xl"></i>
+                            <i class="fa-solid fa-building text-white text-xl md:text-2xl"></i>
 
                         </div>
 
-                        <div>
+                        <div class=" flex max-md:items-center  md:flex-col">
 
-                            <h3 class="text-xl font-bold text-white">
+                            <h3 class="text-md md:text-xl font-bold text-white">
 
                                 500+ Premium Projects
 
@@ -83,15 +83,15 @@ export function initContactForm(containerId = "contact-form") {
 
                     <div class="flex gap-5">
 
-                        <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center flex-shrink-0">
+                        <div class="w-10 md:w-16 h-9 md:h-16 rounded-2xl bg-white/30 flex items-center justify-center flex-shrink-0">
 
-                            <i class="fa-solid fa-wallet text-amber-500 text-2xl"></i>
+                            <i class="fa-solid fa-wallet text-white text-xl md:text-2xl"></i>
 
                         </div>
 
-                        <div>
+                        <div class="flex max-md:items-center  md:flex-col">
 
-                            <h3 class="text-xl font-bold text-white">
+                            <h3 class="text-md md:text-xl font-bold text-white">
 
                                 Best Price Guarantee
 
@@ -109,15 +109,15 @@ export function initContactForm(containerId = "contact-form") {
 
                     <div class="flex gap-5">
 
-                        <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center flex-shrink-0">
+                        <div class="w-10 md:w-16 h-9 md:h-16 rounded-2xl bg-white/30 flex items-center justify-center flex-shrink-0">
 
-                            <i class="fa-solid fa-headset text-amber-500 text-2xl"></i>
+                            <i class="fa-solid fa-headset text-white text-xl md:text-2xl"></i>
 
                         </div>
 
-                        <div>
+                        <div class="flex max-md:items-center  md:flex-col" >
 
-                            <h3 class="text-xl font-bold text-white">
+                            <h3 class="text-md md:text-xl font-bold text-white">
 
                                 Dedicated Relationship Manager
 
@@ -141,7 +141,7 @@ export function initContactForm(containerId = "contact-form") {
 
             <div class="bg-white p-5 lg:p-14">
 
-                <h3 class="text-3xl font-bold text-slate-900">
+                <h3 class="text-[1.4rem] md:text-3xl text-center md:text-left font-bold text-slate-900">
 
                     Schedule a Free Consultation
 
