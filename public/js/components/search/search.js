@@ -41,11 +41,8 @@ function renderSearch() {
 
             <button
                 id="searchBtnMobile"
-                class="flex-shrink-0 h-14 px-5 bg-[#1a3c2e] text-white font-bold flex items-center gap-2 text-sm active:bg-[#132d22]"
+                class="flex-shrink-0 h-14 px-5 bg-yellow-500 text-white font-bold flex items-center gap-2 text-sm active:bg-yellow-600"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                    <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/>
-                </svg>
                 Search
             </button>
 
