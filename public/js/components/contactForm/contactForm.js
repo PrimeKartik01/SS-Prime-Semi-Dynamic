@@ -141,7 +141,7 @@ export function initContactForm(containerId = "contact-form") {
 
             <div class="bg-white p-5 lg:p-14">
 
-                <h3 class="text-[1.2rem] md:text-3xl text-center text-white rounded-xl p-2 bg-amber-400 font-bold">
+                <h3 class="text-[1.2rem] md:text-4xl text-white p-2 md:py-6 md:px-3 bg-yellow-500 shadow-xl shadow-gray-300 font-bold text-center">
 
                     Schedule a Free Consultation
 
@@ -199,7 +199,7 @@ export function initContactForm(containerId = "contact-form") {
                     </select>
 
                     <button
-                        class="w-full h-10 md:h-14 rounded-xl bg-yellow-500 hover:bg-amber-400 transition duration-300 font-semibold text-slate-950 cursor-pointer text-white">
+                        class="w-full h-10 md:h-14 rounded-xl md:text-2xl bg-yellow-500 hover:shadow-lg hover:shadow-gray-400 hover:bg-yellow-400 transition duration-300 font-semibold cursor-pointer text-white">
 
                         Book Visit
 

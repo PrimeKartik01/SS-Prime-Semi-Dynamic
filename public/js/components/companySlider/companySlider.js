@@ -24,7 +24,7 @@ export function companySlider({
 
                     <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900">
                         Working With
-                        <span class="text-amber-600">Leading Developers</span>
+                        <span class="text-yellow-500">Leading Developers</span>
                     </h2>
 
                 </div>

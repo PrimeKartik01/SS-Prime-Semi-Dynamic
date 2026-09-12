@@ -26,7 +26,7 @@ function renderSearch() {
         <!-- ====== MOBILE: Clean pill search bar (visible only on mobile) ====== -->
         <div class="flex md:hidden items-center bg-white rounded-2xl shadow-2xl overflow-hidden">
 
-            <div class="pl-2 flex-shrink-0 text-gray-400">
+            <div class="pl-3 flex-shrink-0 text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/>
                 </svg>
@@ -41,7 +41,7 @@ function renderSearch() {
 
             <button
                 id="searchBtnMobile"
-                class="flex-shrink-0 h-14 px-2 bg-yellow-500 text-white font-bold flex items-center gap-2 text-sm active:bg-yellow-600"
+                class="flex-shrink-0 h-14 px-5 bg-[#1a3c2e] text-white font-bold flex items-center gap-2 text-sm active:bg-[#132d22]"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/>
@@ -51,72 +51,131 @@ function renderSearch() {
 
         </div>
 
-        <!-- ====== DESKTOP / TABLET: Full glassmorphism filter card (hidden on mobile) ====== -->
-        <div class="hidden md:block rounded-2xl shadow-2xl p-5" style="background: rgba(0,0,0,0.45); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12);">
+        <!-- ====== DESKTOP / TABLET: 2-row white card search bar (hidden on mobile) ====== -->
+        <div class="hidden md:block bg-white rounded-2xl shadow-2xl overflow-hidden">
 
-            <!-- Row 1: Search input + dropdowns + Search button -->
-            <div class="grid grid-cols-2 md:grid-cols-7 xl:grid-cols-7 gap-3">
+            <!-- Row 1: Dropdowns + Search Button -->
+            <div class="flex items-stretch" style="min-height:76px;">
 
-                <select id="categoryFilter" class="h-11 rounded-xl border border-white/30 bg-white/95 text-gray-800 px-3 outline-none cursor-pointer">
-                    <option value="" style="color:#111;background:#fff;">Category</option>
-                </select>
+                <!-- City -->
+                <div class="flex-1 flex items-center px-5 py-3 border-r border-gray-100 cursor-pointer gap-2">
+                    <svg class="text-[#1a3c2e] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <div class="relative flex items-center flex-1">
+                        <select id="cityFilter" class="appearance-none w-full bg-transparent text-gray-800 font-medium text-sm outline-none cursor-pointer pr-5 leading-snug">
+                            <option value="" style="color:#111;background:#fff;">Select City</option>
+                        </select>
+                        <svg class="pointer-events-none absolute right-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                </div>
 
-                <select id="typeFilter" class="h-11 rounded-xl border border-white/30 bg-white/95 text-gray-800 px-3 outline-none cursor-pointer">
-                    <option value="" style="color:#111;background:#fff;">Property Type</option>
-                </select>
+                <!-- Location -->
+                <div class="flex-1 flex items-center px-5 py-3 border-r border-gray-100 cursor-pointer gap-2">
+                   
+                    <svg class="text-[#1a3c2e] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                    </svg>
+                       
+                    <div class="relative flex items-center flex-1">
+                        <select id="locationFilter" class="appearance-none w-full bg-transparent text-gray-800 font-medium text-sm outline-none cursor-pointer pr-5 leading-snug">
+                            <option value="" style="color:#111;background:#fff;">Select Location</option>
+                        </select>
+                        <svg class="pointer-events-none absolute right-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                </div>
 
-                <select id="builderFilter" class="h-11 rounded-xl border border-white/30 bg-white/95 text-gray-800 px-3 outline-none cursor-pointer">
-                    <option value="" style="color:#111;background:#fff;">Builder</option>
-                </select>
+                <!-- Project -->
+                <div class="flex-1 flex items-center px-5 py-3 border-r border-gray-100 cursor-pointer gap-2">
+                   
+                    <svg class="text-[#1a3c2e] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+                    </svg>
 
-                <select id="cityFilter" class="h-11 rounded-xl border border-white/30 bg-white/95 text-gray-800 px-3 outline-none cursor-pointer">
-                    <option value="" style="color:#111;background:#fff;">City</option>
-                </select>
+                    <div class="relative flex items-center flex-1">
+                        <select id="builderFilter" class="appearance-none w-full bg-transparent text-gray-800 font-medium text-sm outline-none cursor-pointer pr-5 leading-snug">
+                            <option value="" style="color:#111;background:#fff;">Select Project</option>
+                        </select>
+                        <svg class="pointer-events-none absolute right-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                </div>
 
-                <select id="bhkFilter" class="h-11 rounded-xl border border-white/30 bg-white/95 text-gray-800 px-3 outline-none cursor-pointer">
-                    <option value="" style="color:#111;background:#fff;">BHK</option>
-                </select>
+                <!-- Project Type -->
+                <div class="flex-1 flex items-center px-5 py-3 border-r border-gray-100 cursor-pointer gap-2">
 
-                <select id="statusFilter" class="h-11 rounded-xl border border-white/30 bg-white/95 text-gray-800 px-3 outline-none cursor-pointer">
-                    <option value="" style="color:#111;background:#fff;">Status</option>
-                </select>
+                        <svg class="text-[#1a3c2e] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                        
+                    <div class="relative flex items-center flex-1">
+                        <select id="typeFilter" class="appearance-none w-full bg-transparent text-gray-800 font-medium text-sm outline-none cursor-pointer pr-5 leading-snug">
+                            <option value="" style="color:#111;background:#fff;">Property Types</option>
+                        </select>
+                        <svg class="pointer-events-none absolute right-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                </div>
 
-                <select id="budgetFilter" class="h-11 rounded-xl border border-white/30 bg-white/95 text-gray-800 px-3 outline-none cursor-pointer">
-                    <option value="" style="color:#111;background:#fff;">Budget</option>
-                    <option value="50"  style="color:#111;background:#fff;">Under ₹50 Lakh</option>
-                    <option value="75"  style="color:#111;background:#fff;">Under ₹75 Lakh</option>
-                    <option value="100" style="color:#111;background:#fff;">Under ₹1 Crore</option>
-                    <option value="150" style="color:#111;background:#fff;">Under ₹1.5 Crore</option>
-                    <option value="200" style="color:#111;background:#fff;">Under ₹2 Crore</option>
-                </select>
+                <!-- Property Type -->
+                <div class="flex-1 flex items-center px-5 py-3 border-r border-gray-100 cursor-pointer gap-2">
+
+                    <svg class="text-[#1a3c2e] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    
+                    <div class="relative flex items-center flex-1">
+                        <select id="categoryFilter" class="appearance-none w-full bg-transparent text-gray-800 font-medium text-sm outline-none cursor-pointer pr-5 leading-snug">
+                            <option value="" style="color:#111;background:#fff;">Property Category</option>
+                        </select>
+                        <svg class="pointer-events-none absolute right-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Search Button -->
+                <div class="flex items-center px-4 py-3 flex-shrink-0">
+                    <button
+                        id="searchBtn"
+                        class="flex items-center gap-2 h-full px-7 bg-yellow-500 text-white font-semibold rounded-xl transition-all duration-200 text-sm whitespace-nowrap"
+                        style="min-height:50px;"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        Search
+                    </button>
+                </div>
 
             </div>
 
-            <!-- Row 2: Secondary filters -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
-               
+            <!-- Row 2: Text search input + Clear -->
+            <div class="flex items-center border-t border-gray-100 px-5 py-3 gap-3">
+                <svg class="text-[#1a3c2e] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                </svg>
                 <input
                     id="searchInput"
                     type="text"
-                    placeholder="Search Project, Builder, Location..."
-                    class=" xl:col-span-2 h-11 px-4 rounded-xl border border-white/30 bg-white/95 text-gray-800 placeholder-gray-400 focus:border-yellow-400 outline-none"
+                    placeholder="Search by project name, builder, location..."
+                    class="flex-1 bg-transparent text-gray-800 font-medium text-sm outline-none placeholder-gray-400"
                 >
-
-                <button
-                    id="searchBtn"
-                    class=" lg:col-span-1 h-11 rounded-xl bg-yellow-500 text-white font-semibold hover:bg-yellow-400 transition-colors duration-200"
-                >
-                   Search
+                <button id="clearFilters" class="flex-shrink-0 text-xs text-gray-400 hover:text-red-500 transition-colors duration-150 px-3 py-1.5 rounded-lg hover:bg-red-50">
+                    Clear All
                 </button>
-
-                <button
-                    id="clearFilters"
-                    class="h-11 rounded-xl border border-red-300/80 text-red-200 hover:bg-red-500 hover:text-white transition-colors duration-200"
-                >
-                    Clear
-                </button>
-
             </div>
+
+            <!-- Hidden selects for filter compatibility -->
+            <select id="bhkFilter" class="hidden"><option value=""></option></select>
+            <select id="statusFilter" class="hidden"><option value=""></option></select>
+            <select id="budgetFilter" class="hidden"><option value=""></option></select>
 
         </div>
 
@@ -126,25 +185,24 @@ function renderSearch() {
 
 function populateDropdowns() {
 
-    populateSelect("categoryFilter", "category");
+    populateSelect("cityFilter", "city");
 
-    populateSelect("typeFilter", "type");
+    populateSelect("locationFilter", "location");
 
     populateSelect("builderFilter", "builder");
 
-    populateSelect("cityFilter", "city");
+    populateSelect("typeFilter", "type");
 
-    populateSelect("bhkFilter", "bhk");
-
-    populateSelect("statusFilter", "status");
+    populateSelect("categoryFilter", "category");
 
 }
 
 function populateSelect(selectId, key) {
 
     const select = document.getElementById(selectId);
+    if (!select) return;
 
-    const values = [...new Set(allProperties.map(item => item[key]))];
+    const values = [...new Set(allProperties.map(item => item[key]).filter(v => v && v.trim()))];
 
     values.sort();
 
@@ -168,73 +226,58 @@ function populateSelect(selectId, key) {
 
 function filterProperties() {
 
-    const keyword = document.getElementById("searchInput").value.toLowerCase().trim();
+    const keyword = (document.getElementById("searchInput")?.value || "").toLowerCase().trim();
 
-    const category = document.getElementById("categoryFilter").value;
+    const category = document.getElementById("categoryFilter")?.value || "";
 
-    const type = document.getElementById("typeFilter").value;
+    const type = document.getElementById("typeFilter")?.value || "";
 
-    const builder = document.getElementById("builderFilter").value;
+    const builder = document.getElementById("builderFilter")?.value || "";
 
-    const city = document.getElementById("cityFilter").value;
+    const city = document.getElementById("cityFilter")?.value || "";
 
-    const bhk = document.getElementById("bhkFilter").value;
+    const location = document.getElementById("locationFilter")?.value || "";
 
-    const status = document.getElementById("statusFilter").value;
+    const bhk = document.getElementById("bhkFilter")?.value || "";
 
-    const budget = document.getElementById("budgetFilter").value;
+    const status = document.getElementById("statusFilter")?.value || "";
+
+    const budget = document.getElementById("budgetFilter")?.value || "";
 
     const filtered = allProperties.filter(property => {
 
-        const searchMatch =
-
+        const searchMatch = !keyword ||
             property.title.toLowerCase().includes(keyword) ||
-
             property.builder.toLowerCase().includes(keyword) ||
-
             property.location.toLowerCase().includes(keyword) ||
-
             property.city.toLowerCase().includes(keyword);
 
-        const categoryMatch =
-            !category || property.category === category;
+        const categoryMatch = !category || property.category === category;
 
-        const typeMatch =
-            !type || property.type === type;
+        const typeMatch = !type || property.type === type;
 
-        const builderMatch =
-            !builder || property.builder === builder;
+        const builderMatch = !builder || property.builder === builder;
 
-        const cityMatch =
-            !city || property.city === city;
+        const cityMatch = !city || property.city === city;
 
-        const bhkMatch =
-            !bhk || property.bhk === bhk;
+        const locationMatch = !location || property.location === location;
 
-        const statusMatch =
-            !status || property.status === status;
+        const bhkMatch = !bhk || property.bhk === bhk;
 
-        const budgetMatch =
-            !budget || property.price <= Number(budget);
+        const statusMatch = !status || property.status === status;
+
+        const budgetMatch = !budget || property.price <= Number(budget);
 
         return (
-
             searchMatch &&
-
             categoryMatch &&
-
             typeMatch &&
-
             builderMatch &&
-
             cityMatch &&
-
+            locationMatch &&
             bhkMatch &&
-
             statusMatch &&
-
             budgetMatch
-
         );
 
     });
@@ -246,96 +289,62 @@ function filterProperties() {
 function registerEvents() {
 
     const searchBtn = document.getElementById("searchBtn");
-
     const searchInput = document.getElementById("searchInput");
-
     const categoryFilter = document.getElementById("categoryFilter");
-
     const typeFilter = document.getElementById("typeFilter");
-
     const builderFilter = document.getElementById("builderFilter");
-
     const cityFilter = document.getElementById("cityFilter");
-
-    const bhkFilter = document.getElementById("bhkFilter");
-
-    const statusFilter = document.getElementById("statusFilter");
-
-    const budgetFilter = document.getElementById("budgetFilter");
-
+    const locationFilter = document.getElementById("locationFilter");
     const clearFilters = document.getElementById("clearFilters");
 
 
     // Search Button
-    searchBtn.addEventListener("click", filterProperties);
+    if (searchBtn) searchBtn.addEventListener("click", filterProperties);
 
-
-    // Enter Key
-    searchInput.addEventListener("keydown", (e) => {
-
-        if (e.key === "Enter") {
-
+    // Desktop Search Input — live filter + Enter key
+    if (searchInput) {
+        searchInput.addEventListener("input", () => {
             filterProperties();
-
-        }
-
-    });
-
-
-    // Live Search
-    searchInput.addEventListener("input", () => {
-
-        if (searchInput.value.length === 0) {
-
-            filterProperties();
-
-        }
-
-    });
-
+        });
+        searchInput.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") filterProperties();
+        });
+    }
 
     // Dropdown Events
-    categoryFilter.addEventListener("change", filterProperties);
-
-    typeFilter.addEventListener("change", filterProperties);
-
-    builderFilter.addEventListener("change", filterProperties);
-
-    cityFilter.addEventListener("change", filterProperties);
-
-    bhkFilter.addEventListener("change", filterProperties);
-
-    statusFilter.addEventListener("change", filterProperties);
-
-    budgetFilter.addEventListener("change", filterProperties);
+    if (categoryFilter) categoryFilter.addEventListener("change", filterProperties);
+    if (typeFilter) typeFilter.addEventListener("change", filterProperties);
+    if (builderFilter) builderFilter.addEventListener("change", filterProperties);
+    if (cityFilter) cityFilter.addEventListener("change", filterProperties);
+    if (locationFilter) locationFilter.addEventListener("change", filterProperties);
 
 
     // Clear Filters
-    clearFilters.addEventListener("click", () => {
+    if (clearFilters) {
+        clearFilters.addEventListener("click", () => {
 
-        searchInput.value = "";
+            if (searchInput) searchInput.value = "";
 
-        // Also clear mobile search input
-        const mobileInput = document.getElementById("searchInputMobile");
-        if (mobileInput) mobileInput.value = "";
+            const mobileInput = document.getElementById("searchInputMobile");
+            if (mobileInput) mobileInput.value = "";
 
-        categoryFilter.value = "";
+            if (categoryFilter) categoryFilter.value = "";
+            if (typeFilter) typeFilter.value = "";
+            if (builderFilter) builderFilter.value = "";
+            if (cityFilter) cityFilter.value = "";
+            if (locationFilter) locationFilter.value = "";
 
-        typeFilter.value = "";
+            const bhkFilter = document.getElementById("bhkFilter");
+            const statusFilter = document.getElementById("statusFilter");
+            const budgetFilter = document.getElementById("budgetFilter");
+            if (bhkFilter) bhkFilter.value = "";
+            if (statusFilter) statusFilter.value = "";
+            if (budgetFilter) budgetFilter.value = "";
 
-        builderFilter.value = "";
+            renderProperties(allProperties, 1);
 
-        cityFilter.value = "";
-
-        bhkFilter.value = "";
-
-        statusFilter.value = "";
-
-        budgetFilter.value = "";
-
-        renderProperties(allProperties, 1);
-
-    });
+        });
+    }
 
 
     // ====== Mobile Search Pill Handlers ======
@@ -344,21 +353,20 @@ function registerEvents() {
 
     if (searchInputMobile && searchBtnMobile) {
 
-        // Sync mobile value to desktop input, then filter
         searchBtnMobile.addEventListener("click", () => {
-            searchInput.value = searchInputMobile.value;
+            if (searchInput) searchInput.value = searchInputMobile.value;
             filterProperties();
         });
 
         searchInputMobile.addEventListener("keydown", (e) => {
             if (e.key === "Enter") {
-                searchInput.value = searchInputMobile.value;
+                if (searchInput) searchInput.value = searchInputMobile.value;
                 filterProperties();
             }
         });
 
         searchInputMobile.addEventListener("input", () => {
-            searchInput.value = searchInputMobile.value;
+            if (searchInput) searchInput.value = searchInputMobile.value;
             if (searchInputMobile.value.length === 0) {
                 filterProperties();
             }
