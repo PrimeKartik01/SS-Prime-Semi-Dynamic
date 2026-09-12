@@ -20,7 +20,7 @@ export function initFooter(containerId = "footer") {
 
                 <p class="text-slate-400 mt-6 text-sm sm:text-base">Pune RERA: A52100044653</p>
                 <p class="text-slate-400 mt-1 text-sm sm:text-base break-words">
-                    Delhi NCR RERA: RC/HARERA/GGM/3022/2617/2024/735
+                    Gurgaon RERA: RC/HARERA/GGM/3022/2617/2024/735
                 </p>
 
                 <p class="mt-3 text-slate-400 leading-7 text-sm
