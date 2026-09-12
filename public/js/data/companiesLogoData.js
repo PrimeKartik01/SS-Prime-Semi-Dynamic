@@ -1,34 +1,30 @@
 export const companiesLogoData = [
     {
-        name: "Google",
-        logo: "img/companyLogo/Oberoi.jpeg"
+        name: "oberoi",
+        logo: "img/companyLogo/Oberoi.png"
     },
     {
-        name: "Microsoft",
-        logo: "img/companyLogo/DLF.jpeg"
+        name: "dlf",
+        logo: "img/companyLogo/DLF.png"
     },
     {
-        name: "Amazon",
-        logo: "img/companyLogo/Elan.jpeg"
+        name: "ellan",
+        logo: "img/companyLogo/ellan.png"
     },
     {
-        name: "Apple",
-        logo: "img/companyLogo/Emaar.jpeg"
+        name: "emaar",
+        logo: "img/companyLogo/emaar.png"
     },
     {
-        name: "Meta",
-        logo: "img/companyLogo/M3M.jpeg"
+        name: "m3m",
+        logo: "img/companyLogo/m3m_shadow.png"
     },
     {
-        name: "Adobe",
-        logo: "img/companyLogo/Sobha.jpeg"
-    },
-    {
-        name: "Oracle",
-        logo: "img/companyLogo/Emaar.jpeg"
+        name: "Sobha",
+        logo: "img/companyLogo/Sobha.png"
     },
     {
         name: "Intel",
-        logo: "img/companyLogo/Godrej.jpeg"
+        logo: "img/companyLogo/Godrej.png"
     }
 ];

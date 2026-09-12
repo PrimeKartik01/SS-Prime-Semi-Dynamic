@@ -221,6 +221,18 @@ function populateSelect(selectId, key) {
 
 }
 
+function scrollToPropertySection() {
+
+    const propertySection = document.getElementById("propertyContainer");
+    if (!propertySection) return;
+
+    propertySection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+    });
+
+}
+
 function filterProperties() {
 
     const keyword = (document.getElementById("searchInput")?.value || "").toLowerCase().trim();
@@ -280,6 +292,7 @@ function filterProperties() {
     });
 
     renderProperties(filtered, 1);
+    scrollToPropertySection();
 
 }
 
@@ -339,6 +352,7 @@ function registerEvents() {
             if (budgetFilter) budgetFilter.value = "";
 
             renderProperties(allProperties, 1);
+            scrollToPropertySection();
 
         });
     }
