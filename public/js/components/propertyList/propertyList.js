@@ -4,6 +4,7 @@ const DESKTOP_ITEMS_PER_PAGE = 6;
 const MOBILE_ITEMS_PER_PAGE = 3;
 let currentPage = 1;
 let currentProperties = [];
+let currentItemsPerPage = null;
 let isPaginationBound = false;
 let isViewportListenerBound = false;
 
@@ -27,23 +28,24 @@ export function renderPropertySkeletons(containerId = "propertyContainer", count
 
 }
 
-export function renderProperties(properties, page = 1) {
+export function renderProperties(properties, page = 1, itemsPerPageOverride = null) {
 
 
     const container = document.getElementById("propertyContainer");
     if (!container) return;
     currentProperties = properties;
+    currentItemsPerPage = itemsPerPageOverride ?? currentItemsPerPage ?? getItemsPerPage();
 
     if (!isViewportListenerBound) {
 
         window.matchMedia("(max-width: 767px)").addEventListener("change", () => {
-            renderProperties(currentProperties, currentPage);
+            renderProperties(currentProperties, currentPage, currentItemsPerPage);
         });
         isViewportListenerBound = true;
 
     }
 
-    const itemsPerPage = getItemsPerPage();
+    const itemsPerPage = currentItemsPerPage;
     const totalPages = Math.max(1, Math.ceil(properties.length / itemsPerPage));
     currentPage = Math.min(Math.max(page, 1), totalPages);
 
@@ -155,7 +157,7 @@ function handlePaginationClick(event) {
     if (!button) return;
 
     const requestedPage = Number(button.dataset.page);
-    const totalPages = Math.max(1, Math.ceil(currentProperties.length / getItemsPerPage()));
+    const totalPages = Math.max(1, Math.ceil(currentProperties.length / (currentItemsPerPage ?? getItemsPerPage())));
 
     if (!Number.isInteger(requestedPage) || requestedPage < 1 || requestedPage > totalPages) {
 
