@@ -1,10 +1,10 @@
 export const heroSlides = [
 
     {
-        title: "Luxury Living Begins Here",
-        subtitle: "Premium Residences in Pune",
-        image: "img/banner_images/sspi_website_banner_1.webp",
-        mobile_image: "img/banner_images/banner_mobile_images/mobile_banner_1.webp",
+        title: "Modern Architecture",
+        subtitle: "Crafted By India's Top Builders",
+        image: "img/banner_images/sspi_website_banner_3.webp",
+        mobile_image: "img/banner_images/banner_mobile_images/mobile_banner_3.webp",
 
     },
 
@@ -18,10 +18,10 @@ export const heroSlides = [
     },
 
     {
-        title: "Modern Architecture",
-        subtitle: "Crafted By India's Top Builders",
-        image: "img/banner_images/sspi_website_banner_3.webp",
-        mobile_image: "img/banner_images/banner_mobile_images/mobile_banner_3.webp",
+        title: "Luxury Living Begins Here",
+        subtitle: "Premium Residences in Pune",
+        image: "img/banner_images/sspi_website_banner_1.webp",
+        mobile_image: "img/banner_images/banner_mobile_images/mobile_banner_1.webp",
 
     },
 
