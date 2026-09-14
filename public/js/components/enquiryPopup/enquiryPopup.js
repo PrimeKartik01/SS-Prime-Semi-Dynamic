@@ -184,9 +184,17 @@ export function initEnquiryPopup() {
                     font-size: 12px !important;
                 }
 
+                #popupForm input::placeholder {
+                    font-size: 12px !important;
+                }
+
                 @media (min-width: 768px) {
                     #popupForm select,
                     #popupForm select option {
+                        font-size: 14px !important;
+                    }
+
+                    #popupForm input::placeholder {
                         font-size: 14px !important;
                     }
                 }
