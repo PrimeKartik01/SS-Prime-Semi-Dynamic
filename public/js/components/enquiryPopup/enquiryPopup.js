@@ -56,13 +56,13 @@ export function initEnquiryPopup() {
                     class="relative bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300">
 
                     <!-- Header -->
-                    <div class="relative bg-yellow-500 px-8 py-8 text-white">
+                    <div class="relative bg-yellow-500 p-4 md:px-8 md:py-8 text-white">
                         <button id="closePopup" class="absolute top-5 right-5 text-3xl leading-none hover:rotate-90 duration-300">
                             &times;
                         </button>
                         <p class="uppercase tracking-[4px] text-sm opacity-90">SS Prime</p>
-                        <h2 class="md:text-3xl font-bold mt-2">Request A Callback</h2>
-                        <p class="mt-3 text-white/90">Fill in your details and our property expert will contact you shortly.</p>
+                        <h2 class="text-md md:text-3xl font-bold mt-2">Contact Us</h2>
+                        <p class="mt-1 md:mt-3 text-white/90 text-xs md:text-sm">Fill in your details and our property expert will contact you shortly.</p>
                     </div>
 
                     <!-- Form -->
@@ -73,32 +73,32 @@ export function initEnquiryPopup() {
 
                         <!-- Name -->
                         <div>
-                            <label class="font-semibold block mb-2">Full Name</label>
+                            <label class="font-semibold block mb-2 text-xs md:text-sm">Full Name</label>
                             <input type="text" id="popupName" name="name" placeholder="Enter your name"
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500" required>
+                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 placeholder:text-xs md:placeholder:text-base" required>
                         </div>
 
                         <!-- Email -->
                         <div>
-                            <label class="font-semibold block mb-2">Email Address</label>
+                            <label class="font-semibold block mb-2 text-xs md:text-sm">Email Address</label>
                             <input type="email" id="popupEmail" name="email" placeholder="Enter your email"
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500" required>
+                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 placeholder:text-xs md:placeholder:text-base" required>
                         </div>
 
                         <!-- Phone -->
                         <div>
-                            <label class="font-semibold block mb-2">Mobile Number</label>
+                            <label class="font-semibold block mb-2 text-xs md:text-sm">Mobile Number</label>
                             <input type="tel" id="popupPhone" name="phone" placeholder="Enter your mobile number"
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500" required>
+                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 placeholder:text-xs md:placeholder:text-base" required>
                         </div>
 
                         <!-- Project -->
                         <div>
-                            <label class="font-semibold block mb-2">Interested Project</label>
+                            <label class="font-semibold block mb-2 text-xs md:text-sm">Interested Project</label>
                             <input type="text" id="popupProject" name="project" readonly
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 bg-gray-100 hidden">
+                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 bg-gray-100 hidden ">
                             <select id="popupProjectSelect" name="project"
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 bg-white">
+                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 text-xs md:text-sm outline-none focus:border-yellow-500 bg-white ">
                                 <option value="">Select Project</option>
                             </select>
                         </div>
@@ -106,20 +106,20 @@ export function initEnquiryPopup() {
                         <!-- City & Budget -->
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <label class="font-semibold block mb-2">City</label>
+                                <label class="font-semibold block mb-2 text-xs md:text-sm">City</label>
                                 <input type="text" id="popupCity" name="city" readonly
                                     class="w-full border rounded-xl p-2 md:px-4 md:py-3 bg-gray-100 hidden">
                                 <select id="popupCitySelect" name="city"
-                                    class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 bg-white">
+                                    class="w-full border rounded-xl p-2 md:px-4 md:py-3 text-xs md:text-sm outline-none focus:border-yellow-500 bg-white">
                                     <option value="">Select City</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="font-semibold block mb-2">Budget</label>
+                                <label class="font-semibold block mb-2 text-xs md:text-sm">Budget</label>
                                 <input type="text" id="popupBudget" name="budget" readonly
                                     class="w-full border rounded-xl p-2 md:px-4 md:py-3 bg-gray-100 hidden">
                                 <select id="popupBudgetSelect" name="budget"
-                                    class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 bg-white">
+                                    class="w-full border rounded-xl p-2 md:px-4 md:py-3 text-xs md:text-sm outline-none focus:border-yellow-500 bg-white">
                                     <option value="">Select Budget</option>
                                     <option value="Flexible">Flexible</option>
                                     <option value="Under ₹50 Lakhs">Under ₹50 Lakhs</option>
@@ -177,6 +177,18 @@ export function initEnquiryPopup() {
 
                 #popupForm input, #popupForm select {
                     transition: all .25s ease;
+                }
+
+                #popupForm select,
+                #popupForm select option {
+                    font-size: 12px !important;
+                }
+
+                @media (min-width: 768px) {
+                    #popupForm select,
+                    #popupForm select option {
+                        font-size: 14px !important;
+                    }
                 }
 
                 #popupForm input:focus, #popupForm select:focus {
