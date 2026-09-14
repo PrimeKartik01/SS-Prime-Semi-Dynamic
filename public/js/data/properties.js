@@ -1,24 +1,24 @@
 export const properties = [
+
   {
     id: 1,
-    title: "Smart World Sky Arc",
-    builder: "Smart World Developers",
-    category: "Residential",
-    type: "Apartment",
-    bhk: "3, 3.5 & 4.5 BHK",
+    title: "SPJ Vedatam",
+    builder: "SPJ Properties",
+    category: "Commercial",
+    type: "Retail Shop",
+    bhk: "",
     city: "Gurgaon",
-    location: "Sector 69, Golf Course Extension Road",
-    price: 499,
-    priceLabel: "₹4.99 Cr Onwards",
-    carpetArea: "2355 - 3270 Sq.ft",
-    status: "New Launch",
-    possession: "",
-    rera: "",
-    featured: true,
-    rating: 4.9,
+    location: "Sector 14, Gurgaon",
+    price: 78.75,
+    priceLabel: "₹78.75 Lakhs - ₹2.25 Crore",
+    carpetArea: "210 - 600 Sq.ft",
+    status: "Under Construction",
+    possession: "June 2030",
+    rera: "GGM/927/659/2025/30",
+    featured: false,
+    rating: 5.0,
     images: [
-      "img/brochure_images/smartworld_skyarc_1.webp",
-      "img/brochure_images/smartworld_skyarc_2.webp",
+      // listing images
     ]
   },
   {
@@ -915,6 +915,29 @@ export const properties = [
     images: [
       "img/brochure_images/omaxe_gurgaon_mall.webp",
     ]
-  }
+  },
+  {
+    id: 39,
+    title: "Smart World Sky Arc",
+    builder: "Smart World Developers",
+    category: "Residential",
+    type: "Apartment",
+    bhk: "3, 3.5 & 4.5 BHK",
+    city: "Gurgaon",
+    location: "Sector 69, Golf Course Extension Road",
+    price: 499,
+    priceLabel: "₹4.99 Cr Onwards",
+    carpetArea: "2355 - 3270 Sq.ft",
+    status: "New Launch",
+    possession: "",
+    rera: "",
+    featured: true,
+    rating: 4.9,
+    images: [
+      "img/brochure_images/smartworld_skyarc_1.webp",
+      "img/brochure_images/smartworld_skyarc_2.webp",
+    ]
+  },
+
 ];
 
