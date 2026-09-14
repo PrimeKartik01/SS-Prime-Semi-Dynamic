@@ -1,7 +1,7 @@
 export const companiesLogoData = [
     {
         name: "oberoi",
-        logo: "img/companyLogo/Oberoi.png"
+        logo: "img/companyLogo/oberoi.png"
     },
     {
         name: "dlf",
@@ -25,6 +25,6 @@ export const companiesLogoData = [
     },
     {
         name: "Intel",
-        logo: "img/companyLogo/Godrej.png"
+        logo: "img/companyLogo/godrej.png"
     }
 ];
