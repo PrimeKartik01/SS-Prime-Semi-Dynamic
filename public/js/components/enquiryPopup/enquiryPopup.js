@@ -11,6 +11,37 @@ let projectInput;
 let cityInput;
 let budgetInput;
 
+const ENQUIRY_SUBMITTED_KEY = "ssPrimeEnquirySubmitted";
+const ENQUIRY_OPEN_COUNT_KEY = "ssPrimeEnquiryOpenCount";
+const MAX_AUTOMATIC_OPENS = 2;
+const INITIAL_POPUP_DELAY = 5000;
+const REOPEN_POPUP_DELAY = 40000;
+let popupTimer;
+
+function hasSubmittedEnquiry() {
+    return localStorage.getItem(ENQUIRY_SUBMITTED_KEY) === "true";
+}
+
+function hasReachedAutomaticOpenLimit() {
+    return Number(localStorage.getItem(ENQUIRY_OPEN_COUNT_KEY) || 0) >= MAX_AUTOMATIC_OPENS;
+}
+
+function schedulePopup(delay) {
+    clearTimeout(popupTimer);
+
+    if (hasSubmittedEnquiry() || hasReachedAutomaticOpenLimit()) return;
+
+    popupTimer = setTimeout(() => {
+        if (!popup.classList.contains("flex") && !hasReachedAutomaticOpenLimit()) {
+            localStorage.setItem(
+                ENQUIRY_OPEN_COUNT_KEY,
+                String(Number(localStorage.getItem(ENQUIRY_OPEN_COUNT_KEY) || 0) + 1)
+            );
+            openEnquiryPopup();
+        }
+    }, delay);
+}
+
 export function initEnquiryPopup() {
     // If popup doesn't exist, inject it dynamically
     if (!document.querySelector("#enquiryPopup")) {
@@ -314,6 +345,9 @@ export function initEnquiryPopup() {
 
                 }
 
+                localStorage.setItem(ENQUIRY_SUBMITTED_KEY, "true");
+                clearTimeout(popupTimer);
+
                 // Remove any previous success containers if present
                 popupContent.querySelectorAll(".enquiry-success").forEach(el => el.remove());
 
@@ -428,6 +462,8 @@ export function initEnquiryPopup() {
         });
 
     }
+
+    schedulePopup(INITIAL_POPUP_DELAY);
 }
 
 export function openEnquiryPopup(property) {
@@ -491,5 +527,7 @@ export function closeEnquiryPopup() {
     setTimeout(() => {
         popup.classList.remove("flex");
         popup.classList.add("hidden");
+
+        schedulePopup(REOPEN_POPUP_DELAY);
     }, 300);
 }

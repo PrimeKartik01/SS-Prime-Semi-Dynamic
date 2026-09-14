@@ -13,7 +13,7 @@ export function renderGalleryComponent(containerId, items) {
                 <img id="lightbox-image" class="mx-auto max-h-[calc(100vh-12rem)] max-w-full object-contain sm:max-h-[calc(100vh-13rem)]" src="" alt="">
                 <div class="max-w-xl shrink-0 text-white">
                     <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-amber-400">SS Prime Infra</p>
-                    <h2 id="lightbox-title" class="font-display text-3xl"></h2>
+                    <h2 id="lightbox-title" class="text-3xl"></h2>
                     <p id="lightbox-description" class="mt-4 text-sm leading-7 text-slate-300"></p>
                 </div>
             </div>
@@ -42,7 +42,7 @@ export function renderGalleryComponent(containerId, items) {
             <span class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/10 to-slate-950/90"></span>
             <span class="absolute inset-x-6 bottom-6 flex flex-col text-white">
                 <span class="text-xs font-bold uppercase tracking-[0.18em] text-amber-400">0${index + 1}</span>
-                <span class="mt-2 font-display text-2xl sm:text-3xl">${item.title}</span>
+                <span class="mt-2 text-2xl sm:text-3xl">${item.title}</span>
                 <span class="mt-3 flex items-center gap-2 text-[0.7rem] font-bold uppercase tracking-[0.08em] text-white/70"><i class="fa-solid fa-arrow-up-right-from-square"></i> View image</span>
             </span>
         </button>
