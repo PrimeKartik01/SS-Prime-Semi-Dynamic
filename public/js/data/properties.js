@@ -18,7 +18,10 @@ export const properties = [
     featured: false,
     rating: 5.0,
     images: [
-      // listing images
+      "img/brochure_images/spj_vedatam_1.webp",
+      "img/brochure_images/spj_vedatam_2.webp",
+      "img/brochure_images/spj_vedatam_3.webp",
+      "img/brochure_images/spj_vedatam_4.webp"
     ]
   },
   {
