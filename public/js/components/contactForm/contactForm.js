@@ -27,13 +27,13 @@ export function initContactForm(containerId = "contact-form") {
 
                 <div class="relative">
 
-                <span class="inline-block text-white uppercase tracking-[5px] font-semibold">
+                <span class="inline-block text-white uppercase tracking-[5px] font-semibold text-xs md:text-base">
 
                     Contact Our Experts
 
                 </span>
 
-                <h2 class="mt-3 md:mt-6 text-3xl md:text-5xl font-bold text-white leading-tight">
+                <h2 class="mt-3 md:mt-6 text-2xl md:text-5xl font-bold text-white leading-tight">
 
                     Looking For Your
 

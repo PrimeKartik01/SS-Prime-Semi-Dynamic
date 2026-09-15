@@ -141,7 +141,7 @@ function renderTeam(team) {
                 <div class="swiper-wrapper">
                     ${carouselCards}
                 </div>
-                <div class="swiper-button-prev team-carousel-prev mt-4"></div>
+                <div class="swiper-button-prev team-carousel-prev mt-4 "></div>
                 <div class="swiper-button-next team-carousel-next mt-4"></div>
             </div>
         </div>

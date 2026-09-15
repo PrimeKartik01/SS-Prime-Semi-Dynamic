@@ -78,10 +78,10 @@ export function initTestimonials({
                     <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-widest border border-amber-500/20">
                         <i class="fa-solid fa-comments"></i> Client Testimonials
                     </span>
-                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-black mt-4 tracking-tight">
+                    <h2 class="text-2xl md:text-5xl lg:text-6xl font-black mt-4 tracking-tight">
                         What Our <span class="text-amber-400">Happy Clients</span> Say
                     </h2>
-                    <p class="mt-4 text-slate-400 text-md md:text-lg font-light">
+                    <p class="mt-4 text-slate-400 text-sm md:text-lg font-light">
                         Real stories from home buyers and property investors who found their ideal properties with SS Prime Infra.
                     </p>
                 </div>
@@ -101,7 +101,7 @@ export function initTestimonials({
                                         </div>
 
                                         <!-- Text Content -->
-                                        <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light mb-8 italic">
+                                        <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light mb-8">
                                             "${item.text}"
                                         </p>
 
