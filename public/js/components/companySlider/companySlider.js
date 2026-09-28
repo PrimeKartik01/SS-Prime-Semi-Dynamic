@@ -15,14 +15,7 @@ export function companySlider({
 
             <div>
 
-                <div class="text-center  text-sm  md:text-2xl mb-4">
-
-                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-amber-700 font-semibold tracking-wide">
-                        <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
-                        Trusted Partners
-                    </span>
-
-                </div>
+             
 
                 <div class="relative overflow-hidden">
 

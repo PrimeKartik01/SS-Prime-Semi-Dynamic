@@ -12,18 +12,18 @@ export function initFooter(containerId = "footer") {
 
         <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
 
-            <div>
+            <div class="border-r-[0.5px] border-slate-700">
 
                 <a href="index.html" class="flex justify-center md:justify-start items-center">
                     <img src="img/logo.webp" alt="SS Prime Infra Logo" class="h-25 object-cover drop-shadow-lg">
                 </a>
 
-                <p class="text-slate-400 mt-6 text-sm sm:text-base">Pune RERA: A52100044653</p>
-                <p class="text-slate-400 mt-1 text-sm sm:text-base break-words">
+                <p class=" mt-6 text-sm sm:text-base">Pune RERA: A52100044653</p>
+                <p class=" mt-1 text-sm sm:text-base break-words">
                     Gurgaon RERA: RC/HARERA/GGM/3022/2617/2024/735
                 </p>
 
-                <p class="mt-3 text-slate-400 leading-7 text-sm
+                <p class="mt-3  leading-7 text-sm
                 
                 sm:text-base">
                     Helping you find premium residential properties across Pune. Discover luxury apartments, investment opportunities and dream homes from India's leading developers.
@@ -52,13 +52,16 @@ export function initFooter(containerId = "footer") {
             </div>
 
             <div class="lg:col-span-2 grid grid-cols-2 gap-2 md:gap-12">
-                <div>
+                <div class="border-r-[0.5px] border-slate-700">
 
-                    <h3 class="text-md md:text-xl font-semibold text-white mb-6 md:text-center">
+                    <h3 class="text-xl font-medium
+                     text-white mb-2">
                         Quick Links
                     </h3>
 
-                    <ul class="space-y-4 text-sm md:text-base md:text-center">
+                    <div class="w-14 h-1 bg-yellow-400 mb-6 rounded-lg"></div>
+
+                    <ul class="space-y-3 md:text-light md:text-left">
 
                         <li><a href="index.html" class="hover:text-amber-500 transition">Home</a></li>
 
@@ -76,13 +79,16 @@ export function initFooter(containerId = "footer") {
 
                 </div>
 
-                <div>
+                <div class="border-r-[0.5px] border-slate-700">
 
-                    <h3 class="text-md md:text-xl font-semibold text-white mb-6 md:text-center">
+                    <h3 class="text-xl font-medium
+                     text-white mb-2">
                         Featured Projects
                     </h3>
 
-                    <ul class="space-y-4 text-sm md:text-base md:text-center">
+                    <div class="w-14 h-1 bg-yellow-400 mb-6 rounded-lg"></div>
+
+                    <ul class="space-y-3  md:text-light md:text-left">
 
                         <li><a href="#" class="hover:text-amber-500 transition">SPJ</a></li>
 
@@ -102,9 +108,12 @@ export function initFooter(containerId = "footer") {
 
             <div>
 
-                <h3 class="text-xl font-semibold text-white mb-6">
+                <h3 class="text-xl font-medium
+                 text-white mb-2">
                     Contact
                 </h3>
+                <div class="w-14 h-1 bg-yellow-400 mb-6 rounded-lg"></div>
+                
 
                 <div class="space-y-5">
 
@@ -158,17 +167,18 @@ export function initFooter(containerId = "footer") {
 
     <div class="border-t border-slate-800">
 
-        <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class=" w-8/9 mx-auto py-6 flex flex-col md:flex-row justify-between items-center gap-4">
 
             <div class="text-sm text-slate-500 space-y-1 text-center md:text-left">
                 <p>© 2026 SS Prime Infra. All Rights Reserved.</p>
             </div>
 
-            <div class="flex gap-6 text-sm">
+            <div class="flex gap-1 text-sm">
 
                 <a href="privacy-policy.html" class="hover:text-amber-500 transition">
                     Privacy Policy
                 </a>
+                <span class="text-amber-500 font-medium">-></span>
             </div>
 
         </div>

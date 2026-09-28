@@ -234,6 +234,36 @@ body {
     border-radius: 6px;
 }
 
+/* ---------- Property Card Image Carousel Arrows ---------- */
+.propertySwiper .swiper-button-prev,
+.propertySwiper .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    color: #fff;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.propertySwiper .swiper-button-prev::after,
+.propertySwiper .swiper-button-next::after {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.propertySwiper .swiper-button-prev:hover,
+.propertySwiper .swiper-button-next:hover {
+    background: rgba(245, 158, 11, 0.85);
+    transform: scale(1.1);
+}
+
+/* Keep the property list outer swiper fully visible */
+.propertyListSwiper {
+    overflow: visible;
+    clip-path: inset(-8px -4px -8px -4px);
+}
+
 /* ---------- Swiper Nav Arrows ---------- */
 .hero-nav-btn {
     width: 48px;
