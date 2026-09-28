@@ -11,7 +11,7 @@ export function companySlider({
     const logos = [...companies, ...companies];
 
     container.innerHTML = `
-        <section class="py-4 md:py-8 bg-gray-50 overflow-hidden">
+        <section class="pt-4 md:pt-8 bg-gray-50 overflow-hidden">
 
             <div>
 

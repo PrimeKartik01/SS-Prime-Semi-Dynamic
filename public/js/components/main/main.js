@@ -35,7 +35,7 @@ initHeroCarousel({
 
 initSearch(properties);
 
-renderProperties(properties, 1, 3);
+renderProperties(properties, 1, 4);
 
 companySlider({
     containerId: "company-slider",

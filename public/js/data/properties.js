@@ -10,7 +10,7 @@ export const properties = [
     city: "Gurgaon",
     location: "Sector 14, Gurgaon",
     price: 78.75,
-    priceLabel: "₹78.75 Lakhs - ₹2.25 Cr Ownwards",
+    priceLabel: "₹78.75 L Ownwards",
     carpetArea: "210 - 600 Sq.ft",
     status: "Under Construction",
     possession: "June 2030",

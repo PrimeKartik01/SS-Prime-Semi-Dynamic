@@ -121,13 +121,13 @@ export function propertyCard(property) {
 
                 <div>
 
-                    <p class="text-gray-400 text-sm">
+                    <p class="text-gray-400 text-xs">
 
                         Starting From
 
                     </p>
 
-                    <h2 class="text-md md:text-xl font-bold text-yellow-600">
+                    <h2 class="text-md  font-bold text-yellow-600">
 
                         ${property.priceLabel}
 
