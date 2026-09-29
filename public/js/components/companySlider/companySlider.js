@@ -22,9 +22,9 @@ export function companySlider({
                     <div class="company-slider-track flex items-center gap-6 w-max">
 
                         ${logos.map(company => `
-                            <div class="group flex-shrink-0 w-48 h-48 flex items-center justify-center rounded-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="group flex-shrink-0 w-30 h-30 md:w-48 md:h-48 flex items-center justify-center rounded-2xl hover:-translate-y-1 transition-all duration-300">
 
-                                <div class="w-full h-full flex items-center justify-center p-6">
+                                <div class="w-full h-full flex items-center justify-center md:p-6">
 
                                     <img
                                         src="${company.logo}"
