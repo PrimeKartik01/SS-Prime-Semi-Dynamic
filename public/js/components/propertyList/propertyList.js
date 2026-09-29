@@ -37,7 +37,7 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
     }
 
     const slidesMarkup = properties.map(property => `
-        <div class="swiper-slide !h-auto py-2 px-1">
+        <div class="swiper-slide !h-auto py-2 px-1 md:px-3">
             ${propertyCard(property)}
         </div>
     `).join("");
