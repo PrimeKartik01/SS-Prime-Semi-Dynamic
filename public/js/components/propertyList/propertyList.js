@@ -1,6 +1,5 @@
 import { propertyCard, propertySkeletonCard } from "../propertyCard/propertyCard.js";
 
-const ITEMS_PER_SLIDE = 4;
 let currentProperties = [];
 
 export function renderPropertySkeletons(containerId = "propertyContainer", count = 4) {
@@ -37,17 +36,9 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
 
     }
 
-    // Chunk properties into groups of ITEMS_PER_SLIDE
-    const chunks = [];
-    for (let i = 0; i < properties.length; i += ITEMS_PER_SLIDE) {
-        chunks.push(properties.slice(i, i + ITEMS_PER_SLIDE));
-    }
-
-    const slidesMarkup = chunks.map(chunk => `
-        <div class="swiper-slide !h-auto py-2">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-1">
-                ${chunk.map(propertyCard).join("")}
-            </div>
+    const slidesMarkup = properties.map(property => `
+        <div class="swiper-slide !h-auto py-2 px-1">
+            ${propertyCard(property)}
         </div>
     `).join("");
 
@@ -74,11 +65,6 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
             </div>
         </div>
 
-        <!-- Dots + counter -->
-        <div class="flex items-center justify-center gap-3 mt-6">
-            <div id="propListPagination" class="flex items-center gap-2"></div>
-        </div>
-
     `;
 
     // ── Outer list Swiper ───────────────────────────────────────────────
@@ -89,6 +75,19 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
         speed: 500,
 
         slidesPerView: 1,
+
+        slidesPerGroup: 1,
+
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            1024: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+        },
 
         autoHeight: false,
 
@@ -113,20 +112,20 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
         const counter = document.getElementById("propListCounter");
         const paginationEl = document.getElementById("propListPagination");
 
-        const total = swiper.slides.length;
-        const current = swiper.activeIndex;
+        const total = swiper.snapGrid.length;
+        const current = swiper.snapIndex;
 
         // Counter
         if (counter) counter.textContent = `${current + 1} / ${total}`;
 
         // Prev
         if (prevBtn) {
-            prevBtn.disabled = current === 0;
+            prevBtn.disabled = swiper.isBeginning;
         }
 
         // Next
         if (nextBtn) {
-            nextBtn.disabled = current === total - 1;
+            nextBtn.disabled = swiper.isEnd;
         }
 
         // Dot pagination
@@ -141,7 +140,7 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
 
             paginationEl.querySelectorAll("button[data-index]").forEach(btn => {
                 btn.addEventListener("click", () => {
-                    listSwiper.slideTo(Number(btn.dataset.index));
+                    listSwiper.slideTo(Number(btn.dataset.index) * listSwiper.params.slidesPerGroup);
                 });
             });
         }
