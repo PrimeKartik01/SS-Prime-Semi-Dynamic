@@ -11,7 +11,7 @@ export function companySlider({
     const logos = [...companies, ...companies];
 
     container.innerHTML = `
-        <section class="pt-4 md:pt-8 bg-gray-50 overflow-hidden">
+        <section class="pt-6 md:pt-8 bg-gray-50 overflow-hidden">
 
             <div>
 
@@ -22,7 +22,7 @@ export function companySlider({
                     <div class="company-slider-track flex items-center gap-6 w-max">
 
                         ${logos.map(company => `
-                            <div class="group flex-shrink-0 w-30 h-30 md:w-48 md:h-48 flex items-center justify-center rounded-2xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="group flex-shrink-0 w-35 h-10 md:w-48 md:h-48 flex items-center justify-center rounded-2xl hover:-translate-y-1 transition-all duration-300">
 
                                 <div class="w-full h-full flex items-center justify-center md:p-6">
 
