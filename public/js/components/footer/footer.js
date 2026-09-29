@@ -12,20 +12,18 @@ export function initFooter(containerId = "footer") {
 
         <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
 
-            <div class=" border-r-[0.5px] border-slate-700 pr-1">
+            <div class=" xl:border-r-[0.5px] border-slate-700 pr-1 text-sm">
 
                 <a href="index.html" class="flex justify-center md:justify-start items-center">
                     <img src="img/logo.webp" alt="SS Prime Infra Logo" class="h-25 object-cover drop-shadow-lg">
                 </a>
 
-                <p class=" mt-6 text-sm sm:text-base">Pune RERA: A52100044653</p>
-                <p class=" mt-1 text-sm sm:text-base break-words">
+                <p class=" mt-6">Pune RERA: A52100044653</p>
+                <p class=" mt-1 break-words">
                     Gurgaon RERA: RC/HARERA/GGM/3022/2617/2024/735
                 </p>
 
-                <p class="mt-3  leading-7 text-sm
-                
-                sm:text-base">
+                <p class="mt-3  leading-7">
                     Helping you find premium residential properties across Pune. Discover luxury apartments, investment opportunities and dream homes from India's leading developers.
                 </p>
                 
@@ -52,16 +50,16 @@ export function initFooter(containerId = "footer") {
             </div>
 
             <div class="lg:col-span-2 grid grid-cols-2 gap-2 md:gap-12">
-                <div class="border-r-[0.5px] border-slate-700">
+                <div class="xl:border-r-[0.5px] border-slate-700">
 
-                    <h3 class="text-xl font-medium
+                    <h3 class="text-lg font-medium
                      text-white mb-2">
                         Quick Links
                     </h3>
 
-                    <div class="w-14 h-1 bg-yellow-400 mb-6 rounded-lg"></div>
+                    <div class="w-14 h-0.5 bg-yellow-400 mb-6 rounded-lg"></div>
 
-                    <ul class="space-y-3 md:text-light md:text-left">
+                    <ul class="space-y-3 md:text-light md:text-left text-sm">
 
                         <li><a href="index.html" class="hover:text-amber-500 transition">Home</a></li>
 
@@ -79,16 +77,16 @@ export function initFooter(containerId = "footer") {
 
                 </div>
 
-                <div class="border-r-[0.5px] border-slate-700">
+                <div class="xl:border-r-[0.5px] border-slate-700">
 
-                    <h3 class="text-xl font-medium
+                    <h3 class="text-lg font-medium
                      text-white mb-2">
                         Featured Projects
                     </h3>
 
-                    <div class="w-14 h-1 bg-yellow-400 mb-6 rounded-lg"></div>
+                    <div class="w-14 h-0.5 bg-yellow-400 mb-6 rounded-lg"></div>
 
-                    <ul class="space-y-3  md:text-light md:text-left">
+                    <ul class="space-y-3  md:text-light md:text-left text-sm">
 
                         <li><a href="#" class="hover:text-yellow-500 transition">SPJ</a></li>
 
@@ -108,20 +106,20 @@ export function initFooter(containerId = "footer") {
 
             <div>
 
-                <h3 class="text-xl font-medium
+                <h3 class="text-lg font-medium
                  text-white mb-2">
                     Contact
                 </h3>
-                <div class="w-14 h-1 bg-yellow-400 mb-6 rounded-lg"></div>
+                <div class="w-14 h-0.5 bg-yellow-400 mb-6 rounded-lg"></div>
                 
 
-                <div class="space-y-5">
+                <div class="space-y-5 text-sm">
 
                     <div class="flex gap-3">
                         <i class="fa-solid fa-location-dot text-yellow-500 mt-1 shrink-0"></i>
                         <div>
-                            <span class="block text-xs text-yellow-500 uppercase tracking-widest font-semibold mb-0.5">NCR Office</span>
-                            <a href="https://www.google.com/maps/dir//SS+Prime+Infra+Pvt+Ltd,+Ground+floor,+Block-D,+Pioneer+Urban+Square,+Office+no+:-006,+Sector+62,+Gurugram,+Ghata,+Haryana+122098/@28.4199057,77.0931277,14z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x390d23b6f6e61b6f:0x4fc30b68f5127c0!2m2!1d77.0896093!2d28.4150296?entry=ttu&g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 transition text-wrap text-xs sm:text-base">
+                            <span class="block text-yellow-500 uppercase tracking-widest font-semibold mb-0.5">NCR Office</span>
+                            <a href="https://www.google.com/maps/dir//SS+Prime+Infra+Pvt+Ltd,+Ground+floor,+Block-D,+Pioneer+Urban+Square,+Office+no+:-006,+Sector+62,+Gurugram,+Ghata,+Haryana+122098/@28.4199057,77.0931277,14z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x390d23b6f6e61b6f:0x4fc30b68f5127c0!2m2!1d77.0896093!2d28.4150296?entry=ttu&g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 transition text-wrap ">
                                 SS Prime Infra Pvt Ltd, Ground Floor, Block-D, Pioneer Urban Square, Office No. 006, Sector 62, Gurugram, Haryana 122098
                             </a>
                         </div>
@@ -130,8 +128,8 @@ export function initFooter(containerId = "footer") {
                     <div class="flex gap-3">
                         <i class="fa-solid fa-location-dot text-yellow-500 mt-1 shrink-0"></i>
                         <div>
-                            <span class="block text-xs text-yellow-500 uppercase tracking-widest font-semibold mb-0.5">Maharashtra Office</span>
-                            <a href="https://www.google.com/maps?sca_esv=cf5c3a640caff83a&sxsrf=APpeQnunwSMbo_g7QTwFe_fvSVwdW4LGgQ:1787137880010&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXNzcHJpbWVpbmZyYSBwdW5lMgYQABgWGB5I4BNQrwZYixJwAXgAkAEAmAGTAaABrQaqAQMwLja4AQPIAQD4AQGYAgagAtQFwgIHECMYsAMYJ8ICChAAGEcY1gQYsAPCAhcQLhjcBhi4BhjaBhjYAhjIAxiwA9gBAcICBBAjGCfCAgcQABiABBgNwgINEC4YgAQYDRjHARivAcICBhAAGB4YDcICBxAjGLACGCfCAgsQABiABBiKBRiGA5gDAOIDBRIBMSBAiAYBkAYGugYECAEYGZIHAzEuNaAH0iayBwMwLjW4B84FwgcFMS4yLjPIBxKACAE&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KV_Hcn0Xv8I7McnmUa5qS3Np&daddr=Office+No.+410,+ICON+Towers,+Survey+Number+83/1,+near+Kasturi+Chowk,+Wakad,+Maharashtra+411057" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 text-xs sm:text-base">
+                            <span class="block text-yellow-500 uppercase tracking-widest font-semibold mb-0.5">Maharashtra Office</span>
+                            <a href="https://www.google.com/maps?sca_esv=cf5c3a640caff83a&sxsrf=APpeQnunwSMbo_g7QTwFe_fvSVwdW4LGgQ:1787137880010&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXNzcHJpbWVpbmZyYSBwdW5lMgYQABgWGB5I4BNQrwZYixJwAXgAkAEAmAGTAaABrQaqAQMwLja4AQPIAQD4AQGYAgagAtQFwgIHECMYsAMYJ8ICChAAGEcY1gQYsAPCAhcQLhjcBhi4BhjaBhjYAhjIAxiwA9gBAcICBBAjGCfCAgcQABiABBgNwgINEC4YgAQYDRjHARivAcICBhAAGB4YDcICBxAjGLACGCfCAgsQABiABBiKBRiGA5gDAOIDBRIBMSBAiAYBkAYGugYECAEYGZIHAzEuNaAH0iayBwMwLjW4B84FwgcFMS4yLjPIBxKACAE&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KV_Hcn0Xv8I7McnmUa5qS3Np&daddr=Office+No.+410,+ICON+Towers,+Survey+Number+83/1,+near+Kasturi+Chowk,+Wakad,+Maharashtra+411057" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 ">
                                 Office No. 6, 6th Floor (B Wing) City Vista, Kharadi – Fountain Road Ashoka Nagar, Pune – 411014
                             </a>
                         </div>
@@ -178,7 +176,7 @@ export function initFooter(containerId = "footer") {
                 <a href="privacy-policy.html" class="hover:text-amber-500 transition">
                     Privacy Policy
                 </a>
-                <span class="text-amber-500 font-medium">-></span>
+                <span class="text-yellow-500 font-medium">-></span>
             </div>
 
         </div>

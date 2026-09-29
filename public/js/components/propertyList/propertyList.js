@@ -46,14 +46,14 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
 
         <!-- ← Left Nav Button -->
         <button id="propListPrev"
-            class="absolute left-0 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full  shadow-lg border border-gray-200 text-blue-900 hover:bg-yellow-500 hover:text-white hover:border-yellow-500 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            class="absolute -left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full  shadow-lg border border-gray-200 text-blue-900 bg-yellow-500 text-white transition-all duration-200 disabled:opacity-0 disabled:cursor-not-allowed"
             aria-label="Previous properties">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6"/></svg>
         </button>
 
         <!-- → Right Nav Button -->
         <button id="propListNext"
-            class="absolute right-0 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 shadow-lg border border-gray-200 text-gray-900 hover:bg-yellow-500 hover:text-white hover:border-yellow-500 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            class="absolute -right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 shadow-lg border border-gray-200 text-gray-900 bg-yellow-500 text-white transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Next properties">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></svg>
         </button>
@@ -84,6 +84,10 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
                 slidesPerGroup: 2,
             },
             1024: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            1440: {
                 slidesPerView: 4,
                 slidesPerGroup: 4,
             },
