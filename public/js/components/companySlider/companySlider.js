@@ -11,13 +11,18 @@ export function companySlider({
     const logos = [...companies, ...companies];
 
     container.innerHTML = `
-        <section class=" md:pt-8 bg-gray-50 overflow-hidden">
+        <section class=" md:pt-8 overflow-hidden bg-gradient-to-br from-[#FFFDF9] via-[#FFFDF9] to-[#FFFDF9]">
 
             <div>
 
              
 
-                <div class="relative overflow-hidden">
+                <div class="relative overflow-hidden ">
+
+                <!-- Ambient Lighting Glow -->  
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[200px] md:h-[200px] w-[300px] h-[300px] bg-amber-200/20 rounded-full blur-3xl pointer-events-none">
+                </div>
 
                     <div class="company-slider-track flex items-center gap-6 w-max">
 

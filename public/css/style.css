@@ -11,14 +11,14 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: "Montserrat", sans-serif;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
 }
 
-.font-display {
+/* .font-display {
     font-family: 'Playfair Display', serif;
-}
+} */
 
 /* ---------- Layout ---------- */
 .page-wrapper {
