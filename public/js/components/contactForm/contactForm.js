@@ -11,207 +11,116 @@ export function initContactForm(containerId = "contact-form") {
 
 <section>
 
-    <div class="max-w-[1700px]">
+    <div class="max-w-[1700px] mx-auto">
+    <div
+        class="relative min-h-[700px] overflow-hidden bg-cover bg-center"
+        style="background-image: url('img/form/form.png');"
+    >
 
-        <div class="grid lg:grid-cols-2 items-stretch">
+       
 
-            <div class="relative min-h-[410px] h-full overflow-hidden p-5 md:p-8">
+        <!-- Form -->
+        <div class="relative z-10 flex flex-col min-h-[700px] p-5 md:p-10 lg:p-16 max-w-[1440px] mx-auto ">
 
-                <img
-                    src="https://images.unsplash.com/photo-1515674744565-0d7112cd179a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Bridge connecting a modern city skyline"
-                    class="absolute inset-0 h-full w-full  object-center"
-                    loading="lazy">
+                    <div class="lg:col-span-7 space-y-5">
 
-                <div class="absolute inset-0 bg-black/10"></div>
-
-                <div class="relative">
-
-                <span class="inline-block text-white uppercase tracking-[5px] font-semibold text-xs md:text-base">
-
-                    Contact Our Experts
-
-                </span>
-
-                <h2 class="mt-3 md:mt-6 text-2xl md:text-5xl font-bold text-white leading-tight">
-
-                    Looking For Your
-
-                    <span class="text-slate-800">
-
-                        Dream Property?
-
-                    </span>
-
-                </h2>
-
-                <p class="mt-4 md:mt-8 text-sm md:text-lg leading-8 text-white">
-
-                    Whether you're buying your first home, upgrading to a luxury residence,
-                    or searching for the perfect investment, our dedicated property consultants
-                    are here to guide you through every step.
-
-                </p>
-
-                <div class="space-y-8 mt-6 md:mt-12">
-
-                    <div class="flex gap-5">
-
-                        <div class="w-10 md:w-16 h-9 md:h-16 rounded-2xl bg-white/30 flex items-center justify-center flex-shrink-0">
-
-                            <i class="fa-solid fa-building text-white text-xl md:text-2xl"></i>
-
+                        <!-- Header Badge / Subtitle -->
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-[2px] bg-[#C59B27]"></span>
+                                <span class="text-xs sm:text-sm font-bold tracking-[3px] uppercase text-[#C59B27]">Contact Our Experts</span>
+                            </div>
                         </div>
 
-                        <div class=" flex max-md:items-center  md:flex-col">
+                        <!-- Main Heading -->
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] leading-[1.18]">
+                            Looking For<br class="hidden sm:inline" />
+                            <span class="text-[#B68D37]">Dream Property</span>
+                        </h2>
 
-                            <h3 class="text-md md:text-xl font-bold text-white">
+                        <!-- Main Paragraph -->
+                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
+                            At <strong class="text-slate-900 font-semibold">SS Prime Infra</strong>, we believe buying a
+                            property is more than just a transaction—it's a life-changing decision. Our mission is to
+                            simplify the journey by offering trusted guidance, verified projects, and complete
+                            transparency at every stage.
+                        </p>
 
-                                500+ Premium Projects
-
-                            </h3>
-
-                            <p class="mt-2 text-slate-500 text-white hidden md:block">
-
-                                Access verified residential and commercial projects across Gurgaon and Pune.
-
-                            </p>
-
+                        <!-- Expandable Read More Text -->
+                        <div id="aboutMoreExpansion"
+                            class="grid grid-rows-[0fr] opacity-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="min-h-0 overflow-hidden">
+                                <p class="pt-2 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
+                                    From luxury residences and premium commercial spaces to high-return investment
+                                    opportunities, our experienced advisors ensure every client finds the perfect
+                                    property with complete confidence and peace of mind.
+                                </p>
+                            </div>
                         </div>
 
                     </div>
 
-                    <div class="flex gap-5">
 
-                        <div class="w-10 md:w-16 h-9 md:h-16 rounded-2xl bg-white/30 flex items-center justify-center flex-shrink-0">
+                     
+                    <div class="">
+                       
+                        <div class="w-full max-w-xl backdrop-blur-sm p-6 shadow-2xl rounded-2xl">
 
-                            <i class="fa-solid fa-wallet text-white text-xl md:text-2xl"></i>
+                            <h2 class="text-2xl font-bold text-[#B68D37]">
+                               Schedule Free Consultation
+                            </h2>
 
+                            <form class="mt-4 grid grid-cols-2 gap-2 ">
+
+                                <input type="text" id="contactName" placeholder="Full Name"
+                                    class="w-full h-10 rounded-xl placeholder:text-sm placeholder:text-[#111827] px-5 border border-gray-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
+                                    required>
+
+                                <input type="email" id="contactEmail" placeholder="Email Address"
+                                    class="w-full h-10 rounded-xl placeholder:text-sm placeholder:text-[#111827] px-5 border border-gray-200 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
+                                    required>
+
+                                <input type="tel" id="contactPhone" placeholder="Mobile Number"
+                                    class="w-full h-10 rounded-xl placeholder:text-sm placeholder:text-[#111827] px-5 border border-gray-200 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
+                                    required>
+
+                                <select id="contactProjectSelect"
+                                    class="w-full h-10 rounded-xl text-sm px-5 border border-gray-200 outline-none focus:border-amber-500"
+                                    required>
+                                    <option value="">Select Project</option>
+                                </select>
+
+                                <select id="contactCitySelect"
+                                    class="w-full h-10 rounded-xl text-sm px-5 border border-gray-200 outline-none focus:border-amber-500"
+                                    required>
+                                    <option value="">Select City</option>
+                                </select>
+
+                                <select id="contactBudgetSelect"
+                                    class="w-full h-10 rounded-xl text-sm px-5 border border-gray-200 outline-none focus:border-amber-500"
+                                    required>
+                                    <option value="">Select Budget</option>
+                                    <option value="Flexible">Flexible</option>
+                                    <option value="Under ₹50 Lakhs">Under ₹50 Lakhs</option>
+                                    <option value="₹50 Lakhs - ₹1 Crore">₹50 Lakhs - ₹1 Crore</option>
+                                    <option value="₹1 Crore - ₹2 Crore">₹1 Crore - ₹2 Crore</option>
+                                    <option value="₹2 Crore - ₹3 Crore">₹2 Crore - ₹3 Crore</option>
+                                    <option value="₹3 Crore - ₹5 Crore">₹3 Crore - ₹5 Crore</option>
+                                    <option value="₹5 Crore+">₹5 Crore+</option>
+                                </select>
+
+                                <button
+                                    class="w-full h-10 rounded-3xl text-sm w-max px-4  bg-[#B68D37] hover:bg-yellow-400 hover:shadow-lg hover:shadow-gray-400 transition duration-300 font-medium cursor-pointer text-white">
+                                    Schedule Now
+                                </button>
+
+                            </form>
                         </div>
-
-                        <div class="flex max-md:items-center  md:flex-col">
-
-                            <h3 class="text-md md:text-xl font-bold text-white">
-
-                                Best Price Guarantee
-
-                            </h3>
-
-                            <p class="mt-2 text-slate-500 text-white hidden md:block">
-
-                                Get exclusive launch prices, offers and flexible payment plans.
-
-                            </p>
-
-                        </div>
-
                     </div>
-
-                    <div class="flex gap-5">
-
-                        <div class="w-10 md:w-16 h-9 md:h-16 rounded-2xl bg-white/30 flex items-center justify-center flex-shrink-0">
-
-                            <i class="fa-solid fa-headset text-white text-xl md:text-2xl"></i>
-
-                        </div>
-
-                        <div class="flex max-md:items-center  md:flex-col" >
-
-                            <h3 class="text-md md:text-xl font-bold text-white">
-
-                                Dedicated Relationship Manager
-
-                            </h3>
-
-                            <p class="mt-2 text-slate-500 text-white hidden md:block">
-
-                                From site visit to possession, we'll be with you throughout the journey.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                </div>
-
-            </div>
-
-            <div class="bg-white p-5 lg:p-14">
-
-                <h3 class="text-[1.2rem] md:text-4xl text-white p-2 md:py-6 md:px-3 bg-yellow-500 shadow-xl shadow-gray-300 font-bold text-center">
-
-                    Schedule a Free Consultation
-
-                </h3>
-
-                <form class="mt-5 md:mt-10 space-y-6">
-
-                    <input
-                        type="text"
-                        id="contactName"
-                        placeholder="Full Name"
-                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
-                        required>
-
-                    <input
-                        type="email"
-                        id="contactEmail"
-                        placeholder="Email Address"
-                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
-                        required>
-
-                    <input
-                        type="tel"
-                        id="contactPhone"
-                        placeholder="Mobile Number"
-                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500"
-                        required>
-
-                    <select
-                        id="contactProjectSelect"
-                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
-                        required>
-                        <option value="">Select Project</option>
-                    </select>
-
-                    <select
-                        id="contactCitySelect"
-                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
-                        required>
-                        <option value="">Select City</option>
-                    </select>
-
-                    <select
-                        id="contactBudgetSelect"
-                        class="w-full h-10 md:h-14 rounded-xl border border-slate-300 px-5 outline-none focus:border-amber-500 bg-white"
-                        required>
-                        <option value="">Select Budget</option>
-                        <option value="Flexible">Flexible</option>
-                        <option value="Under ₹50 Lakhs">Under ₹50 Lakhs</option>
-                        <option value="₹50 Lakhs - ₹1 Crore">₹50 Lakhs - ₹1 Crore</option>
-                        <option value="₹1 Crore - ₹2 Crore">₹1 Crore - ₹2 Crore</option>
-                        <option value="₹2 Crore - ₹3 Crore">₹2 Crore - ₹3 Crore</option>
-                        <option value="₹3 Crore - ₹5 Crore">₹3 Crore - ₹5 Crore</option>
-                        <option value="₹5 Crore+">₹5 Crore+</option>
-                    </select>
-
-                    <button
-                        class="w-full h-10 md:h-14 rounded-xl md:text-2xl bg-yellow-500 hover:shadow-lg hover:shadow-gray-400 hover:bg-yellow-400 transition duration-300 font-semibold cursor-pointer text-white">
-
-                        Book Visit
-
-                    </button>
-
-                </form>
-
-            </div>
 
         </div>
-
     </div>
+</div>
 
 </section>
 

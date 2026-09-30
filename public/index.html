@@ -236,18 +236,19 @@
             <img src="./img/about/leaf_decor_bottom_right.png" alt="Decorative Leaf"
                 class="absolute -bottom-6 -right-6 sm:-right-10 w-44 sm:w-60 md:w-72 lg:w-96 pointer-events-none z-10 opacity-90 select-none drop-shadow-md">
 
-            <div class="relative max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 z-20">
-                <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div class="relative max-w-[1440px] mx-auto md:px-6 sm:px-10 lg:px-16 z-20">
+                <div class="flex flex-col md:flex-row justify-around gap-4 md:gap-8  items-center">
 
                     <!-- Left Content Column (7 cols on lg) -->
-                    <div class="lg:col-span-7 space-y-5">
+                    <div class="lg:col-span-7 space-y-5 px-7 lg:w-1/2">
 
                         <!-- Header Badge / Subtitle -->
                         <div class="space-y-1.5">
                             <div class="flex items-center gap-3">
-                                <span class="w-8 h-[2px] bg-[#C59B27]"></span>
                                 <span class="text-xs sm:text-sm font-bold tracking-[3px] uppercase text-[#C59B27]">ABOUT
                                     US</span>
+                                <span class="w-8 h-[2px] bg-[#C59B27]"></span>
+
                             </div>
                         </div>
 
@@ -292,127 +293,38 @@
                             </button>
                         </div>
 
-                        <!-- Features Badges Grid -->
-                        <div class="pt-8 border-t border-amber-900/10">
-                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-6 gap-x-4 items-center">
-
-                                <!-- Badge 1: Verified Projects -->
-                                <div class="flex items-center gap-3">
-                                    <div
-                                        class="w-11 h-11 rounded-full bg-[#FAF3E3] border border-[#E5D2A8] flex items-center justify-center shrink-0 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B68D37]"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-                                        </svg>
-                                    </div>
-                                    <span
-                                        class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Verified<br
-                                            class="hidden sm:inline"> Projects</span>
-                                </div>
-
-                                <!-- Badge 2: Premium Developers -->
-                                <div class="flex items-center gap-3 sm:border-l sm:border-amber-900/10 sm:pl-4">
-                                    <div
-                                        class="w-11 h-11 rounded-full bg-[#FAF3E3] border border-[#E5D2A8] flex items-center justify-center shrink-0 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B68D37]"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5s0 0 0 0m3 0h1.5m-4.5 3h1.5m3 0h1.5m-4.5 3h1.5m3 0h1.5m-4.5 3h1.5m3 0h1.5" />
-                                        </svg>
-                                    </div>
-                                    <span
-                                        class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Premium<br
-                                            class="hidden sm:inline"> Developers</span>
-                                </div>
-
-                                <!-- Badge 3: Expert Guidance -->
-                                <div class="flex items-center gap-3 sm:border-l sm:border-amber-900/10 sm:pl-4">
-                                    <div
-                                        class="w-11 h-11 rounded-full bg-[#FAF3E3] border border-[#E5D2A8] flex items-center justify-center shrink-0 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B68D37]"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Expert<br
-                                            class="hidden sm:inline"> Guidance</span>
-                                </div>
-
-                                <!-- Badge 4: Trusted Service -->
-                                <div class="flex items-center gap-3 pt-2 sm:pt-0">
-                                    <div
-                                        class="w-11 h-11 rounded-full bg-[#FAF3E3] border border-[#E5D2A8] flex items-center justify-center shrink-0 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B68D37]"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.5 1.5 0 013 0v1.5m-3 0h3m-3 3h3m-6 3a1.5 1.5 0 00-3 0v3a1.5 1.5 0 003 0m0-6h3m-3 3h3m3 3a1.5 1.5 0 001.5-1.5v-3a1.5 1.5 0 00-1.5-1.5m-3 6h3" />
-                                        </svg>
-                                    </div>
-                                    <span
-                                        class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">Trusted<br
-                                            class="hidden sm:inline"> Service</span>
-                                </div>
-
-                                <!-- Badge 5: End-to-End Support -->
-                                <div
-                                    class="flex items-center gap-3 pt-2 sm:pt-0 sm:border-l sm:border-amber-900/10 sm:pl-4">
-                                    <div
-                                        class="w-11 h-11 rounded-full bg-[#FAF3E3] border border-[#E5D2A8] flex items-center justify-center shrink-0 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#B68D37]"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
-                                        </svg>
-                                    </div>
-                                    <span
-                                        class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">End-to-End<br
-                                            class="hidden sm:inline"> Support</span>
-                                </div>
-
-                            </div>
-                        </div>
 
                     </div>
 
+
                     <!-- Right Column: Asymmetrical Luxury Image Box (5 cols on lg) -->
-                    <div class="lg:col-span-5 relative mt-6 lg:mt-0 ">
+                    <div class="lg:col-span-5 relative mt-6 lg:mt-0 px-7 lg:w-1/2">
                         <div
-                            class="relative flex flex-col justify-center items-center w-full rounded-[36px] sm:rounded-[48px] lg:rounded-tl-[150px] lg:rounded-tr-[36px] lg:rounded-bl-[36px] lg:rounded-br-[90px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] ring-1 ring-black/5 aspect-[4/3] sm:aspect-[16/11] lg:aspect-auto lg:h-[530px]">
-                            <!-- High Rise Luxury Tower Image -->
+                            class="relative w-full rounded-3xl md:rounded-tl-[150px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] ring-1 ring-black/5 aspect-[4/3] sm:aspect-[16/11] lg:aspect-auto lg:h-[530px]">
+
+                            <!-- Image -->
                             <img src="img/brochure_images/bptp_3.webp"
                                 alt="SS Prime Infra - Creating Exceptional Real Estate Experiences"
                                 class="w-full h-full object-cover object-center">
 
-                            <!-- Top-Right Pill Badge -->
+                            <!-- Badge -->
                             <div
-                                class="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 flex items-center gap-2.5 px-4 py-2 sm:px-5 sm:py-2.5 bg-[#EFE3C8]/90 backdrop-blur-md border border-white/60 rounded-full shadow-lg  hidden md:block">
+                                class="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 flex items-center gap-2.5 px-4 py-1 sm:px-5 bg-[#EFE3C8]/90 backdrop-blur-md border border-white/60 rounded-full shadow-lg hidden md:block">
                                 <div
                                     class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#B68D37] flex items-center justify-center shrink-0 text-white shadow-sm">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 sm:w-4 sm:h-4"
                                         viewBox="0 0 24 24" fill="currentColor">
                                         <path fill-rule="evenodd"
-                                            d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.01a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                            d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.01a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25a.75.75 0 00-1.22-.872z"
                                             clip-rule="evenodd" />
                                     </svg>
                                 </div>
-                                <span class="text-xs sm:text-sm font-semibold text-[#5A4312]">Trusted Real Estate
-                                    Partner</span>
+
+                                <span class="text-xs sm:text-sm font-semibold text-[#5A4312] whitespace-nowrap">
+                                    Trusted Real Estate Partner
+                                </span>
                             </div>
 
-                            <!-- Bottom-Left Vision Card -->
-                            <div
-                                class="absolute bottom-4 md:left-4 sm:bottom-6 z-20 max-w-[270px]  bg-[#161B22]/95 backdrop-blur-xl border border-white/10 rounded-[22px] sm:rounded-[26px] p-4 sm:p-6 shadow-2xl">
-                                <span
-                                    class="text-[10px] sm:text-[11px] font-bold tracking-[3px] uppercase text-[#C59B27]">OUR
-                                    VISION</span>
-                                <h3 class="mt-1 text-xs md:text-2xl font-bold text-white leading-tight">Building Trust,
-                                    Not Just Homes</h3>
-                                <p class="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed font-light hidden md:block">Delivering
-                                    exceptional real estate experiences through transparency, integrity and personalized
-                                    consultation.</p>
-                            </div>
                         </div>
                     </div>
 
@@ -421,7 +333,7 @@
         </section>
 
         <!-- Why Choose Us -->
-        <section class="relative bg-gradient-to-br from-[#FFFDF9] via-[#FFFDF9] to-[#FFFDF9] py-6 md:py-10">
+        <section class="relative bg-gradient-to-br from-[#FFFDF9] via-[#FFFDF9] to-[#FFFDF9] py-6 md:py-20">
 
             <!-- Ambient Lighting Glow -->
             <div
@@ -557,11 +469,10 @@
 
         </section>
 
-        <!-- Testimonial Section -->
-        <div id="testimonials"></div>
-
         <div id="contact-form"></div>
 
+        <!-- Testimonial Section -->
+        <div id="testimonials"></div>
 
         <div id="footer"></div>
     </div>
