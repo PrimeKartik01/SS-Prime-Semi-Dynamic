@@ -141,7 +141,7 @@ function renderSearch() {
                 <div class="flex items-center px-4 py-3 flex-shrink-0">
                     <button
                         id="searchBtn"
-                        class="flex items-center gap-2 h-full px-7 bg-yellow-500 text-white font-semibold rounded-xl transition-all duration-200 text-sm whitespace-nowrap"
+                        class="flex items-center gap-2 h-full px-7 bg-[#B68D37] text-white font-semibold rounded-xl transition-all duration-200 text-sm whitespace-nowrap"
                         style="min-height:50px;"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
