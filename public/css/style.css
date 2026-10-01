@@ -12,8 +12,8 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* .font-display {
@@ -38,6 +38,36 @@ body {
 .fade-up.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ---------- Card Water Wave (Inside Boxes, Behind Text, Fills to Bottom) ---------- */
+.card-wave-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.card-wave-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 85%;
+    pointer-events: none;
+    animation: cardWaveLoop 6s linear infinite;
+    will-change: transform;
+}
+
+@keyframes cardWaveLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* ---------- Hero Text Entrance ---------- */

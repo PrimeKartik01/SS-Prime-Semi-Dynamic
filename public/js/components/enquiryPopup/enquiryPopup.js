@@ -135,20 +135,23 @@ export function initEnquiryPopup() {
                         </div>
 
                         <!-- Submit -->
-                        <div class="flex justify-center items-center bg-[#232936] px-6 py-2 rounded-3xl gap-2">
+                        <div class="flex justify-center items-center">
                             <button type="submit"
-                                class="leading-relaxed tracking-wider max-w text-xs md:text-base  hover:bg-yellow-600 text-white   font-semibold duration-300 cursor-pointer">
-                                Enquire Now
+                                class="water-wave-box relative group overflow-hidden flex items-center justify-center bg-[#232936] px-8 py-3.5 rounded-3xl gap-2 text-white font-semibold cursor-pointer transition-all duration-300 shadow-md hover:shadow-yellow-500/25 w-full">
                                 
-                            </button>
-                        
+                                <!-- Button Text (Above Wave) -->
+                                <span class="relative z-10 leading-relaxed tracking-wider text-xs md:text-base">
+                                    Enquire Now
+                                </span>
+
+                                <!-- Button Icon (Above Wave) -->
                                 <svg id="aboutReadMoreIcon" xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-3 text-white transition-transform duration-300 group-hover:translate-x-1"
+                                    class="relative z-10 w-4 h-3 text-white transition-transform duration-300 group-hover:translate-x-1"
                                     fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                                 </svg>
-                        
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -208,7 +211,7 @@ export function initEnquiryPopup() {
                     }
 
                     #popupForm input::placeholder {
-                        font-size: 16px !important;
+                        font-size: 14px !important;
                     }
                 }
 
@@ -216,13 +219,40 @@ export function initEnquiryPopup() {
                     box-shadow: 0 0 0 4px rgba(234, 179, 8, .15);
                 }
 
-                #popupForm button {
-                    transition: all .3s ease;
+                /* Single Middle Wave Button Styles */
+                .water-wave-box {
+                    position: relative;
+                    overflow: hidden;
+                    isolation: isolate;
                 }
 
-                #popupForm button:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 10px 30px rgba(234, 179, 8, .35);
+                .water-wave-bg {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 0;
+                    pointer-events: none;
+                    overflow: hidden;
+                    border-radius: 24px;
+                }
+
+                .single-btn-wave-svg {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 200%;
+                    height: 75%;
+                    pointer-events: none;
+                    animation: btnWaveFlow 4s linear infinite;
+                    will-change: transform;
+                }
+
+                @keyframes btnWaveFlow {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
                 }
 
                 #closePopup {
