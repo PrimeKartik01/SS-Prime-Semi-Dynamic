@@ -56,13 +56,15 @@ export function initEnquiryPopup() {
                     class="relative bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300">
 
                     <!-- Header -->
-                    <div class="relative bg-yellow-500 p-4 md:px-8 md:py-8 text-white">
+                    <div class="relative bg-[#B68D37] p-4 md:px-8 md:py-8 text-white">
                         <button id="closePopup" class="absolute top-5 right-5 text-3xl leading-none hover:rotate-90 duration-300">
                             &times;
                         </button>
-                        <p class="uppercase tracking-[4px] text-sm opacity-90">SS Prime</p>
-                        <h2 class="text-md md:text-3xl font-bold mt-2">Contact Us</h2>
-                        <p class="mt-1 md:mt-3 text-white/90 text-xs md:text-sm">Fill in your details and our property expert will contact you shortly.</p>
+                        <img
+                            src="img/white_logo.webp"
+                            alt="SS Prime Infra"
+                            class="h-20 md:h-25 object-cover drop-shadow-lg"
+                        >
                     </div>
 
                     <!-- Form -->
@@ -75,30 +77,30 @@ export function initEnquiryPopup() {
                         <div>
                             <label class="font-semibold block mb-2 text-xs md:text-sm">Full Name</label>
                             <input type="text" id="popupName" name="name" placeholder="Enter your name"
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 placeholder:text-xs md:placeholder:text-base" required>
+                                class="w-full border rounded-xl p-2 md:px-4 outline-none focus:border-yellow-500 text-xs md:text-base" required>
                         </div>
 
                         <!-- Email -->
                         <div>
                             <label class="font-semibold block mb-2 text-xs md:text-sm">Email Address</label>
                             <input type="email" id="popupEmail" name="email" placeholder="Enter your email"
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 placeholder:text-xs md:placeholder:text-base" required>
+                                class="w-full border rounded-xl p-2 md:px-4 outline-none focus:border-yellow-500 text-xs md:text-base" required>
                         </div>
 
                         <!-- Phone -->
                         <div>
                             <label class="font-semibold block mb-2 text-xs md:text-sm">Mobile Number</label>
                             <input type="tel" id="popupPhone" name="phone" placeholder="Enter your mobile number"
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 outline-none focus:border-yellow-500 placeholder:text-xs md:placeholder:text-base" required>
+                                class="w-full border rounded-xl p-2 md:px-4 outline-none focus:border-yellow-500 text-xs md:text-base" required>
                         </div>
 
                         <!-- Project -->
                         <div>
                             <label class="font-semibold block mb-2 text-xs md:text-sm">Interested Project</label>
                             <input type="text" id="popupProject" name="project" readonly
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 bg-gray-100 hidden ">
+                                class="w-full border rounded-xl p-2 md:px-4 hidden text-xs md:text-base">
                             <select id="popupProjectSelect" name="project"
-                                class="w-full border rounded-xl p-2 md:px-4 md:py-3 text-xs md:text-sm outline-none focus:border-yellow-500 bg-white ">
+                                class="w-full border rounded-xl p-2 md:px-4 outline-none focus:border-yellow-500 bg-white text-xs md:text-base">
                                 <option value="">Select Project</option>
                             </select>
                         </div>
@@ -108,18 +110,18 @@ export function initEnquiryPopup() {
                             <div>
                                 <label class="font-semibold block mb-2 text-xs md:text-sm">City</label>
                                 <input type="text" id="popupCity" name="city" readonly
-                                    class="w-full border rounded-xl p-2 md:px-4 md:py-3 bg-gray-100 hidden">
+                                    class="w-full border rounded-xl p-2 md:px-4 hidden text-xs md:text-base">
                                 <select id="popupCitySelect" name="city"
-                                    class="w-full border rounded-xl p-2 md:px-4 md:py-3 text-xs md:text-sm outline-none focus:border-yellow-500 bg-white">
+                                    class="w-full border rounded-xl p-2 md:px-4 outline-none focus:border-yellow-500 bg-white text-xs md:text-base">
                                     <option value="">Select City</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="font-semibold block mb-2 text-xs md:text-sm">Budget</label>
                                 <input type="text" id="popupBudget" name="budget" readonly
-                                    class="w-full border rounded-xl p-2 md:px-4 md:py-3 bg-gray-100 hidden">
+                                    class="w-full border rounded-xl p-2 md:px-4 hidden text-xs md:text-base">
                                 <select id="popupBudgetSelect" name="budget"
-                                    class="w-full border rounded-xl p-2 md:px-4 md:py-3 text-xs md:text-sm outline-none focus:border-yellow-500 bg-white">
+                                    class="w-full border rounded-xl p-2 md:px-4 outline-none focus:border-yellow-500 bg-white text-xs md:text-base">
                                     <option value="">Select Budget</option>
                                     <option value="Flexible">Flexible</option>
                                     <option value="Under ₹50 Lakhs">Under ₹50 Lakhs</option>
@@ -133,10 +135,21 @@ export function initEnquiryPopup() {
                         </div>
 
                         <!-- Submit -->
-                        <button type="submit"
-                            class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-4 rounded-xl font-semibold duration-300 cursor-pointer">
-                            Request Callback
-                        </button>
+                        <div class="flex justify-center items-center bg-[#232936] px-6 py-2 rounded-3xl gap-2">
+                            <button type="submit"
+                                class="leading-relaxed tracking-wider max-w text-xs md:text-base  hover:bg-yellow-600 text-white   font-semibold duration-300 cursor-pointer">
+                                Enquire Now
+                                
+                            </button>
+                        
+                                <svg id="aboutReadMoreIcon" xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-3 text-white transition-transform duration-300 group-hover:translate-x-1"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                        
+                        </div>
                     </form>
                 </div>
             </div>
@@ -191,11 +204,11 @@ export function initEnquiryPopup() {
                 @media (min-width: 768px) {
                     #popupForm select,
                     #popupForm select option {
-                        font-size: 14px !important;
+                        font-size: 16px !important;
                     }
 
                     #popupForm input::placeholder {
-                        font-size: 14px !important;
+                        font-size: 16px !important;
                     }
                 }
 
