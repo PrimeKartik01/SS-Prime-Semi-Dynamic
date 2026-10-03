@@ -6,6 +6,7 @@ import { initContactForm } from "../contactForm/contactForm.js";
 import { initFooter } from "../footer/footer.js";
 import { initEnquiryPopup } from "../enquiryPopup/enquiryPopup.js";
 import { aboutVision, aboutValues, aboutTeam, aboutStats } from "../../data/aboutData.js";
+import { initManagers } from "../managers/managers.js";
 
 // ─── Helpers ────────────────────────────────────────────────
 
@@ -196,7 +197,10 @@ companySlider({
 // Render data-driven sections
 renderStats(aboutStats);
 renderVisionValues(aboutVision, aboutValues);
-renderTeam(aboutTeam);
+initManagers({
+    containerId: "about-team",
+    managers: aboutTeam,
+});
 
 // Initialize Contact Form
 initContactForm("contact-form");

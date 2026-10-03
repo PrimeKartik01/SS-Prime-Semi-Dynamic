@@ -17,6 +17,8 @@ import { initContactForm } from "../contactForm/contactForm.js";
 import { initFooter } from "../footer/footer.js";
 import { initTestimonials } from "../testimonials/testimonials.js";
 import { testimonialsData } from "../../data/testimonialsData.js";
+import { initManagers } from "../managers/managers.js";
+import { aboutTeam } from "../../data/aboutData.js";
 
 import {
     initEnquiryPopup,
@@ -42,12 +44,17 @@ companySlider({
     companies: companiesLogoData
 });
 
+initManagers({
+    containerId: "managers",
+    managers: aboutTeam
+});
+
+initContactForm("contact-form");
+
 initTestimonials({
     containerId: "testimonials",
     testimonials: testimonialsData
 });
-
-initContactForm("contact-form");
 
 initFooter("footer");
 
