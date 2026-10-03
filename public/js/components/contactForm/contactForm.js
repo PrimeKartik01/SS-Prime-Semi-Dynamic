@@ -13,14 +13,11 @@ export function initContactForm(containerId = "contact-form") {
 
     <div class="max-w-[1700px] mx-auto">
     <div
-        class="relative min-h-[700px] overflow-hidden bg-cover bg-center"
-        style="background-image: url('img/form/form.png');"
+        class="contact-form-background relative min-h-[650px] overflow-hidden bg-cover bg-center"
     >
 
-       
-
         <!-- Form -->
-        <div class="relative z-10 flex flex-col min-h-[700px] p-5 md:p-10 lg:p-16 max-w-[1440px] mx-auto ">
+        <div class="relative z-10 flex flex-col h-full p-5 md:p-10 lg:p-16 max-w-[1440px] mx-auto ">
 
                     <div class="lg:col-span-7 space-y-5">
 

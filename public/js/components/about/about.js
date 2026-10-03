@@ -147,7 +147,7 @@ function renderTeam(team) {
         </div>
 
         <!-- Desktop Grid (visible only on medium screens and up) -->
-        <div class="hidden md:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 fade-up">
+        <div class="hidden md:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 fade-up">
             ${memberCards}
         </div>
     `;

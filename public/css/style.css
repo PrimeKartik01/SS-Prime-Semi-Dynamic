@@ -27,6 +27,16 @@ body {
     min-height: 100vh;
 }
 
+.contact-form-background {
+    background-image: url('../img/form/form.png');
+}
+
+@media (max-width: 767px) {
+    .contact-form-background {
+        background:#FFFDF9;
+    }
+}
+
 /* ---------- Scroll Reveal — Fade Up ---------- */
 .fade-up {
     opacity: 0;
