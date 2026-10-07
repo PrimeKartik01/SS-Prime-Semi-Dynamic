@@ -37,6 +37,7 @@ export function propertyCard(property) {
                 Enquire Now
             </button>
 
+            
         </div>
         
 
