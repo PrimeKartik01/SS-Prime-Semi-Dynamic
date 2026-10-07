@@ -59,7 +59,7 @@ export const aboutTeam = [
     {
         image: "img/managers/saurabh_sir.webp",
         name: "Saurabh Gupta",
-        role: "Executive Director",
+        role: "Director",
         bio: "Expert in luxury residential sales across Gurgaon & Pune.",
         linkedin: "#",
         instagram: "#",

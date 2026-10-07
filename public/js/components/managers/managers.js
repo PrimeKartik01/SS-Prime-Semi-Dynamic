@@ -113,7 +113,7 @@ export function initManagers({
                                 <div class="swiper-slide h-auto">
                                     <div class="group relative h-full bg-white border border-[#B68D37] rounded-[28px] p-5 md:p-6 shadow-[0_8px_30px_rgba(37,99,235,0.06)] hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)] transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
 
-                                        <div class="relative z-10">
+                                        <div class="relative z-10 text-center">
                                             <!-- Manager Image -->
                                             <div class="relative w-full aspect-[4/3] rounded-[20px] overflow-hidden mb-4 bg-slate-100 border border-slate-100/80">
                                                 <img src="${item.image || 'img/logo.webp'}" alt="${item.name}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" onerror="this.onerror=null; this.src='img/logo.webp';">
@@ -121,17 +121,10 @@ export function initManagers({
 
                                             <!-- Name & Role -->
                                             <h3 class="text-[#0F172A] font-bold text-lg md:text-xl tracking-tight">${item.name}</h3>
-                                            <p class="text-[#B68D37] text-xs md:text-sm font-semibold mt-0.5 mb-3">${item.role}</p>
+                                            <p class="text-[#B68D37] text-xs md:text-sm font-semibold mt-0.5">${item.role}</p>
 
                                             <!-- Quote Text -->
-                                            <div class="flex items-start gap-1.5 mb-4">
-                                                <svg class="w-5 h-5 text-[#B68D37] shrink-0 mt-0.5 opacity-90" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                                                </svg>
-                                                <p class="text-slate-600 text-xs md:text-sm leading-relaxed font-normal">
-                                                    ${item.bio || item.text || ''}
-                                                </p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
