@@ -18,7 +18,7 @@ export function propertyCard(property) {
 
                         <img
                             src="${image}"
-                            class="w-full h-38 lg:h-62 object-cover opacity-0 transition-opacity duration-300"
+                            class="w-full h-44 md:h-38 object-cover opacity-0 transition-opacity duration-300"
                             onload="this.classList.remove('opacity-0'); this.parentElement.querySelector('.property-image-loader')?.remove()"
                             onerror="this.classList.remove('opacity-0'); this.parentElement.querySelector('.property-image-loader')?.remove()"
                         >
@@ -42,26 +42,11 @@ export function propertyCard(property) {
 
         <div class="p-3 md:p-4">
 
-            <p class="text-[#111827] mt-2 flex items-center gap-1 text-xs md:text-sm w-max font-semibold rounded-lg my-2">
+           
 
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                ${property.city}
-
-            </p>
-
-            <div class="flex justify-between  gap-1 md:gap-3">
+            <div class="flex justify-between items-end  gap-1 md:gap-3">
                     <div>
-                        <h2 class="text-[16px] md:text-lg font-bold text-[#B68D37]">
+                        <h2 class="text-sm font-bold text-[#B68D37]">
 
                             ${property.title}
 
@@ -79,19 +64,28 @@ export function propertyCard(property) {
 
             </div>
 
-            <div class="flex justify-between gap-4 mt-3 md:mt-6">
+            <div class="flex justify-between gap-4 mt-3 ">
 
                 <div>
 
                     <p class="text-xs text-gray-400">
-
-                        Builder
-
+                        Location
                     </p>
 
-                    <p class="font-semibold text-sm md:text-md text-[#111827]">
+                    <p class="text-[#111827] flex items-center gap-1 text-xs  w-max font-semibold rounded-lg">
 
-                        ${property.builder}
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-3 h-3"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        ${property.city}
 
                     </p>
 
@@ -105,7 +99,7 @@ export function propertyCard(property) {
 
                     </p>
 
-                    <h4 class="font-semibold text-sm md:text-md text-[#111827]">
+                    <h4 class="font-semibold text-xs md:text-md text-[#111827]">
 
                         ${property.type}
 
@@ -127,7 +121,7 @@ export function propertyCard(property) {
 
                     </p>
 
-                    <h2 class="text-md  font-bold  text-[#B68D37]">
+                    <h2 class="text-xs  font-bold  text-[#B68D37]">
 
                         ${property.priceLabel}
 
@@ -135,17 +129,17 @@ export function propertyCard(property) {
 
                 </div>
 
-               <div class="flex items-center gap-2">
-                    <a href="./calculator.html?price=${(property.price && property.price > 0) ? property.price * 100000 : 5000000}" title="Calculate EMI" class="bg-amber-100 hover:bg-amber-200 text-amber-800 p-2 md:px-3 md:py-3 rounded-lg font-medium inline-flex items-center gap-1 transition-colors text-xs" aria-label="Calculate EMI">
+               <div class="flex items-center gap-1">
+                    <a href="./calculator.html?price=${(property.price && property.price > 0) ? property.price * 100000 : 5000000}" title="Calculate EMI" class="bg-amber-100 hover:bg-amber-200 text-amber-800 p-2  rounded-lg font-medium inline-flex items-center gap-1 transition-colors text-xs" aria-label="Calculate EMI">
                         <i class="fa-solid fa-calculator"></i>
                         <span class="hidden sm:inline">EMI</span>
                     </a>
-                    <a href="./property-details.html?id=${property.id}" class="bg-[#B68D37] hover:bg-yellow-600 px-4 py-2 md:px-5 md:py-3 rounded-lg text-white font-semibold inline-flex items-center justify-center gap-2 transition-colors shadow-md">
+                    <a href="./property-details.html?id=${property.id}" class="bg-[#B68D37] hover:bg-yellow-600 px-4 py-2  rounded-lg text-white font-semibold inline-flex items-center justify-center gap-2 transition-colors shadow-md">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z" />
                             <circle cx="12" cy="12" r="3" />
                         </svg>
-                        <span class="text-xs md:text-md">View</span>
+                        <span class="text-xs ">View</span>
                     </a>
                </div>
 

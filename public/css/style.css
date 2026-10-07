@@ -33,7 +33,7 @@ body {
 
 @media (max-width: 767px) {
     .contact-form-background {
-        background:#FFFDF9;
+        background: #FFFDF9;
     }
 }
 
@@ -75,6 +75,7 @@ body {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -298,10 +299,11 @@ body {
     transform: scale(1.1);
 }
 
-/* Keep the property list outer swiper fully visible */
+/* Keep property content contained within the section without horizontal overflow */
 .propertyListSwiper {
-    overflow: visible;
-    clip-path: inset(-8px -4px -8px -4px);
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* ---------- Swiper Nav Arrows ---------- */
@@ -349,19 +351,22 @@ body {
 }
 
 /* ---------- Scrollbar ---------- */
-::-webkit-scrollbar {
-    width: 8px;
-}
+/* ---------- Scrollbar (Desktop Only) ---------- */
+@media (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
 
-::-webkit-scrollbar-track {
-    background: #0f172a;
-}
+    ::-webkit-scrollbar-track {
+        background: #0f172a;
+    }
 
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #f59e0b, #d97706);
-    border-radius: 4px;
-}
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #f59e0b, #d97706);
+        border-radius: 4px;
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #fbbf24, #f59e0b);
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #fbbf24, #f59e0b);
+    }
 }

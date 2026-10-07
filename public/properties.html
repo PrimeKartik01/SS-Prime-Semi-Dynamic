@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse all premium residential and commercial properties listed by SS Prime Infra. Filter by city, category, type, budget and more.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="./img/logo.webp">
+
+    <!-- Preconnect for External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/properties.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <title>All Properties — SS Prime Infra</title>
+</head>
+
+<body class="bg-[#F8F6F1]">
+    <div class="page-wrapper">
+
+        <!-- Navbar Render Here -->
+        <header id="navbar"></header>
+
+        <!-- Page Hero Banner -->
+        <div class="properties-page-hero relative overflow-hidden bg-slate-900 pt-24 pb-10 md:pt-32 md:pb-14">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-[#1a1200] pointer-events-none"></div>
+            <!-- Glowing Orbs -->
+            <div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-amber-600/8 rounded-full blur-3xl pointer-events-none"></div>
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;">
+            </div>
+
+            <div class="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+                <!-- Breadcrumb -->
+                <nav class="flex items-center gap-2 text-sm text-slate-400 mb-6" aria-label="Breadcrumb">
+                    <a href="./index.html" class="hover:text-amber-400 transition-colors">Home</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6" />
+                    </svg>
+                    <span class="text-amber-400 font-medium">All Properties</span>
+                </nav>
+
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs font-bold tracking-[3px] uppercase text-[#C59B27]">LISTINGS</span>
+                            <span class="w-8 h-[2px] bg-[#C59B27]"></span>
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.2]">
+                            All <span class="text-[#B68D37]">Properties</span>
+                        </h1>
+                        <p class="mt-3 text-slate-400 text-sm sm:text-base max-w-xl">
+                            Explore our complete portfolio of premium residential & commercial properties.
+                        </p>
+                    </div>
+                    <!-- Results count badge -->
+                    <div id="resultsCountBadge"
+                        class="inline-flex items-center gap-2 bg-white/5 backdrop-blur border border-white/10 rounded-2xl px-5 py-3 text-white self-start md:self-auto">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                        <span id="resultsCountText" class="text-sm font-semibold">Loading properties...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content: Filters + Cards -->
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-8 md:py-12">
+            <div class="flex flex-col lg:flex-row gap-8">
+
+                <!-- ============ LEFT FILTER SIDEBAR ============ -->
+                <aside id="filterSidebar" class="lg:w-[300px] xl:w-[320px] shrink-0">
+
+                    <!-- Mobile Filter Toggle -->
+                    <div class="lg:hidden mb-4">
+                        <button id="mobileFilterToggle"
+                            class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-2xl px-5 py-3.5 text-slate-800 font-semibold shadow-sm">
+                            <span class="flex items-center gap-2.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
+                                </svg>
+                                Filters
+                            </span>
+                            <span id="mobileFilterBadge" class="hidden bg-amber-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                            <svg id="mobileFilterChevron" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Filter Panel -->
+                    <div id="filterPanel"
+                        class="hidden lg:block bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+                        
+                        <!-- Filter Header -->
+                        <div class="flex items-center justify-between p-5 border-b border-gray-100">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-xl bg-amber-50 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-slate-800">Filters</span>
+                            </div>
+                            <button id="clearAllFilters"
+                                class="text-xs text-amber-600 font-semibold hover:text-amber-800 transition-colors hidden">
+                                Clear All
+                            </button>
+                        </div>
+
+                        <div class="p-5 space-y-6">
+
+                            <!-- Search -->
+                            <div class="filter-group">
+                                <label class="filter-label">Search</label>
+                                <div class="relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 15.803a7.5 7.5 0 0 0 10.607 0Z" />
+                                    </svg>
+                                    <input type="text" id="filterSearch" placeholder="Search by name, builder..."
+                                        class="filter-input pl-9" />
+                                </div>
+                            </div>
+
+                            <!-- City -->
+                            <div class="filter-group">
+                                <label class="filter-label">City</label>
+                                <div id="cityFilters" class="space-y-2.5"></div>
+                            </div>
+
+                            <!-- Category -->
+                            <div class="filter-group">
+                                <label class="filter-label">Category</label>
+                                <div id="categoryFilters" class="space-y-2.5"></div>
+                            </div>
+
+                            <!-- Property Type -->
+                            <div class="filter-group">
+                                <label class="filter-label">Property Type</label>
+                                <div id="typeFilters" class="space-y-2.5"></div>
+                            </div>
+
+                            <!-- Status -->
+                            <div class="filter-group">
+                                <label class="filter-label">Status</label>
+                                <div id="statusFilters" class="space-y-2.5"></div>
+                            </div>
+
+                            <!-- Budget Range -->
+                            <div class="filter-group">
+                                <label class="filter-label">
+                                    Budget
+                                    <span id="budgetRangeLabel" class="text-amber-600 font-bold ml-1">Any</span>
+                                </label>
+                                <div class="space-y-3">
+                                    <input type="range" id="budgetFilter" min="0" max="700" step="10" value="700"
+                                        class="budget-range w-full" />
+                                    <div class="flex justify-between text-xs text-gray-400 font-medium">
+                                        <span>₹0</span>
+                                        <span>₹700L+</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- ============ RIGHT PROPERTIES GRID ============ -->
+                <main class="flex-1 min-w-0">
+                    <!-- Sort Bar -->
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+                        <p id="propertiesCount" class="text-sm text-slate-500 font-medium">
+                            Showing <span id="shownCount" class="font-bold text-slate-800">0</span> of <span id="totalCount" class="font-bold text-slate-800">0</span> properties
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <label for="sortSelect" class="text-sm text-slate-500 font-medium whitespace-nowrap">Sort by:</label>
+                            <select id="sortSelect"
+                                class="text-sm bg-white border border-gray-200 text-slate-700 rounded-xl px-3 py-2 font-medium focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200 cursor-pointer">
+                                <option value="default">Featured</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Properties Grid -->
+                    <div id="allPropertiesGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                        <!-- Skeleton loading state -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow border border-gray-100 animate-pulse">
+                            <div class="w-full h-52 bg-gray-200"></div>
+                            <div class="p-4 space-y-3">
+                                <div class="h-5 bg-gray-200 rounded w-3/4"></div>
+                                <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                                <div class="h-4 bg-gray-200 rounded w-2/3"></div>
+                                <div class="h-9 bg-gray-200 rounded-xl w-full mt-4"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl overflow-hidden shadow border border-gray-100 animate-pulse">
+                            <div class="w-full h-52 bg-gray-200"></div>
+                            <div class="p-4 space-y-3">
+                                <div class="h-5 bg-gray-200 rounded w-3/4"></div>
+                                <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                                <div class="h-4 bg-gray-200 rounded w-2/3"></div>
+                                <div class="h-9 bg-gray-200 rounded-xl w-full mt-4"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl overflow-hidden shadow border border-gray-100 animate-pulse hidden sm:block">
+                            <div class="w-full h-52 bg-gray-200"></div>
+                            <div class="p-4 space-y-3">
+                                <div class="h-5 bg-gray-200 rounded w-3/4"></div>
+                                <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                                <div class="h-4 bg-gray-200 rounded w-2/3"></div>
+                                <div class="h-9 bg-gray-200 rounded-xl w-full mt-4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div id="noResultsMsg" class="hidden text-center py-20">
+                        <div class="w-20 h-20 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">No Properties Found</h3>
+                        <p class="text-slate-500 text-sm max-w-sm mx-auto mb-6">Try adjusting your filters to find more properties that match your preferences.</p>
+                        <button id="resetFiltersBtn"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#B68D37] text-white text-sm font-semibold hover:bg-[#9a7229] transition-all duration-300 shadow-md">
+                            Clear All Filters
+                        </button>
+                    </div>
+                </main>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- Enquiry Popup (injected by JS) -->
+    <div id="enquiry-popup"></div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./js/components/propertiesPage/propertiesPage.js"></script>
+
+    <!-- Scroll Reveal Observer -->
+    <script>
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        const registerFadeElements = (container) => {
+            if (!container) return;
+            const elements = container.querySelectorAll('.fade-up');
+            elements.forEach(el => fadeObserver.observe(el));
+            if (container.classList && container.classList.contains('fade-up')) {
+                fadeObserver.observe(container);
+            }
+        };
+
+        registerFadeElements(document);
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+                mutation.addedNodes.forEach(node => {
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        registerFadeElements(node);
+                    }
+                });
+            });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+    </script>
+</body>
+
+</html>

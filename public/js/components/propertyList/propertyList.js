@@ -46,20 +46,20 @@ export function renderProperties(properties, _page, _itemsPerPageOverride) {
 
         <!-- ← Left Nav Button -->
         <button id="propListPrev"
-            class="absolute -left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full  shadow-lg bg-[#B68D37] text-white transition-all duration-200 disabled:opacity-0 disabled:cursor-not-allowed"
+            class="absolute -left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full  shadow-lg bg-[#B68D37] text-white transition-all duration-200 disabled:opacity-0 disabled:cursor-not-allowed"
             aria-label="Previous properties">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6"/></svg>
         </button>
 
         <!-- → Right Nav Button -->
         <button id="propListNext"
-            class="absolute -right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg bg-[#B68D37] text-white transition-all duration-200 disabled:opacity-0 disabled:cursor-not-allowed"
+            class="absolute -right-1 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full shadow-lg bg-[#B68D37] text-white transition-all duration-200 disabled:opacity-0 disabled:cursor-not-allowed"
             aria-label="Next properties">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></svg>
         </button>
 
         <!-- Outer Swiper (padded so cards stay clear of the side buttons) -->
-        <div class="swiper propertyListSwiper overflow-hidden px-12 md:px-14">
+        <div class="swiper propertyListSwiper overflow-hidden px-2 sm:px-12 md:px-14">
             <div class="swiper-wrapper">
                 ${slidesMarkup}
             </div>

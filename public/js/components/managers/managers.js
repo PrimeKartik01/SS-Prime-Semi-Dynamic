@@ -88,21 +88,14 @@ export function initManagers({
 
             <div class="max-w-[1700px] mx-auto px-6 lg:px-12 relative z-10">
                 <!-- Section Header -->
-                <div class="text-center max-w-4xl mx-auto mb-10 md:mb-14 fade-up">
-                    <div class="flex items-center justify-center gap-3 mb-3">
+                <div class="text-center max-w-4xl mx-auto mb-6 fade-up">
+                    <div class="flex items-center justify-center gap-3 mb-3 text-xs md:text-2xl">
                         <span class="w-10 md:w-16 h-[1.5px] bg-[#B68D37]"></span>
-                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full  border border-[#B68D37] text-[#B68D37] text-xs font-bold uppercase tracking-widest shadow-xs">
-                            <i class="fa-solid fa-users text-[#B68D37]"></i> THE PEOPLE BEHIND IT
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full  border border-[#B68D37] text-[#B68D37] font-bold uppercase tracking-widest shadow-xs">
+                            Our Managers
                         </span>
                         <span class="w-10 md:w-16 h-[1.5px] bg-[#B68D37]"></span>
                     </div>
-
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-black text-[#0F172A] tracking-tight">
-                        Meet Our <span class="text-[#B68D37]">Managers</span>
-                    </h2>
-                    <p class="mt-3 text-slate-600 text-sm md:text-base font-normal max-w-2xl mx-auto">
-                        A passionate group of real estate professionals dedicated to turning your property dreams into reality.
-                    </p>
                 </div>
 
                 <!-- Swiper Slider -->

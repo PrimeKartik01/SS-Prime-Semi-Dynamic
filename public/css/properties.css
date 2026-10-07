@@ -1,0 +1,434 @@
+/* ============================================================
+   SS Prime Infra — Properties Listing Page Styles
+   ============================================================ */
+
+/* ── Hero Banner ───────────────────────────────────────────── */
+.properties-page-hero {
+    min-height: 220px;
+}
+
+/* ── Filter Sidebar ────────────────────────────────────────── */
+.filter-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.filter-group {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.filter-input {
+    width: 100%;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 9px 12px;
+    font-size: 0.85rem;
+    color: #1e293b;
+    background: #f8fafc;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.filter-input:focus {
+    border-color: #B68D37;
+    box-shadow: 0 0 0 3px rgba(182, 141, 55, 0.12);
+    background: #fff;
+}
+
+/* ── Checkbox Filter Items ─────────────────────────────────── */
+.filter-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 6px;
+    border-radius: 8px;
+    transition: background 0.15s;
+}
+
+.filter-checkbox-item:hover {
+    background: #fefce8;
+}
+
+.filter-checkbox-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #cbd5e1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.filter-checkbox-item input[type="checkbox"]:checked {
+    background: #B68D37;
+    border-color: #B68D37;
+}
+
+.filter-checkbox-item input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    width: 5px;
+    height: 9px;
+    border: 2px solid white;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+
+.filter-checkbox-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #374151;
+    flex: 1;
+}
+
+.filter-checkbox-count {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #94a3b8;
+    background: #f1f5f9;
+    border-radius: 20px;
+    padding: 1px 7px;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* ── Budget Range Slider ───────────────────────────────────── */
+.budget-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 99px;
+    background: linear-gradient(to right, #B68D37 0%, #B68D37 var(--range-pct, 100%), #e2e8f0 var(--range-pct, 100%), #e2e8f0 100%);
+    outline: none;
+    cursor: pointer;
+}
+
+.budget-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #B68D37;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(182, 141, 55, 0.45);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.budget-range::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 14px rgba(182, 141, 55, 0.55);
+}
+
+.budget-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #B68D37;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(182, 141, 55, 0.45);
+    cursor: pointer;
+}
+
+/* ── Property Card (Properties Page) ──────────────────────── */
+.prop-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    animation: cardSlideIn 0.4s ease both;
+}
+
+.prop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prop-card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 210px;
+}
+
+.prop-card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.prop-card:hover .prop-card-image-wrapper img {
+    transform: scale(1.06);
+}
+
+.prop-card-status {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prop-card-status.status-new {
+    background: rgba(245, 158, 11, 0.85);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.prop-card-status.status-delivered {
+    background: rgba(16, 185, 129, 0.85);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.prop-card-enquire-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #B68D37;
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 10;
+}
+
+.prop-card-enquire-btn:hover {
+    background: #9a7229;
+    transform: scale(1.04);
+}
+
+.prop-card-body {
+    padding: 16px;
+}
+
+.prop-card-city {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.prop-card-city svg {
+    width: 14px;
+    height: 14px;
+    color: #B68D37;
+    flex-shrink: 0;
+}
+
+.prop-card-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.prop-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.3;
+    flex: 1;
+}
+
+.prop-card-category {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #B68D37;
+    border: 1.5px solid #B68D37;
+    padding: 3px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.prop-card-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.prop-card-meta-item label {
+    display: block;
+    font-size: 0.68rem;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.prop-card-meta-item span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.prop-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.prop-card-price-label {
+    font-size: 0.68rem;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.prop-card-price {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #B68D37;
+}
+
+.prop-card-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.prop-card-emi-btn {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.prop-card-emi-btn:hover {
+    background: #fde68a;
+}
+
+.prop-card-view-btn {
+    background: #1e293b;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.prop-card-view-btn:hover {
+    background: #B68D37;
+}
+
+/* ── No image placeholder ──────────────────────────────────── */
+.prop-card-no-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Mobile Filter Panel Animation ────────────────────────── */
+#filterPanel.mobile-open {
+    display: block;
+    animation: filterSlideDown 0.3s ease;
+}
+
+@keyframes filterSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Active Filter Indicator ───────────────────────────────── */
+.filter-active-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #B68D37;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 800;
+}
+
+/* ── Sort Select ───────────────────────────────────────────── */
+#sortSelect {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 1023px) {
+    #filterPanel {
+        margin-top: 8px;
+    }
+}

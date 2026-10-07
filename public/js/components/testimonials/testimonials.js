@@ -92,12 +92,10 @@ export function initTestimonials({
                     <div class="flex items-center justify-center gap-3 mb-3 text-xs md:text-2xl">
                         <span class="w-10 md:w-16 h-[1.5px] bg-[#B68D37]"></span>
                         <span class="inline-flex items-center gap-2 px-6 py-2 rounded-full  border border-[#B68D37] text-[#B68D37] font-bold uppercase tracking-widest shadow-xs">
-                            <i class="fa-solid fa-user-group text-[#B68D37]"></i> CLIENT TESTIMONIALS
+                           CLIENT TESTIMONIALS
                         </span>
                         <span class="w-10 md:w-16 h-[1.5px] bg-[#B68D37]"></span>
                     </div>
-                    <p class="mt-3 text-slate-600 text-sm md:text-base font-normal max-w-2xl mx-auto leading-relaxed hidden md:block">
-                        Real stories from home buyers and property investors </p>
                 </div>
 
                 <!-- Swiper Slider -->
