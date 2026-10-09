@@ -41,14 +41,6 @@ export const aboutValues = [
 // ---------- Team Members ----------
 export const aboutTeam = [
     {
-        image: "img/managers/suman_mam.webp",
-        name: "Suman Bhakuni",
-        role: "Founder & Director",
-        bio: "Driving trusted real estate sales with a focus on transparency.",
-        linkedin: "#",
-        instagram: "#",
-    },
-    {
         image: "img/managers/satish_sir.webp",
         name: "Satish Ashok Rathod",
         role: "Co-Founder & Director",
@@ -56,14 +48,6 @@ export const aboutTeam = [
         linkedin: "#",
         instagram: "#",
     },
-    // {
-    //     image: "img/managers/saurabh_sir.webp",
-    //     name: "Saurabh Gupta",
-    //     role: "Director",
-    //     bio: "Expert in luxury residential sales across Gurgaon & Pune.",
-    //     linkedin: "#",
-    //     instagram: "#",
-    // },
     {
         image: "img/managers/yogesh_sir.webp",
         name: "Yogesh Pathak",
@@ -72,6 +56,24 @@ export const aboutTeam = [
         linkedin: "#",
         instagram: "#",
     },
+    {
+        image: "img/managers/suman_mam.webp",
+        name: "Suman Bhakuni",
+        role: "Founder & Director",
+        bio: "Driving trusted real estate sales with a focus on transparency.",
+        linkedin: "#",
+        instagram: "#",
+    },
+
+    // {
+    //     image: "img/managers/saurabh_sir.webp",
+    //     name: "Saurabh Gupta",
+    //     role: "Director",
+    //     bio: "Expert in luxury residential sales across Gurgaon & Pune.",
+    //     linkedin: "#",
+    //     instagram: "#",
+    // },
+
 ];
 
 // ---------- Gallery Images ----------

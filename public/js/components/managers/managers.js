@@ -101,7 +101,7 @@ export function initManagers({
                 <!-- Swiper Slider -->
                 <div class="relative px-2 sm:px-6 lg:px-12 fade-up">
                     <div class="swiper managersSwiper overflow-hidden">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper flex items-center justify-center">
                             ${managers.map(item => `
                                 <div class="swiper-slide h-auto">
                                     <div class="group relative h-full bg-white border border-[#B68D37] rounded-[28px] p-5 md:p-6 shadow-[0_8px_30px_rgba(37,99,235,0.06)] hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)] transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
