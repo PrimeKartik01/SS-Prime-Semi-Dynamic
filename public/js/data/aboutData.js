@@ -92,5 +92,5 @@ export const galleryItems = [
         image: "./img/gallery/4th.webp",
         title: "Elegant Urban Residences",
         description: "Luxury meets everyday living.",
-    },
+    },  
 ];

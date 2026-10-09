@@ -118,7 +118,7 @@ export function initFooter(containerId = "footer") {
                     <div class="flex gap-3">
                         <i class="fa-solid fa-location-dot text-yellow-500 mt-1 shrink-0"></i>
                         <div>
-                            <span class="block text-yellow-500 uppercase tracking-widest font-semibold mb-0.5">NCR Office</span>
+                            <span class="block text-yellow-500 uppercase tracking-widest font-semibold mb-0.5">GURUGRAM Office</span>
                             <a href="https://www.google.com/maps/dir//SS+Prime+Infra+Pvt+Ltd,+Ground+floor,+Block-D,+Pioneer+Urban+Square,+Office+no+:-006,+Sector+62,+Gurugram,+Ghata,+Haryana+122098/@28.4199057,77.0931277,14z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x390d23b6f6e61b6f:0x4fc30b68f5127c0!2m2!1d77.0896093!2d28.4150296?entry=ttu&g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 transition text-wrap ">
                                 SS Prime Infra Pvt Ltd, Ground Floor, Block-D, Pioneer Urban Square, Office No. 006, Sector 62, Gurugram, Haryana 122098
                             </a>
