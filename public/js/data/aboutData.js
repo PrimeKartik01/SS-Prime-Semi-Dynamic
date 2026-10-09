@@ -56,14 +56,14 @@ export const aboutTeam = [
         linkedin: "#",
         instagram: "#",
     },
-    {
-        image: "img/managers/saurabh_sir.webp",
-        name: "Saurabh Gupta",
-        role: "Director",
-        bio: "Expert in luxury residential sales across Gurgaon & Pune.",
-        linkedin: "#",
-        instagram: "#",
-    },
+    // {
+    //     image: "img/managers/saurabh_sir.webp",
+    //     name: "Saurabh Gupta",
+    //     role: "Director",
+    //     bio: "Expert in luxury residential sales across Gurgaon & Pune.",
+    //     linkedin: "#",
+    //     instagram: "#",
+    // },
     {
         image: "img/managers/yogesh_sir.webp",
         name: "Yogesh Pathak",
