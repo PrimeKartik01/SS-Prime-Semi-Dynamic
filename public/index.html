@@ -64,24 +64,27 @@
             <div
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-amber-200/20 rounded-full blur-3xl pointer-events-none">
             </div>
-            <div class="px-2 w-full max-w-[1400px] mx-auto">
+            <div class="px-5 w-full max-w-[1400px] mx-auto">
 
                 <!-- Section Header -->
-                <div class="fade-up flex flex-col gap-5 md:flex-row md:items-end md:justify-between mb-8">
+                <div
+                    class="fade-up flex flex-col gap-2 md:gap-5 md:flex-row md:items-end md:justify-between mb-2 md:mb-8">
                     <div class="w-full md:max-w-xl">
-                        <div class="flex items-center gap-3 mb-2">
+                        <div class="flex items-center gap-3 mb-4">
                             <span
                                 class="text-xs sm:text-sm font-bold tracking-[3px] uppercase text-[#C59B27]">PROPERTIES</span>
                             <span class="w-8 h-[2px] bg-[#C59B27]"></span>
                         </div>
-                        <h2 class="text-[2.1rem] sm:text-4xl lg:text-5xl font-bold text-[#111827] leading-[1.08] tracking-[-0.04em]">
+                        <h2
+                            class="text-[1.6rem] md:text-5xl font-bold text-[#111827] leading-[1.08] tracking-[-0.04em]">
                             Our <span class="text-[#B68D37]">Featured</span> Projects
                         </h2>
-                        <p class="mt-2 text-sm sm:text-base text-slate-500">Handpicked premium properties from
+                        <p class="mt-2 text-xs md:text-base text-slate-500 hidden md:block">Handpicked premium
+                            properties from
                             top builders across Pune & Gurgaon.</p>
                     </div>
                     <a href="./properties.html" id="viewAllPropertiesBtn"
-                        class="group inline-flex w-full items-center justify-center gap-2.5 px-6 py-3 rounded-full bg-[#B68D37] hover:bg-[#9a7229] text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-xl whitespace-nowrap md:w-auto">
+                        class="group inline-flex w-max items-center justify-center gap-2.5 px-2 py-0.5 md:px-6 md:py-3 rounded-full bg-[#B68D37] hover:bg-[#9a7229] text-white text-[0.7rem] md:text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-xl whitespace-nowrap md:w-auto">
                         View All Properties
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
@@ -279,24 +282,25 @@
                         </div>
 
                         <!-- Main Heading -->
-                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] leading-[1.18]">
+                        <h2 class="text-[1.6rem] md:text-4xl lg:text-5xl font-bold text-[#111827] leading-[1.18]">
                             Creating Exceptional <br class="hidden sm:inline" />
                             <span class="text-[#B68D37]">Real Estate Experiences</span>
                         </h2>
 
                         <!-- Main Paragraph -->
-                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-normal">
+                        <p class="text-xs md:text-base text-slate-600 leading-relaxed max-w-2xl font-normal mb-0">
                             At <strong class="text-slate-900 font-semibold">SS Prime Infra</strong>, we believe buying a
-                            property is more than just a transaction—it's a life-changing decision. Our mission is to
-                            simplify the journey by offering trusted guidance, verified projects, and complete
-                            transparency at every stage.
+                            property is more than just a transaction—it's a life-changing decision.
                         </p>
 
                         <!-- Expandable Read More Text -->
                         <div id="aboutMoreExpansion"
                             class="grid grid-rows-[0fr] opacity-0 overflow-hidden transition-all duration-500 ease-in-out">
                             <div class="min-h-0 overflow-hidden">
-                                <p class="pt-2 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
+                                <p class="pt-2 text-xs md:text-base text-slate-600 leading-relaxed max-w-2xl">
+                                    Our mission is to simplify the journey by offering trusted guidance, verified
+                                    projects, and complete
+                                    transparency at every stage.
                                     From luxury residences and premium commercial spaces to high-return investment
                                     opportunities, our experienced advisors ensure every client finds the perfect
                                     property with complete confidence and peace of mind.
@@ -308,7 +312,7 @@
                         <div>
                             <button id="aboutReadMoreBtn" onclick="toggleAboutReadMore()" aria-expanded="false"
                                 aria-controls="aboutMoreExpansion"
-                                class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#161B22] hover:bg-[#232936] text-white text-sm font-medium transition-all duration-300 shadow-md hover:shadow-xl group border border-amber-500/20 cursor-pointer">
+                                class="inline-flex items-center gap-3 p-2 md:px-6 md:py-3 rounded-full bg-[#161B22] hover:bg-[#232936] text-white text-[0.7rem] font-medium transition-all duration-300 shadow-md hover:shadow-xl group border border-amber-500/20 cursor-pointer">
                                 <span id="aboutReadMoreText">Read More</span>
                                 <svg id="aboutReadMoreIcon" xmlns="http://www.w3.org/2000/svg"
                                     class="w-4 h-4 text-white transition-transform duration-300 group-hover:translate-x-1"
@@ -324,7 +328,7 @@
 
 
                     <!-- Right Column: Asymmetrical Luxury Image Box (5 cols on lg) -->
-                    <div class="fade-up lg:col-span-5 relative mt-6 lg:mt-0 px-7 lg:w-1/2">
+                    <div class="fade-up lg:col-span-5 relative  px-7 lg:w-1/2">
                         <div
                             class="relative w-full rounded-3xl md:rounded-tl-[150px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] ring-1 ring-black/5 aspect-[4/3] sm:aspect-[16/11] lg:aspect-auto lg:h-[530px]">
 
@@ -368,7 +372,7 @@
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[600px] md:h-[600px] w-[300px] h-[300px] bg-amber-200/20 rounded-full blur-3xl pointer-events-none -z-3">
             </div>
 
-            <div class="mx-auto px-6 lg:px-20 lg:px-8 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 z-20">
+            <div class="mx-auto px-7 lg:px-20 lg:px-8 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 z-20">
 
                 <!-- Header -->
 
@@ -376,15 +380,14 @@
 
                     <div>
 
-                        <span class="text-xs md:text-sm uppercase tracking-[4px] text-yellow-500 font-semibold">
+                        <span class="text-xs md:text-sm uppercase tracking-[4px] text-[#B68D37] font-semibold">
                             Why Choose Us
                         </span>
 
-                        <h2
-                            class="mt-3 md:mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] leading-[1.18]">
-                            More Than <span class="text-[#B68D37]">Property,</span>
+                        <h2 class="mt-3 md:mt-5 text-[1.6rem] lg:text-5xl font-bold text-[#111827] leading-[1.18]">
+                            More Than <span class="text-[#B68D37]">Property.</span>
                             <br>
-                            We Deliver Confidence.
+                            Built on Trust.
                         </h2>
 
                     </div>
@@ -418,7 +421,7 @@
                             </div>
 
                             <div
-                                class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-emerald-50/50 transition-transform duration-500 group-hover:scale-150 z-0">
+                                class="absolute -right-10 -top-10 md:h-28 md:w-28 rounded-full bg-emerald-50/50 transition-transform duration-500 group-hover:scale-150 z-0">
                             </div>
 
                             <div class="relative z-10">
@@ -431,7 +434,7 @@
                                     2000<span class="text-[#B68D37]">+</span>
                                 </h3>
 
-                                <p class="mt-1 md:mt-3 text-xs md:text-sm font-medium text-slate-500">
+                                <p class="mt-1 md:mt-3 text-[9px] md:text-sm font-medium text-slate-500">
                                     Happy Customers
                                 </p>
                             </div>
@@ -458,7 +461,7 @@
                             </div>
 
                             <div
-                                class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-amber-50/50 transition-transform duration-500 group-hover:scale-150 z-0">
+                                class="absolute -right-10 -top-10 md:h-28 md:w-28 rounded-full bg-amber-50/50 transition-transform duration-500 group-hover:scale-150 z-0">
                             </div>
 
                             <div class="relative z-10">
@@ -471,7 +474,7 @@
                                     500<span class="text-[#B68D37]">+</span>
                                 </h3>
 
-                                <p class="mt-1 md:mt-3 text-xs md:text-sm font-medium text-slate-500">
+                                <p class="mt-1 md:mt-3 text-[9px] md:text-sm font-medium text-slate-500">
                                     Associates
                                 </p>
                             </div>
@@ -498,7 +501,7 @@
                             </div>
 
                             <div
-                                class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-emerald-50/50 transition-transform duration-500 group-hover:scale-150 z-0">
+                                class="absolute -right-10 -top-10 md:h-28 md:w-28 rounded-full bg-emerald-50/50 transition-transform duration-500 group-hover:scale-150 z-0">
                             </div>
 
                             <div class="relative z-10">
@@ -511,7 +514,7 @@
                                     100<span class="text-[#B68D37]">%</span>
                                 </h3>
 
-                                <p class="mt-1 md:mt-3 text-xs md:text-sm font-medium text-slate-500">
+                                <p class="mt-1 md:mt-3 text-[9px] md:text-sm font-medium text-slate-500">
                                     Transparency
                                 </p>
                             </div>
@@ -538,7 +541,7 @@
                             </div>
 
                             <div
-                                class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-amber-50/50 transition-transform duration-500 group-hover:scale-150 z-0">
+                                class="absolute -right-10 -top-10 md:h-28 md:w-28 rounded-full bg-amber-50/50 transition-transform duration-500 group-hover:scale-150 z-0">
                             </div>
 
                             <div class="relative z-10">
@@ -551,7 +554,7 @@
                                     24<span class="text-[#B68D37]">×</span>7
                                 </h3>
 
-                                <p class="mt-1 md:mt-3 text-xs md:text-sm font-medium text-slate-500">
+                                <p class="mt-1 md:mt-3 text-[9px] md:text-sm font-medium text-slate-500">
                                     Customer Support
                                 </p>
                             </div>

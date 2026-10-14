@@ -24,7 +24,7 @@ function renderSearch() {
     container.innerHTML = `
 
         <!-- ====== MOBILE: Clean pill search bar (visible only on mobile) ====== -->
-        <div class="flex md:hidden items-center bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="flex md:hidden items-center bg-white rounded-2xl shadow-2xl overflow-hidden h-10">
 
             <div class="pl-3 flex-shrink-0 text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -36,12 +36,12 @@ function renderSearch() {
                 id="searchInputMobile"
                 type="text"
                 placeholder="Search City, Location, Project..."
-                class="flex-1 h-14 px-3 bg-transparent text-gray-700 placeholder-gray-400 outline-none text-sm"
+                class="flex-1 h-8 px-3 bg-transparent text-gray-700 placeholder-gray-400 outline-none text-sm"
             >
 
             <button
                 id="searchBtnMobile"
-                class="flex-shrink-0 h-14 px-5 bg-yellow-500 text-white font-bold flex items-center gap-2 text-sm active:bg-yellow-600"
+                class="flex-shrink-0 h-14 px-5 bg-[#B68D37] text-white font-bold flex items-center gap-2 text-sm active:bg-yellow-600"
             >
                 Search
             </button>
