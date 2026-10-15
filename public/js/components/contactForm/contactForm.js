@@ -17,7 +17,7 @@ export function initContactForm(containerId = "contact-form") {
     >
 
         <!-- Form -->
-        <div class="relative z-10 flex flex-col h-full p-5 md:p-10 lg:p-16 max-w-[1440px] mx-auto ">
+        <div class="relative z-10 flex flex-col h-full px-7 py-5 md:p-10 lg:p-16 max-w-[1440px] mx-auto ">
 
                     <div class="lg:col-span-7 space-y-5">
 
@@ -30,7 +30,7 @@ export function initContactForm(containerId = "contact-form") {
                         </div>
 
                         <!-- Main Heading -->
-                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] leading-[1.18]">
+                        <h2 class="text-[1.6rem] md:text-5xl font-bold text-[#111827] leading-[1.18]">
                             Looking For<br class="hidden sm:inline" />
                             <span class="text-[#B68D37]">Dream Property</span>
                         </h2>
@@ -63,7 +63,7 @@ export function initContactForm(containerId = "contact-form") {
                        
                         <div class="w-full max-w-xl backdrop-blur-sm p-6 shadow-2xl rounded-2xl">
 
-                            <h2 class="text-2xl font-bold text-[#B68D37]">
+                            <h2 class="text-md text-center md:text-2xl font-bold text-[#B68D37]">
                                Schedule Free Consultation
                             </h2>
 
@@ -73,30 +73,30 @@ export function initContactForm(containerId = "contact-form") {
                                     class="w-full h-10 rounded-xl placeholder:text-sm placeholder:text-[#111827] px-5 border border-gray-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                                     required>
 
-                                <input type="email" id="contactEmail" placeholder="Email Address"
+                                <input type="email" id="contactEmail" placeholder="Email "
                                     class="w-full h-10 rounded-xl placeholder:text-sm placeholder:text-[#111827] px-5 border border-gray-200 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                                     required>
 
-                                <input type="tel" id="contactPhone" placeholder="Mobile Number"
+                                <input type="tel" id="contactPhone" placeholder="Number"
                                     class="w-full h-10 rounded-xl placeholder:text-sm placeholder:text-[#111827] px-5 border border-gray-200 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                                     required>
 
                                 <select id="contactProjectSelect"
                                     class="w-full h-10 rounded-xl text-sm px-5 border border-gray-200 outline-none focus:border-amber-500"
                                     required>
-                                    <option value="">Select Project</option>
+                                    <option value="">Project</option>
                                 </select>
 
                                 <select id="contactCitySelect"
                                     class="w-full h-10 rounded-xl text-sm px-5 border border-gray-200 outline-none focus:border-amber-500"
                                     required>
-                                    <option value="">Select City</option>
+                                    <option value="">City</option>
                                 </select>
 
                                 <select id="contactBudgetSelect"
                                     class="w-full h-10 rounded-xl text-sm px-5 border border-gray-200 outline-none focus:border-amber-500"
                                     required>
-                                    <option value="">Select Budget</option>
+                                    <option value="">Budget</option>
                                     <option value="Flexible">Flexible</option>
                                     <option value="Under ₹50 Lakhs">Under ₹50 Lakhs</option>
                                     <option value="₹50 Lakhs - ₹1 Crore">₹50 Lakhs - ₹1 Crore</option>
@@ -107,7 +107,7 @@ export function initContactForm(containerId = "contact-form") {
                                 </select>
 
                                 <button
-                                    class="w-full h-10 rounded-3xl text-sm w-max px-4  bg-[#B68D37] hover:bg-yellow-400 hover:shadow-lg hover:shadow-gray-400 transition duration-300 font-medium cursor-pointer text-white">
+                                    class="w-full h-8 md:h-10 rounded-xl text-sm w-max px-4  bg-[#B68D37] hover:bg-yellow-400 hover:shadow-lg hover:shadow-gray-400 transition duration-300 font-medium cursor-pointer text-white">
                                     Schedule Now
                                 </button>
 

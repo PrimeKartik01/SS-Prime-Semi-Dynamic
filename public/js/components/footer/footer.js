@@ -57,7 +57,7 @@ export function initFooter(containerId = "footer") {
                         Quick Links
                     </h3>
 
-                    <div class="w-14 h-0.5 bg-yellow-400 mb-6 rounded-lg"></div>
+                    <div class="w-14 h-0.5 bg-[#B68D37] mb-6 rounded-lg"></div>
 
                     <ul class="space-y-3 md:text-light md:text-left text-sm">
 
@@ -84,7 +84,7 @@ export function initFooter(containerId = "footer") {
                         Featured Projects
                     </h3>
 
-                    <div class="w-14 h-0.5 bg-yellow-400 mb-6 rounded-lg"></div>
+                    <div class="w-14 h-0.5 bg-[#B68D37] mb-6 rounded-lg"></div>
 
                     <ul class="space-y-3  md:text-light md:text-left text-sm">
 
@@ -110,15 +110,15 @@ export function initFooter(containerId = "footer") {
                  text-white mb-2">
                     Contact
                 </h3>
-                <div class="w-14 h-0.5 bg-yellow-400 mb-6 rounded-lg"></div>
+                <div class="w-14 h-0.5 bg-[#B68D37] mb-6 rounded-lg"></div>
                 
 
                 <div class="space-y-5 text-sm"> 
 
                     <div class="flex gap-3">
-                        <i class="fa-solid fa-location-dot text-yellow-500 mt-1 shrink-0"></i>
+                        <i class="fa-solid fa-location-dot text-[#B68D37] mt-1 shrink-0"></i>
                         <div>
-                            <span class="block text-yellow-500 uppercase tracking-widest font-semibold mb-0.5">GURUGRAM  Office</span>
+                            <span class="block text-[#B68D37] uppercase tracking-widest font-semibold mb-0.5">GURUGRAM  Office</span>
                             <a href="https://www.google.com/maps/dir//SS+Prime+Infra+Pvt+Ltd,+Ground+floor,+Block-D,+Pioneer+Urban+Square,+Office+no+:-006,+Sector+62,+Gurugram,+Ghata,+Haryana+122098/@28.4199057,77.0931277,14z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x390d23b6f6e61b6f:0x4fc30b68f5127c0!2m2!1d77.0896093!2d28.4150296?entry=ttu&g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 transition text-wrap ">
                                 SS Prime Infra Pvt Ltd, Ground Floor, Block-D, Pioneer Urban Square, Office No. 006, Sector 62, Gurugram, Haryana 122098
                             </a>
@@ -126,9 +126,9 @@ export function initFooter(containerId = "footer") {
                     </div>
 
                     <div class="flex gap-3">
-                        <i class="fa-solid fa-location-dot text-yellow-500 mt-1 shrink-0"></i>
+                        <i class="fa-solid fa-location-dot text-[#B68D37] mt-1 shrink-0"></i>
                         <div>
-                            <span class="block text-yellow-500 uppercase tracking-widest font-semibold mb-0.5">Maharashtra Office</span>
+                            <span class="block text-[#B68D37] uppercase tracking-widest font-semibold mb-0.5">Maharashtra Office</span>
                             <a href="https://www.google.com/maps?sca_esv=cf5c3a640caff83a&sxsrf=APpeQnunwSMbo_g7QTwFe_fvSVwdW4LGgQ:1787137880010&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXNzcHJpbWVpbmZyYSBwdW5lMgYQABgWGB5I4BNQrwZYixJwAXgAkAEAmAGTAaABrQaqAQMwLja4AQPIAQD4AQGYAgagAtQFwgIHECMYsAMYJ8ICChAAGEcY1gQYsAPCAhcQLhjcBhi4BhjaBhjYAhjIAxiwA9gBAcICBBAjGCfCAgcQABiABBgNwgINEC4YgAQYDRjHARivAcICBhAAGB4YDcICBxAjGLACGCfCAgsQABiABBiKBRiGA5gDAOIDBRIBMSBAiAYBkAYGugYECAEYGZIHAzEuNaAH0iayBwMwLjW4B84FwgcFMS4yLjPIBxKACAE&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KV_Hcn0Xv8I7McnmUa5qS3Np&daddr=Office+No.+410,+ICON+Towers,+Survey+Number+83/1,+near+Kasturi+Chowk,+Wakad,+Maharashtra+411057" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 ">
                                 Office No. 6, 6th Floor (B Wing) City Vista, Kharadi – Fountain Road Ashoka Nagar, Pune – 411014
                             </a>
@@ -137,7 +137,7 @@ export function initFooter(containerId = "footer") {
 
                     <div class="flex gap-3">
 
-                        <i class="fa-solid fa-phone text-yellow-500 mt-1"></i>
+                        <i class="fa-solid fa-phone text-[#B68D37] mt-1"></i>
 
                         <a href="tel:+919898981498" class="hover:text-yellow-500">
                             +91-9898981498
@@ -147,7 +147,7 @@ export function initFooter(containerId = "footer") {
 
                     <div class="flex gap-3">
 
-                        <i class="fa-solid fa-envelope text-yellow-500 mt-1"></i>
+                        <i class="fa-solid fa-envelope text-[#B68D37] mt-1"></i>
 
                         <a href="mailto:info@ssprimeinfra.com" class="hover:text-yellow-500">
                             info@ssprimeinfra.com
