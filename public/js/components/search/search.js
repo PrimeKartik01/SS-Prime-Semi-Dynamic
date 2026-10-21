@@ -184,7 +184,13 @@ function populateDropdowns() {
 
     populateSelect("cityFilter", "city");
 
-    populateSelect("locationFilter", "location");
+    // Location is NOT pre-populated — it only shows after a city is selected
+    const locationFilter = document.getElementById("locationFilter");
+    if (locationFilter) {
+        locationFilter.disabled = true;
+        locationFilter.style.opacity = "0.4";
+        locationFilter.style.cursor = "not-allowed";
+    }
 
     populateSelect("builderFilter", "builder");
 
@@ -218,6 +224,54 @@ function populateSelect(selectId, key) {
         select.appendChild(option);
 
     });
+
+}
+
+function populateLocationsByCity(selectedCity) {
+
+    const locationFilter = document.getElementById("locationFilter");
+    if (!locationFilter) return;
+
+    // Clear all existing options
+    locationFilter.innerHTML = `<option value="" style="color:#111;background:#fff;">Select Location</option>`;
+
+    if (!selectedCity) {
+        // No city selected — disable and leave empty
+        locationFilter.disabled = true;
+        locationFilter.style.opacity = "0.4";
+        locationFilter.style.cursor = "not-allowed";
+        return;
+    }
+
+    // City selected — enable the dropdown
+    locationFilter.disabled = false;
+    locationFilter.style.opacity = "1";
+    locationFilter.style.cursor = "pointer";
+
+    // Get addresses for the selected city
+    const filtered = allProperties.filter(p => p.city === selectedCity);
+
+    const locations = [...new Set(filtered.map(p => p.address).filter(v => v && v.trim()))];
+
+    locations.sort();
+
+    locations.forEach(loc => {
+
+        const option = document.createElement("option");
+
+        option.value = loc;
+
+        option.textContent = loc;
+
+        option.style.color = "#111";
+
+        option.style.background = "#fff";
+
+        locationFilter.appendChild(option);
+
+    });
+
+    locationFilter.value = "";
 
 }
 
@@ -258,7 +312,7 @@ function filterProperties() {
         const searchMatch = !keyword ||
             property.title.toLowerCase().includes(keyword) ||
             property.builder.toLowerCase().includes(keyword) ||
-            property.location.toLowerCase().includes(keyword) ||
+            (property.address || "").toLowerCase().includes(keyword) ||
             property.city.toLowerCase().includes(keyword);
 
         const categoryMatch = !category || property.category === category;
@@ -269,7 +323,7 @@ function filterProperties() {
 
         const cityMatch = !city || property.city === city;
 
-        const locationMatch = !location || property.location === location;
+        const locationMatch = !location || property.address === location;
 
         const bhkMatch = !bhk || property.bhk === bhk;
 
@@ -325,7 +379,15 @@ function registerEvents() {
     if (categoryFilter) categoryFilter.addEventListener("change", filterProperties);
     if (typeFilter) typeFilter.addEventListener("change", filterProperties);
     if (builderFilter) builderFilter.addEventListener("change", filterProperties);
-    if (cityFilter) cityFilter.addEventListener("change", filterProperties);
+
+    // City filter: populate matching locations first, do NOT filter/scroll yet
+    if (cityFilter) {
+        cityFilter.addEventListener("change", () => {
+            populateLocationsByCity(cityFilter.value);
+        });
+    }
+
+    // Location filter: filter properties and scroll
     if (locationFilter) locationFilter.addEventListener("change", filterProperties);
 
 
@@ -342,6 +404,9 @@ function registerEvents() {
             if (typeFilter) typeFilter.value = "";
             if (builderFilter) builderFilter.value = "";
             if (cityFilter) cityFilter.value = "";
+
+            // Reset location dropdown to show all locations
+            populateLocationsByCity("");
             if (locationFilter) locationFilter.value = "";
 
             const bhkFilter = document.getElementById("bhkFilter");
