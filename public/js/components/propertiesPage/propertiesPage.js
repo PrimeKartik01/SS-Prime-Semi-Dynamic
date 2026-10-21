@@ -26,6 +26,8 @@ const state = {
     statuses: new Set(),
     maxBudget: 700,      // in Lakhs (0 = unlimited)
     sort: "default",
+    currentPage: 1,
+    itemsPerPage: 9,
 };
 
 // ── DOM helpers ───────────────────────────────────────────────────────────────
@@ -62,6 +64,7 @@ function buildCheckboxGroup(containerId, values, stateSet) {
         label.querySelector("input").addEventListener("change", e => {
             if (e.target.checked) stateSet.add(val);
             else stateSet.delete(val);
+            state.currentPage = 1;
             applyFilters();
         });
     });
@@ -92,6 +95,7 @@ function buildFilters() {
         label.querySelector("input").addEventListener("change", e => {
             if (e.target.checked) state.categories.add(cat);
             else state.categories.delete(cat);
+            state.currentPage = 1;
             applyFilters();
         });
     });
@@ -115,6 +119,7 @@ function buildFilters() {
         label.querySelector("input").addEventListener("change", e => {
             if (e.target.checked) state.types.add(type);
             else state.types.delete(type);
+            state.currentPage = 1;
             applyFilters();
         });
     });
@@ -138,6 +143,7 @@ function buildFilters() {
         label.querySelector("input").addEventListener("change", e => {
             if (e.target.checked) state.statuses.add(status);
             else state.statuses.delete(status);
+            state.currentPage = 1;
             applyFilters();
         });
     });
@@ -297,6 +303,85 @@ function renderPropertyCard(property, index) {
     </article>`;
 }
 
+// ── Render pagination controls ────────────────────────────────────────────────
+
+function renderPagination(totalItems) {
+    const container = $("paginationContainer");
+    if (!container) return;
+
+    const totalPages = Math.ceil(totalItems / state.itemsPerPage);
+
+    if (totalPages <= 1) {
+        container.innerHTML = "";
+        container.style.display = "none";
+        return;
+    }
+
+    container.style.display = "";
+    const currentPage = state.currentPage;
+
+    // Build page number buttons (show up to 5 around current page)
+    let startPage = Math.max(1, currentPage - 2);
+    let endPage = Math.min(totalPages, startPage + 4);
+    if (endPage - startPage < 4) startPage = Math.max(1, endPage - 4);
+
+    let pagesHTML = "";
+
+    // Prev button
+    pagesHTML += `
+        <button class="pagination-btn pagination-nav ${currentPage === 1 ? 'disabled' : ''}" 
+            data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''} aria-label="Previous page">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m15 19-7-7 7-7" />
+            </svg>
+        </button>`;
+
+    // First page + ellipsis
+    if (startPage > 1) {
+        pagesHTML += `<button class="pagination-btn" data-page="1">1</button>`;
+        if (startPage > 2) pagesHTML += `<span class="pagination-ellipsis">…</span>`;
+    }
+
+    // Page number buttons
+    for (let i = startPage; i <= endPage; i++) {
+        pagesHTML += `<button class="pagination-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+    }
+
+    // Last page + ellipsis
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) pagesHTML += `<span class="pagination-ellipsis">…</span>`;
+        pagesHTML += `<button class="pagination-btn" data-page="${totalPages}">${totalPages}</button>`;
+    }
+
+    // Next button
+    pagesHTML += `
+        <button class="pagination-btn pagination-nav ${currentPage === totalPages ? 'disabled' : ''}" 
+            data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''} aria-label="Next page">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7" />
+            </svg>
+        </button>`;
+
+    container.innerHTML = `
+        <div class="pagination-info">Page ${currentPage} of ${totalPages}</div>
+        <div class="pagination-controls">${pagesHTML}</div>
+    `;
+
+    // Wire pagination clicks
+    container.querySelectorAll(".pagination-btn:not(.disabled)").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const page = parseInt(btn.dataset.page, 10);
+            if (!isNaN(page) && page !== state.currentPage) {
+                state.currentPage = page;
+                applyFilters();
+                // Scroll to top of properties grid
+                const grid = $("allPropertiesGrid");
+                if (grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+}
+
 // ── Render filtered list ──────────────────────────────────────────────────────
 
 function applyFilters() {
@@ -309,9 +394,17 @@ function applyFilters() {
     const clearBtn = $("clearAllFilters");
     const mobileBadge = $("mobileFilterBadge");
 
-    // Update counts
-    if (shownCount) shownCount.textContent = filtered.length;
-    if (totalCount) totalCount.textContent = properties.length;
+    const totalPages = Math.ceil(filtered.length / state.itemsPerPage);
+    if (state.currentPage > totalPages && totalPages > 0) state.currentPage = totalPages;
+
+    // Slice for current page
+    const start = (state.currentPage - 1) * state.itemsPerPage;
+    const paginated = filtered.slice(start, start + state.itemsPerPage);
+
+    // Update counts — show range info
+    const shownEnd = Math.min(start + state.itemsPerPage, filtered.length);
+    if (shownCount) shownCount.textContent = filtered.length > 0 ? `${start + 1}–${shownEnd}` : "0";
+    if (totalCount) totalCount.textContent = filtered.length;
     if (resultsCountText) {
         resultsCountText.textContent = `${filtered.length} ${filtered.length === 1 ? "Property" : "Properties"} Found`;
     }
@@ -335,10 +428,12 @@ function applyFilters() {
     if (filtered.length === 0) {
         grid.classList.add("hidden");
         noResults?.classList.remove("hidden");
+        renderPagination(0);
     } else {
         grid.classList.remove("hidden");
         noResults?.classList.add("hidden");
-        grid.innerHTML = filtered.map((p, i) => renderPropertyCard(p, i)).join("");
+        grid.innerHTML = paginated.map((p, i) => renderPropertyCard(p, i)).join("");
+        renderPagination(filtered.length);
     }
 }
 
@@ -394,6 +489,7 @@ function wireEvents() {
             clearTimeout(debounce);
             debounce = setTimeout(() => {
                 state.search = e.target.value.trim();
+                state.currentPage = 1;
                 applyFilters();
             }, 280);
         });
@@ -410,6 +506,7 @@ function wireEvents() {
             if (budgetLabel) {
                 budgetLabel.textContent = state.maxBudget >= 700 ? "Any" : `≤ ₹${state.maxBudget}L`;
             }
+            state.currentPage = 1;
             applyFilters();
         });
     }
@@ -419,6 +516,7 @@ function wireEvents() {
     if (sortSelect) {
         sortSelect.addEventListener("change", e => {
             state.sort = e.target.value;
+            state.currentPage = 1;
             applyFilters();
         });
     }

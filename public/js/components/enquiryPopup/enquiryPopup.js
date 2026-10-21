@@ -56,15 +56,20 @@ export function initEnquiryPopup() {
                     class="relative bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300">
 
                     <!-- Header -->
-                    <div class="relative bg-[#B68D37] p-4 md:px-8 md:py-8 text-white">
+                    <div class="relative p-1 bg-[#232936] text-white">
                         <button id="closePopup" class="absolute top-5 right-5 text-3xl leading-none hover:rotate-90 duration-300">
                             &times;
                         </button>
-                        <img
-                            src="img/white_logo.webp"
-                            alt="SS Prime Infra"
-                            class="h-20 md:h-25 object-cover drop-shadow-lg"
-                        >
+                        <div class="flex items-center">
+                            <img
+                                src="img/sspi_logo.webp"
+                                alt="SS Prime Infra"
+                                class="h-20 md:h-25 object-cover drop-shadow-lg"
+                            >
+                            <p class="text-2xl font-medium mt-3 italic ">
+                                #Build Trust Yes We Do
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Form -->
