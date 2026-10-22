@@ -220,9 +220,7 @@ export const properties = [
     featured: true,
     rating: 4.9,
     images: [
-      "/img/brochure_images/apex_63a_1.webp",
-      "/img/brochure_images/apex_63a_2.webp",
-      "/img/brochure_images/apex_63a_3.webp",
+      "/img/brochure_images/oberoi_1.webp",
     ]
   },
   {

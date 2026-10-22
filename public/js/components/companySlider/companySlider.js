@@ -53,7 +53,6 @@ export function companySlider({
                                     <img
                                         src="${company.logo}"
                                         alt="${company.name}"
-                                        loading="lazy"
                                         draggable="false"
                                         class="max-w-full max-h-full object-contain group-hover:opacity-100 transition-all duration-300"
                                     >
@@ -99,8 +98,30 @@ export function companySlider({
         track.classList.add('cs-animating');
     }
 
-    // Kick off default animation (start = 0, end = -1 set)
-    restartAnimation(0);
+    // Kick off animation only after all images are loaded so scrollWidth is accurate
+    const images = track.querySelectorAll('img');
+    let loadedCount = 0;
+    const totalImages = images.length;
+
+    function startWhenReady() {
+        loadedCount++;
+        if (loadedCount >= totalImages) {
+            restartAnimation(0);
+        }
+    }
+
+    if (totalImages === 0) {
+        restartAnimation(0);
+    } else {
+        images.forEach(img => {
+            if (img.complete) {
+                startWhenReady();
+            } else {
+                img.addEventListener('load', startWhenReady);
+                img.addEventListener('error', startWhenReady); // error pe bhi start karo
+            }
+        });
+    }
 
     // ── Hover: pause / resume ──
     let isDragging = false;
