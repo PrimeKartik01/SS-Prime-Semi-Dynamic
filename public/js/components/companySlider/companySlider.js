@@ -29,7 +29,7 @@ export function companySlider({
                 will-change: transform;
             }
             .cs-track.cs-animating {
-                animation: cs-scroll var(--cs-duration, 20s) linear infinite;
+                animation: cs-scroll var(--cs-duration, 40s) linear infinite;
             }
             .cs-track.cs-paused {
                 animation-play-state: paused;
