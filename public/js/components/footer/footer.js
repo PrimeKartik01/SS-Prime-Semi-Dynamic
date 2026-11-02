@@ -176,7 +176,6 @@ export function initFooter(containerId = "footer") {
                 <a href="privacy-policy.html" class="hover:text-amber-500 transition">
                     Privacy Policy
                 </a>
-                <span class="text-yellow-500 font-medium">-></span>
             </div>
 
         </div>

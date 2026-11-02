@@ -207,7 +207,7 @@ function renderMarkup(root, uid) {
 
           <p class="emi-result-card__label">Estimated Monthly EMI</p>
           <p class="emi-result-card__value" id="emiValue-${uid}" aria-live="polite">\u20B90</p>
-          <p class="emi-result-card__per-month">per month</p>
+          <p class="emi-result-card__per-month">Per Month</p>
 
           <div class="emi-ledger" role="table" aria-label="Loan breakdown">
             <div class="emi-ledger__row" role="row">

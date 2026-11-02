@@ -26,11 +26,11 @@ function renderPropertyDetails(property) {
             <div class="p-4 sm:p-8 space-y-6 sm:space-y-8">
                 <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div>
-                        <p class="text-xs md:text-sm text-yellow-600 font-semibold uppercase border w-max p-2 rounded-xl">${property.category}</p>
-                        <h1 class="text-xl sm:text-4xl font-bold text-blue-700 uppercase mt-2 sm:mt-3">${property.title}</h1>
+                        <p class="text-xs md:text-sm text-white bg-[#b68d37] font-semibold uppercase border w-max p-2 rounded-xl">${property.category}</p>
+                        <h1 class="text-xl sm:text-4xl font-bold text-[#b68d37] uppercase mt-2 sm:mt-3">${property.title}</h1>
                         <p class="text-gray-500 text-sm sm:text-base mt-2 sm:mt-3">Builder ${property.builder}, ${property.location}, ${property.city}</p>
                     </div>
-                    <div class="rounded-2xl sm:rounded-3xl bg-yellow-500 text-white p-2 md:p-4  w-max">
+                    <div class="rounded-2xl sm:rounded-3xl bg-[#b68d37] text-white p-2 md:p-4  w-max">
                         <p class="text-xs sm:text-sm uppercase tracking-[0.2em]">Starting From</p>
                         <p class="text-lg sm:text-3xl font-bold mt-1 sm:mt-2">${property.priceLabel}</p>
                     </div>
@@ -57,7 +57,7 @@ function renderPropertyDetails(property) {
 
                 <div class="grid gap-6 lg:grid-cols-2">
                     <div class="rounded-2xl sm:rounded-3xl border border-gray-200 p-4 sm:p-8 space-y-4">
-                        <h2 class="text-xl sm:text-2xl font-semibold">Project Overview</h2>
+                        <h2 class="text-xl sm:text-2xl font-semibold text-[#b68d37]">Project Overview</h2>
                         <p class="text-gray-600 text-xs md:text-base">
                             ${property.summary || "Discover premium property features, specifications, and amenities designed for modern living."}
                         </p>
@@ -73,24 +73,11 @@ function renderPropertyDetails(property) {
                         </div>
                     </div>
                     <div class="rounded-2xl sm:rounded-3xl border border-gray-200 p-4 sm:p-6 space-y-4">
-                        <h2 class="text-lg sm:text-2xl font-semibold text-gray-900">
+                        <h2 class="text-lg sm:text-2xl font-semibold text-[#b68d37]">
                             Key Highlights
                         </h2>
 
-                        <ul class="list-disc pl-5 text-gray-600 text-xs
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        sm:text-base space-y-2.5">
+                        <ul class="list-disc pl-5 text-gray-600 text-xs sm:text-base space-y-2.5">
                             <li>
                                 Premium location in ${property.location || property.city}
                             </li>
@@ -116,7 +103,7 @@ function renderPropertyDetails(property) {
                     <a href="./index.html" class="inline-flex items-center justify-center rounded-3xl border border-gray-300 px-6 py-3 text-gray-700 hover:bg-gray-100">
                         Back to listings
                     </a>
-                    <button class="enquireBtn inline-flex items-center justify-center rounded-3xl bg-yellow-500 px-6 py-3 text-white hover:bg-yellow-600 cursor-pointer font-semibold shadow-md" data-id="${property.id}">
+                    <button class="enquireBtn inline-flex items-center justify-center rounded-3xl bg-[#b68d37] px-6 py-3 text-white hover:bg-yellow-600 cursor-pointer font-semibold shadow-md" data-id="${property.id}">
                         Contact Sales Team
                     </button>
                 </div>
