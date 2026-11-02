@@ -80,17 +80,17 @@ export const aboutTeam = [
 export const galleryItems = [
     {
         image: "./img/gallery/2nd.webp",
-        title: "Contemporary Residential Living",
-        description: "Modern homes, timeless comfort.",
+        title: "Meet Our Leadership Team",
+        description: "Experienced leaders driving vision, trust and excellence.",
     },
     {
         image: "./img/gallery/1st.webp",
-        title: "Premium Commercial Spaces",
-        description: "Designed for modern businesses.",
+        title: "Expertise That Builds Trust",
+        description: "A dedicated team committed to quality and innovation.",
     },
     {
         image: "./img/gallery/4th.webp",
-        title: "Elegant Urban Residences",
-        description: "Luxury meets everyday living.",
-    },  
+        title: "Together Towards Excellence",
+        description: "United by a shared vision of creating lasting value.",
+    },
 ];
