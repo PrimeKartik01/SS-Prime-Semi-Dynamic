@@ -872,7 +872,7 @@ export const properties = [
     ]
   },
   {
-    id: 37,
+    id: 39,
     title: "Suncity Heights",
     builder: "Suncity",
     category: "Commercial",
@@ -893,7 +893,7 @@ export const properties = [
     ]
   },
   {
-    id: 38,
+    id: 40,
     title: "Omaxe Gurgaon Mall",
     builder: "Omaxe",
     category: "Commercial",
@@ -914,7 +914,7 @@ export const properties = [
     ]
   },
   {
-    id: 39,
+    id: 41,
     title: "Smart World Sky Arc",
     builder: "Smart World Developers",
     category: "Residential",
@@ -936,7 +936,7 @@ export const properties = [
     ]
   },
   {
-    id: 40,
+    id: 42,
     title: "Conscient Elaira",
     builder: "Conscient",
     category: "Residential",
@@ -959,7 +959,7 @@ export const properties = [
     ]
   },
   {
-    id: 41,
+    id: 43,
     title: "Birla Pravaah",
     builder: "Birla Estates",
     category: "Residential",
