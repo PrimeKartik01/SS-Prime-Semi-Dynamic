@@ -57,7 +57,7 @@ export function initEnquiryPopup() {
 
                     <!-- Header -->
                     <div class="relative p-1 bg-[#232936] text-white">
-                        <button id="closePopup" class="absolute top-5 right-5 text-3xl leading-none hover:rotate-90 duration-300">
+                        <button id="closePopup" class="absolute top-2 right-2 text-3xl leading-none hover:rotate-90 duration-300">
                             &times;
                         </button>
                         <div class="flex items-center">
@@ -66,8 +66,8 @@ export function initEnquiryPopup() {
                                 alt="SS Prime Infra"
                                 class="h-20 md:h-25 object-cover drop-shadow-lg"
                             >
-                            <p class="text-2xl font-medium mt-3 italic ">
-                                #Build Trust Yes We Do
+                            <p class="md:text-2xl font-medium mt-3 italic ">
+                                # Build Trust Yes We Do
                             </p>
                         </div>
                     </div>
