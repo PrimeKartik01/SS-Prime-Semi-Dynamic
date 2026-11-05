@@ -4,7 +4,7 @@ export const testimonialsData = [
         name: "Satnam Ratan",
         property: "Miami 2BHK",
         image: "img/testimonials/satnam.jpeg",
-        text: "The SS Prime team patiently explained everything and helped me make a decision with complete clarity.",
+        text: "The SS Prime team patiently explained everything and helped me make a decision with complete clarity and we are very happy with our purchase.",
         rating: 5,
         avatarBg: "from-amber-600 to-slate-800",
         initials: "SK"

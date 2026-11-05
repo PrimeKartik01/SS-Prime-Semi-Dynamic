@@ -109,9 +109,9 @@ export function initTestimonials({
 
                                         <!-- Top Profile Header (Avatar + Info + Stars) -->
                                         <div class="grid gap-2">
-                                            <div class="relative overflow-hidden h-40 md:h-70 shrink-0 shadow-sm border-2 border-white bg-slate-100">
+                                            <div class="relative overflow-hidden h-40 md:h-70 shrink-0 shadow-sm  rounded-t-xl border-2 border-white bg-slate-100">
                                                 ${item.image ? `
-                                                  <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover" onerror="this.onerror=null  this.parentElement.innerHTML='<div class=\\'w-full h-full bg-gradient-to-br ${item.avatarBg || 'from-blue-60  to-indigo-700'} flex items-center justify-center text-white font-bold text-base\\'>${item.initials || 'SP'}</div>';">
+                                                  <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover rounded-t-xl" onerror="this.onerror=null  this.parentElement.innerHTML='<div class=\\'w-full h-full bg-gradient-to-br ${item.avatarBg || 'from-blue-60  to-indigo-700'} flex items-center justify-center text-white font-bold text-base\\'>${item.initials || 'SP'}</div>';">
                                                     ` : `
                                                   <div class="w-full h-full bg-gradient-to-br ${item.avatarBg || 'from-blue-600 to-indigo-700'} flex items-cente  justify-center text-white font-bold text-base">
                                                       ${item.initials || 'SP'}
