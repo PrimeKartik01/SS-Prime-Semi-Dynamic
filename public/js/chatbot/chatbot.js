@@ -1,12 +1,18 @@
 
 document.body.insertAdjacentHTML("beforeend", `
     <button id="chatbot-toggle" type="button" class="fixed bottom-6 right-6 z-[9999] flex  md:min-h-[72px] md:w-[250px] items-center gap-2.5  rounded-3xl md:rounded-full border-0 bg-[#065b47] p-2 md:px-3 md:py-2 text-left text-white shadow-xl transition duration-150 hover:scale-105 hover:bg-[#047158] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700" aria-label="Ask AI about properties" aria-controls="chatbot-container" aria-expanded="false">
-        <span class="flex size-[30px] md:size-[50px] shrink-0 items-center justify-center rounded-full bg-[#e6b52e] text-[#073f33]" aria-hidden="true">
-            <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <span class="relative flex size-[30px] md:size-[50px] shrink-0 items-center justify-center rounded-full bg-[#e6b52e] text-white" aria-hidden="true">
+            <svg class="size-5 md:size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 3 10.2 9.2 4 11l6.2 1.8L12 19l1.8-6.2L20 11l-6.2-1.8L12 3Z"/>
                 <path d="m19 14-.9 2.1L16 17l2.1.9L19 20l.9-2.1L22 17l-2.1-.9L19 14Z"/>
                 <path d="M5 3v3M3.5 4.5h3"/>
             </svg>
+
+              <!-- Blinking Online Indicator -->
+    <span class="absolute right-0 top-0 flex size-3">
+        <span class="absolute inline-flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+        <span class="relative inline-flex size-3 rounded-full bg-green-500 ring-2 ring-[#065b47]"></span>
+    </span>
         </span>
         <span class="flex min-w-0 flex-col gap-1">
             <span class="text-[13px] font-bold leading-tight">Ask AI</span>
