@@ -20,7 +20,7 @@ document.body.insertAdjacentHTML("beforeend", `
         </span>
     </button>
 
-    <section id="chatbot-container" class="fixed bottom-24 right-6 z-[9998] hidden h-[520px] w-[370px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-200 max-sm:inset-x-3 max-sm:bottom-20 max-sm:h-[70vh] max-sm:w-auto" aria-label="SS Prime Assistant" aria-hidden="true">
+    <section id="chatbot-container" class="fixed bottom-24 md:bottom-29 right-6 z-[9998] hidden h-[520px] w-[370px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-200 max-sm:inset-x-3 max-sm:bottom-20 max-sm:h-[70vh] max-sm:w-auto" aria-label="SS Prime Assistant" aria-hidden="true">
         <header class="flex shrink-0 items-center justify-between bg-emerald-950 px-5 py-4 text-white">
             <div>
                 <h2 class="m-0 text-base font-semibold">SS Prime Assistant</h2>
