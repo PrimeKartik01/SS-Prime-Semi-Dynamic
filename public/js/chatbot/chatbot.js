@@ -1,6 +1,6 @@
 
 document.body.insertAdjacentHTML("beforeend", `
-    <button id="chatbot-toggle" type="button" class="fixed bottom-6 right-6 z-[9999] flex  md:min-h-[72px] md:w-[250px] items-center gap-2.5  rounded-3xl md:rounded-full border-0 bg-[#065b47] p-2 md:px-3 md:py-2 text-left text-white shadow-xl transition duration-150 hover:scale-105 hover:bg-[#047158] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700" aria-label="Ask AI about properties" aria-controls="chatbot-container" aria-expanded="false">
+    <button id="chatbot-toggle" type="button" class="fixed bottom-6 right-6 z-[10002] flex  md:min-h-[72px] md:w-[250px] items-center gap-2.5  rounded-3xl md:rounded-full border-0 bg-[#065b47] p-2 md:px-3 md:py-2 text-left text-white shadow-xl transition duration-150 hover:scale-105 hover:bg-[#047158] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700" aria-label="Ask AI about properties" aria-controls="chatbot-container" aria-expanded="false">
         <span class="relative flex size-[30px] md:size-[50px] shrink-0 items-center justify-center rounded-full bg-[#e6b52e] text-white" aria-hidden="true">
             <svg class="size-5 md:size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 3 10.2 9.2 4 11l6.2 1.8L12 19l1.8-6.2L20 11l-6.2-1.8L12 3Z"/>
@@ -20,7 +20,9 @@ document.body.insertAdjacentHTML("beforeend", `
         </span>
     </button>
 
-    <section id="chatbot-container" class="fixed bottom-24 md:bottom-29 right-6 z-[9998] hidden h-[520px] w-[370px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-200 max-sm:inset-x-3 max-sm:bottom-20 max-sm:h-[70vh] max-sm:w-auto" aria-label="SS Prime Assistant" aria-hidden="true">
+    <div id="chatbot-backdrop" class="fixed inset-0 z-[10000] hidden bg-black/20 backdrop-blur-sm sm:hidden" aria-hidden="true"></div>
+
+    <section id="chatbot-container" class="fixed bottom-24 md:bottom-29 right-6 z-[10001] hidden h-[700px] w-[370px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-200 max-sm:inset-x-3 max-sm:bottom-20 max-sm:h-[70vh] max-sm:w-auto" aria-label="SS Prime Assistant" aria-hidden="true">
         <header class="flex shrink-0 items-center justify-between bg-emerald-950 px-5 py-4 text-white">
             <div>
                 <h2 class="m-0 text-base font-semibold">SS Prime Assistant</h2>
@@ -44,6 +46,7 @@ document.body.insertAdjacentHTML("beforeend", `
 
 const chatbotToggle = document.getElementById("chatbot-toggle");
 const chatbotContainer = document.getElementById("chatbot-container");
+const chatbotBackdrop = document.getElementById("chatbot-backdrop");
 const chatbotClose = document.getElementById("chatbot-close");
 
 const chatbotInput = document.getElementById("chatbot-input");
@@ -57,6 +60,7 @@ const API_URL = "/api/chatbot/message";
 // ----------------------------------
 
 chatbotToggle.addEventListener("click", () => {
+    chatbotBackdrop.classList.remove("hidden");
     chatbotContainer.classList.remove("hidden");
     chatbotContainer.classList.add("flex");
     chatbotContainer.setAttribute("aria-hidden", "false");
@@ -65,6 +69,7 @@ chatbotToggle.addEventListener("click", () => {
 });
 
 chatbotClose.addEventListener("click", () => {
+    chatbotBackdrop.classList.add("hidden");
     chatbotContainer.classList.add("hidden");
     chatbotContainer.classList.remove("flex");
     chatbotContainer.setAttribute("aria-hidden", "true");
