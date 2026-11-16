@@ -1,5 +1,6 @@
 import Enquiry from "../models/enquiry.model.js";
 import { getLeadsTransporter } from "../config/mailer.js";
+import { forwardLeadToLeadrat } from "../services/leadrat.service.js";
 
 export const createEnquiry = async (req, res) => {
 
@@ -95,6 +96,15 @@ export const createEnquiry = async (req, res) => {
 
         } catch (mailErr) {
             console.error("❌ Lead Email Error:", mailErr.message);
+        }
+
+        try {
+            await forwardLeadToLeadrat(req.body);
+        } catch (integrationError) {
+            console.error(
+                `LeadRAT forwarding failed for city "${req.body.city}":`,
+                integrationError.message
+            );
         }
 
         return res.status(201).json({

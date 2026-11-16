@@ -107,7 +107,9 @@ export function initContactForm(containerId = "contact-form") {
                                 </select>
 
                                 <button
-                                    class="w-full h-8 md:h-10 rounded-xl text-sm w-max px-4  bg-[#B68D37] hover:bg-yellow-400 hover:shadow-lg hover:shadow-gray-400 transition duration-300 font-medium cursor-pointer text-white">
+                                    class="w-full h-8 md:h-10 rounded-
+                                    
+                                    xl text-sm w-max px-4  bg-[#B68D37] hover:bg-yellow-400 hover:shadow-lg hover:shadow-gray-400 transition duration-300 font-medium cursor-pointer text-white">
                                     Schedule Now
                                 </button>
 
