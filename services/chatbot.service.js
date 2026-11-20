@@ -2,6 +2,45 @@
 import { generateAIResponse } from "./ai.service.js";
 import { searchProperties } from "./property.service.js";
 import { getRelevantCompanyInfo } from "./company.service.js";
+import { forwardLeadToLeadrat } from "./leadrat.service.js";
+
+// ------------------------------------------------------------------
+// Extract lead info when user shares a phone number in chat
+// Handles: "9876543210", "Rahul 9876543210", "Rahul 9876543210 Gurgaon"
+// ------------------------------------------------------------------
+const extractChatLead = (message) => {
+    const phoneMatch = message.match(/\b(?:\+?91[\s-]?)?([6-9]\d{9})\b/);
+    if (!phoneMatch) return null;
+
+    const phone = phoneMatch[1];
+
+    // Remove phone (and optional +91 prefix) from message to parse the rest
+    let remaining = message
+        .replace(/\+?91[\s-]?[6-9]\d{9}/, "")
+        .replace(/[6-9]\d{9}/, "")
+        .trim();
+
+    // Detect city keyword (kept for notes, but API always goes to Gurgaon)
+    let detectedCity = "";
+    const cityPattern =
+        /\b(gurgaon|gurugram|pune|delhi|noida|mumbai|bangalore|hyderabad)\b/i;
+    const cityMatch = remaining.match(cityPattern);
+
+    if (cityMatch) {
+        detectedCity = cityMatch[1];
+        remaining = remaining.replace(cityPattern, "").trim();
+    }
+
+    // Whatever is left is treated as the name
+    let name = remaining
+        .replace(/[,\-\/|:;.]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+    if (!name || name.length < 2) name = "Chat Lead";
+
+    return { name, phone, detectedCity };
+};
 
 // Identify whether the user is asking about SS Prime Infra
 const isCompanyQuestion = (message) => {
@@ -169,6 +208,43 @@ ${JSON.stringify(message)}
 // Generate chatbot response
 export const generatePropertyChatResponse = async (message) => {
     try {
+        // ── 0. Lead Capture — phone number detected → forward to LeadRAT ──
+        const chatLead = extractChatLead(message);
+
+        if (chatLead) {
+            try {
+                await forwardLeadToLeadrat({
+                    name: chatLead.name,
+                    phone: chatLead.phone,
+                    city: "Gurgaon",
+                    email: "",
+                    project: "",
+                    budget: "",
+                    source: "AI Chatbot",
+                });
+
+                console.log(
+                    `✅ Chatbot lead forwarded to LeadRAT: ${chatLead.name} / ${chatLead.phone}`
+                );
+            } catch (leadErr) {
+                console.error(
+                    "❌ Chatbot lead forwarding failed:",
+                    leadErr.message
+                );
+            }
+
+            const greeting =
+                chatLead.name !== "Chat Lead"
+                    ? ` ${chatLead.name}`
+                    : "";
+
+            return {
+                reply: `Thank you${greeting}! 🙏 Our property expert will contact you shortly. We look forward to helping you find your dream property!`,
+                totalResults: 0,
+                properties: [],
+            };
+        }
+
         // 1. Company-related question
         if (isCompanyQuestion(message)) {
             const reply = await generateCompanyResponse(message);
